@@ -5,8 +5,8 @@ la compara con la anterior (state/cinemark.json) y devuelve los avisos.
 
 Qué vigila:
 - peliculas   películas nuevas, cambios de estado (próximamente → preventa → cartelera), salidas
-- funciones   funciones nuevas, canceladas y cambios de horario en los 24 cines
-- promos      promociones nuevas, que terminan o cambian
+- funciones   funciones nuevas, canceladas y cambios de horario en los cines de CINES
+- promos      promociones nuevas, que terminan o cambian (solo las que aplican a CINES)
 - merch       productos nuevos de la tienda, que se agotan/salen o cambian de precio
 
 Todo sale de la API JSON bff.cinemark.com.ar, salvo el merch: la tienda
@@ -25,6 +25,9 @@ from .showcase_imax import DIAS, TZ, Aviso, _e
 
 SECCIONES = ("peliculas", "funciones", "promos", "merch")
 MARGEN_CANCELADA = timedelta(hours=1)
+# Solo se vigilan estos cines (id de la API → nombre). Para sumar uno, ver los ids en
+# https://bff.cinemark.com.ar/api/cinema/theaters (con el encabezado country: AR).
+CINES = {103: "Abasto", 733: "Palermo", 111: "DOT", 104: "Unicenter"}
 CINE_MERCH = "Abasto"  # la tienda pide elegir un cine; el catálogo es el mismo en todos
 MAX_LINEAS = 25        # para que un aviso no se vuelva interminable
 ESTADOS = {"SHOWING_NOW": "En cartelera", "PRESALE": "Preventa", "COMING_SOON": "Próximamente"}
@@ -59,6 +62,8 @@ class Fotografo:
     def funciones(self) -> dict:
         items = {}
         for cine in self.scraper._get("theaters", limit=1000):
+            if cine["id"] not in CINES:
+                continue
             for s in self.scraper._get("showtimes", theater=cine["id"]):
                 clave = f"{cine['id']}-{s['sessionId']}-{s.get('sessionFormat')}"
                 items[clave] = {
@@ -81,9 +86,11 @@ class Fotografo:
         r.raise_for_status()
         items = {}
         for p in r.json()["data"]:
-            if not p.get("active", True):
+            cines = [n for i, n in CINES.items() if i in (p.get("theaterIds") or [])]
+            if not p.get("active", True) or not cines:
                 continue
             items[str(p["id"])] = {
+                "cines": cines,
                 "titulo": p.get("title") or "",
                 "descripcion": p.get("description") or "",
                 "info": p.get("additionalInformation") or "",
@@ -163,10 +170,16 @@ def comparar(antes: dict, ahora: dict, momento: datetime | None = None) -> list[
                          if ambas("funciones") else set())
         avisos += _avisos_peliculas(antes["peliculas"], ahora["peliculas"], con_funciones)
     if ambas("funciones"):
-        avisos += _avisos_funciones(antes["funciones"], ahora["funciones"],
+        # La foto anterior puede tener funciones de cines que ya no se vigilan: no son cancelaciones.
+        ids = tuple(f"{i}-" for i in CINES)
+        f_antes = {k: f for k, f in antes["funciones"].items() if k.startswith(ids)}
+        avisos += _avisos_funciones(f_antes, ahora["funciones"],
                                     ahora.get("peliculas") or antes["peliculas"], momento)
     if ambas("promos"):
-        avisos += _avisos_promos(antes["promos"], ahora["promos"])
+        # Las promos de fotos viejas (sin "cines") pueden ser de cines que no se vigilan:
+        # solo se comparan si siguen apareciendo, para no avisar que "terminaron".
+        p_antes = {k: p for k, p in antes["promos"].items() if "cines" in p or k in ahora["promos"]}
+        avisos += _avisos_promos(p_antes, ahora["promos"])
     if ambas("merch"):
         avisos += _avisos_merch(antes["merch"], ahora["merch"])
     return avisos
@@ -255,6 +268,7 @@ def _avisos_promos(antes: dict, ahora: dict) -> list[Aviso]:
             txt += f"\n<i>{_e(p['info'])}</i>"
         if p["hasta"]:
             txt += f"\nHasta el {_dia(p['hasta'])}"
+        txt += f"\n📍 {_cines(p['cines'])}"
         avisos.append(Aviso(txt, p.get("imagen"), _boton("🏷️ Ver promociones", f"{SITE}/promociones")))
     for k in antes.keys() - ahora.keys():
         avisos.append(Aviso(f"🏷️ <b>Terminó una promo de Cinemark</b> — {_e(antes[k]['titulo'])}"))
@@ -305,6 +319,12 @@ def resumen_inicial(foto: dict) -> Aviso:
 
 
 # --------------------------------------------------------------------------- helpers
+
+def _cines(nombres: list[str]) -> str:
+    if len(nombres) == len(CINES):
+        return "Todos tus cines (" + ", ".join(CINES.values()) + ")"
+    return ", ".join(nombres)
+
 
 def _boton(texto: str, url: str) -> list[list[dict]]:
     return [[{"text": texto, "url": url}]] if url else []
