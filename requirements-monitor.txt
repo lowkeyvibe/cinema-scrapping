@@ -1,0 +1,6 @@
+# Dependencias mínimas del monitor (las usa GitHub Actions)
+requests
+beautifulsoup4
+lxml
+tenacity
+python-dotenv
