@@ -100,8 +100,9 @@ def _prolijo(t: str | None) -> str | None:
 
 def _mayuscula_inicial(palabra: str) -> str:
     """Primera letra en mayúscula, salteando comillas o signos del principio ('arirang' -> 'Arirang')."""
-    m = re.search(r"[^\W\d_]", palabra)
-    return palabra[:m.start()] + palabra[m.start()].upper() + palabra[m.start() + 1:] if m else palabra
+    m = re.match(r"[^\w]*", palabra)          # signos del principio; si empieza con número ("1st"), no se toca
+    i = m.end()
+    return palabra[:i] + palabra[i:i + 1].upper() + palabra[i + 1:] if palabra[i:i + 1].isalpha() else palabra
 
 
 def _clave(titulo: str) -> str:
