@@ -69,7 +69,7 @@ Cada corrida reemplaza las filas de esa cadena, así que otras cadenas pueden co
 | Aviso | Fuente |
 |---|---|
 | 🎬 Película nueva · 📣 cambio de estado (🔥 arranque de preventa) · 📅 cambio de estreno · 👋 sale de cartelera | API `bff.cinemark.com.ar/api/cinema/movies` |
-| 🔥 ¡Salieron las entradas! (primera vez que una película tiene funciones) | API `.../showtimes?theater=` (solo Abasto, Palermo, DOT y Unicenter: `CINES` en `src/monitor/cinemark.py`) |
+| 🔥 ¡Salieron las entradas! (primera vez que una película tiene funciones) | API `.../showtimes?theater=` (solo Abasto y DOT: `CINES` en `src/monitor/cinemark.py`) |
 | 🎟️ Funciones nuevas (resumen por película) · ❌ canceladas · 🔄 cambio de horario | ídem |
 | 🏷️ Promos nuevas, que terminan o cambian (solo las que aplican a esos cines) | API `.../content/promotions` |
 | 🛍️ Merch nuevo, que sale de la tienda o 💲 cambia de precio | tienda `/store` con Playwright (solo con `--merch`, cada 6 h) |

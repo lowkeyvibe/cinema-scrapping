@@ -29,10 +29,10 @@ SECCIONES = ("peliculas", "funciones", "promos", "merch")
 MARGEN_CANCELADA = timedelta(hours=1)
 # Solo se vigilan estos cines (id de la API → nombre). Para sumar uno, ver los ids en
 # https://bff.cinemark.com.ar/api/cinema/theaters (con el encabezado country: AR).
-CINES = {103: "Abasto", 733: "Palermo", 111: "DOT", 104: "Unicenter"}
+CINES = {103: "Abasto", 111: "DOT"}
 CINE_MERCH = "Abasto"  # la tienda pide elegir un cine; el catálogo es el mismo en todos
 MAX_LINEAS = 25        # para que un aviso no se vuelva interminable
-MAX_FUNCIONES = 12     # bloques de función por aviso; el resto, "y N funciones más"
+MAX_POR_CINE = 8       # bloques de función por cine en un aviso; el resto se ve con el link a la película
 DIAS_LARGOS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
 # Asientos libres de la última foto: {clave de función: (libres, capacidad)}.
@@ -189,9 +189,11 @@ def comparar(antes: dict, ahora: dict, momento: datetime | None = None) -> list[
         avisos += _avisos_funciones(f_antes, ahora["funciones"],
                                     ahora.get("peliculas") or antes["peliculas"], momento)
     if ambas("promos"):
-        # Las promos de fotos viejas (sin "cines") pueden ser de cines que no se vigilan:
-        # solo se comparan si siguen apareciendo, para no avisar que "terminaron".
-        p_antes = {k: p for k, p in antes["promos"].items() if "cines" in p or k in ahora["promos"]}
+        # Las promos de la foto anterior pueden ser de cines que ya no se vigilan: no "terminaron".
+        # (Las de fotos viejas sin "cines" solo se comparan si siguen apareciendo.)
+        nombres = set(CINES.values())
+        p_antes = {k: p for k, p in antes["promos"].items()
+                   if (set(p["cines"]) & nombres if "cines" in p else k in ahora["promos"])}
         avisos += _avisos_promos(p_antes, ahora["promos"])
     if ambas("merch"):
         avisos += _avisos_merch(antes["merch"], ahora["merch"])
@@ -403,24 +405,20 @@ def _bloques(fs: list[dict]) -> str:
     """Un bloque por función, agrupadas por cine y en orden de horario:
 
         📍 <b>Abasto</b>
-
-        <b>DBOX 2D · 22:45</b>
-        Sala 11: 22 asientos libres de 30
+        <b>DBOX 2D · 22:45</b> 🌙
+        Sala 11: 22 🟢 / 30 🔴
         Martes 15/12
 
-    Los MAX_FUNCIONES lugares se reparten entre los cines (así no se los come
-    uno solo); lo que no entra queda como "… y N funciones más en <cine>".
+    (🟢 asientos libres / 🔴 capacidad de la sala). Hasta MAX_POR_CINE funciones
+    por cine; las demás se ven con el link a la película del final del aviso.
     """
     por_cine: dict[str, list[dict]] = {}
     for f in sorted(fs, key=lambda f: (f["inicio"], f.get("formato") or "")):
         por_cine.setdefault(f["cine"], []).append(f)
-    por_cada = max(3, MAX_FUNCIONES // len(por_cine))
     partes = []
     for cine, funcs in sorted(por_cine.items()):
-        partes.append(f"📍 <b>{_e(cine)}</b>")
-        partes += [_bloque(f) for f in funcs[:por_cada]]
-        if len(funcs) > por_cada:
-            partes.append(f"<i>… y {len(funcs) - por_cada} funciones más en {_e(cine)}</i>")
+        bloques = [_bloque(f) for f in funcs[:MAX_POR_CINE]]
+        partes.append(f"📍 <b>{_e(cine)}</b>\n" + "\n\n".join(bloques))
     return "\n\n".join(partes)
 
 
@@ -428,8 +426,8 @@ def _bloque(f: dict) -> str:
     libres, capacidad = ASIENTOS.get(f.get("clave", ""), (None, None))
     lugar = f"Sala {_e(str(f['sala']))}" if f.get("sala") else ""
     if libres is not None and capacidad:
-        lugar += (": " if lugar else "") + f"{libres} asientos libres de {capacidad}"
-    lineas = [f"<b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b>", lugar, _dia_largo(f)]
+        lugar += (": " if lugar else "") + f"{libres} 🟢 / {capacidad} 🔴"
+    lineas = [f"<b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b> 🌙", lugar, _dia_largo(f)]
     return "\n".join(l for l in lineas if l)
 
 
