@@ -9,12 +9,18 @@ Uso:
 Cada monitor guarda su foto en state/<monitor>.json. La primera vez no hay con
 qué comparar: se guarda la foto y se manda un mensaje de "monitor activado".
 Si un monitor falla, los demás siguen y el comando termina con error.
+
+Cada monitor puede tener su propio bot y chat de Telegram:
+    TELEGRAM_BOT_TOKEN_CINEMARK / TELEGRAM_CHAT_ID_CINEMARK
+    TELEGRAM_BOT_TOKEN_SHOWCASE_IMAX / TELEGRAM_CHAT_ID_SHOWCASE_IMAX
+Si no están, usa TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import time
 import traceback
@@ -32,6 +38,13 @@ MONITORES = {
 }
 NOMBRES = {"showcase_imax": "Showcase IMAX", "cinemark": "Cinemark"}
 FALLAS_PARA_AVISAR = 6  # corridas seguidas con error en una sección (= 3 h si corre cada 30 min)
+
+
+def telegram_de(clave: str) -> Telegram:
+    """El bot/chat propio del monitor, o el general si no tiene uno."""
+    sufijo = clave.upper()
+    return Telegram(token=os.environ.get(f"TELEGRAM_BOT_TOKEN_{sufijo}") or None,
+                    chat_id=os.environ.get(f"TELEGRAM_CHAT_ID_{sufijo}") or None)
 
 
 def correr(clave: str, tg: Telegram, dry_run: bool, merch: bool) -> None:
@@ -85,16 +98,18 @@ def main() -> int:
         parser.error(f"monitor desconocido: {', '.join(desconocidos)}")
     load_dotenv()
 
-    tg = Telegram()
-    if not args.dry_run and not tg.configurado:
-        print("Faltan TELEGRAM_BOT_TOKEN y/o TELEGRAM_CHAT_ID (usá --dry-run para probar).", file=sys.stderr)
+    claves = args.monitores or list(MONITORES)
+    bots = {clave: telegram_de(clave) for clave in claves}
+    if not args.dry_run and (sin_bot := [c for c, tg in bots.items() if not tg.configurado]):
+        print(f"Falta el bot de Telegram para: {', '.join(sin_bot)} (TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID; "
+              "usá --dry-run para probar).", file=sys.stderr)
         return 1
 
     fallaron = []
-    for clave in args.monitores or MONITORES:
+    for clave in claves:
         t0 = time.monotonic()
         try:
-            correr(clave, tg, args.dry_run, args.merch)
+            correr(clave, bots[clave], args.dry_run, args.merch)
         except Exception:  # noqa: BLE001 - un monitor roto no frena a los demás
             traceback.print_exc()
             fallaron.append(clave)

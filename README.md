@@ -89,6 +89,10 @@ python -m src.monitor cinemark --merch     # solo Cinemark, incluyendo la tienda
 2. Mandale cualquier mensaje a tu bot nuevo.
 3. `TELEGRAM_BOT_TOKEN=<token> python -m src.monitor.telegram` → te imprime tu `TELEGRAM_CHAT_ID`.
 
+Cada monitor puede usar su propio bot: `TELEGRAM_BOT_TOKEN_CINEMARK` (y opcionalmente `TELEGRAM_CHAT_ID_CINEMARK`).
+Si no está definido, usa `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`. Hoy Cinemark avisa con **@cinemark_alerts_bot**
+y Showcase con **@showcase_imax_alertas_bot**, los dos en el grupo "Cinema Alerts".
+
 ### Correrlo en GitHub Actions
 
 El workflow [`.github/workflows/monitor.yml`](.github/workflows/monitor.yml) corre todos los
