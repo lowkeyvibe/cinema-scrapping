@@ -5,3 +5,4 @@ __pycache__/
 credentials*.json
 service_account*.json
 .DS_Store
+output/
