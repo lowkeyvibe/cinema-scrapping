@@ -268,16 +268,6 @@
    "show": "87722A",
    "trasnoche": false
   },
-  "573903": {
-   "cinema": 18,
-   "fecha": "2026-11-18",
-   "formato": "IMAX-Subtitulado",
-   "hora": "16:00",
-   "pelicula": "Godzilla Minus Zero",
-   "pelicula_id": "6234",
-   "show": "87639A",
-   "trasnoche": false
-  },
   "574670": {
    "cinema": 18,
    "fecha": "2026-11-25",
@@ -510,12 +500,6 @@
   }
  },
  "peliculas": {
-  "6234": {
-   "estado": "En cartelera",
-   "poster": "https://static.voyalcine.net/Uploads/i6234.jpg",
-   "titulo": "Godzilla Minus Zero",
-   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6234&house_id=3250"
-  },
   "6291": {
    "estado": "Preventa",
    "poster": "https://static.voyalcine.net/Uploads/i6291.jpg",

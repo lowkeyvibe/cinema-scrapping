@@ -4740,24 +4740,6 @@
    "pelicula_id": "114044",
    "sala": "8"
   },
-  "103-189958-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T13:50",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "1"
-  },
-  "103-189959-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:40",
-   "pelicula": "CLAYFACE",
-   "pelicula_id": "110812",
-   "sala": "1"
-  },
   "103-189960-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4775,24 +4757,6 @@
    "pelicula": "CLAYFACE",
    "pelicula_id": "110812",
    "sala": "1"
-  },
-  "103-189962-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:20",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "2"
-  },
-  "103-189963-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:00",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "2"
   },
   "103-189964-2D": {
    "cine": "Abasto",
@@ -4812,33 +4776,6 @@
    "pelicula_id": "114046",
    "sala": "2"
   },
-  "103-189966-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T14:10",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "9"
-  },
-  "103-189968-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T14:20",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "3"
-  },
-  "103-189969-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T17:10",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "3"
-  },
   "103-189970-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4856,24 +4793,6 @@
    "pelicula": "GODZILLA MINUS ZERO",
    "pelicula_id": "111103",
    "sala": "3"
-  },
-  "103-189972-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:30",
-   "pelicula": "CÓMO ROBAR UN BANCO",
-   "pelicula_id": "110804",
-   "sala": "4"
-  },
-  "103-189973-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:20",
-   "pelicula": "CÓMO ROBAR UN BANCO",
-   "pelicula_id": "110804",
-   "sala": "4"
   },
   "103-189974-2D": {
    "cine": "Abasto",
@@ -4893,15 +4812,6 @@
    "pelicula_id": "110804",
    "sala": "4"
   },
-  "103-189977-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T17:30",
-   "pelicula": "MADRE SINIESTRA",
-   "pelicula_id": "112852",
-   "sala": "5"
-  },
   "103-189978-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4910,24 +4820,6 @@
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "5"
-  },
-  "103-189980-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:05",
-   "pelicula": "¡PLUMAS! OPERACIÓN RESCATE",
-   "pelicula_id": "114050",
-   "sala": "6"
-  },
-  "103-189981-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T15:20",
-   "pelicula": "¡PLUMAS! OPERACIÓN RESCATE",
-   "pelicula_id": "114050",
-   "sala": "6"
   },
   "103-189983-2D": {
    "cine": "Abasto",
@@ -4947,42 +4839,6 @@
    "pelicula_id": "114047",
    "sala": "6"
   },
-  "103-189985-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T15:00",
-   "pelicula": "ANIQUILACIÓN",
-   "pelicula_id": "114047",
-   "sala": "5"
-  },
-  "103-189987-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T17:50",
-   "pelicula": "ANIQUILACIÓN",
-   "pelicula_id": "114047",
-   "sala": "6"
-  },
-  "103-189989-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:20",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "8"
-  },
-  "103-189990-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:15",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "8"
-  },
   "103-189991-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -5001,24 +4857,6 @@
    "pelicula_id": "111102",
    "sala": "8"
   },
-  "103-189993-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T14:20",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "12"
-  },
-  "103-189994-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T17:20",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "12"
-  },
   "103-189995-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -5036,87 +4874,6 @@
    "pelicula": "CABALLO SALVAJE NUEVE",
    "pelicula_id": "114045",
    "sala": "12"
-  },
-  "103-190037-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:00",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "10"
-  },
-  "103-190037-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:00",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "10"
-  },
-  "103-190038-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:00",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "10"
-  },
-  "103-190038-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:00",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "10"
-  },
-  "103-190039-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:10",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "11"
-  },
-  "103-190039-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:10",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "11"
-  },
-  "103-190040-3D": {
-   "cine": "Abasto",
-   "formato": "3D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T15:50",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "11"
-  },
-  "103-190040-DBOX 3D": {
-   "cine": "Abasto",
-   "formato": "DBOX 3D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T15:50",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "11"
-  },
-  "103-190041-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:45",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "9"
   },
   "103-190042-2D": {
    "cine": "Abasto",
@@ -7061,6 +6818,222 @@
    "pelicula": "LA ASISTENTE DE LA MORGUE",
    "pelicula_id": "110243",
    "sala": "6"
+  },
+  "103-190301-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-16T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190302-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-16T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190303-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-16T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190304-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-17T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190306-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-17T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190307-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-18T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190309-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-18T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190310-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-19T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190312-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-19T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190313-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-20T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190315-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-20T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190316-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-21T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190318-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-21T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190319-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-22T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190321-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-22T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190322-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-23T13:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190324-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-23T20:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190325-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-17T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190326-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-18T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190327-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-19T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190328-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-20T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190329-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-23T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190330-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-22T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
+  },
+  "103-190331-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-21T17:00",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "2"
   },
   "111-151941-PREMIER 2D": {
    "cine": "DOT",
@@ -9132,15 +9105,6 @@
    "pelicula_id": "110814",
    "sala": "3"
   },
-  "111-154746-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T01:25",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "2"
-  },
   "111-154747-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -10032,24 +9996,6 @@
    "pelicula_id": "114117",
    "sala": "9"
   },
-  "111-155092-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T14:50",
-   "pelicula": "VERITY: LA SOMBRA DE UN ENGAÑO",
-   "pelicula_id": "110808",
-   "sala": "1"
-  },
-  "111-155093-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T17:20",
-   "pelicula": "VERITY: LA SOMBRA DE UN ENGAÑO",
-   "pelicula_id": "110808",
-   "sala": "1"
-  },
   "111-155094-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -10067,60 +10013,6 @@
    "pelicula": "MADRE SINIESTRA",
    "pelicula_id": "112852",
    "sala": "1"
-  },
-  "111-155096-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T15:40",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "2"
-  },
-  "111-155097-XD 2D": {
-   "cine": "DOT",
-   "formato": "XD 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T12:50",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "3"
-  },
-  "111-155098-XD 2D": {
-   "cine": "DOT",
-   "formato": "XD 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T15:50",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "3"
-  },
-  "111-155099-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T13:00",
-   "pelicula": "CLAYFACE",
-   "pelicula_id": "110812",
-   "sala": "4"
-  },
-  "111-155100-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T15:30",
-   "pelicula": "CLAYFACE",
-   "pelicula_id": "110812",
-   "sala": "4"
-  },
-  "111-155101-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T18:00",
-   "pelicula": "CLAYFACE",
-   "pelicula_id": "110812",
-   "sala": "4"
   },
   "111-155102-2D": {
    "cine": "DOT",
@@ -10140,42 +10032,6 @@
    "pelicula_id": "110812",
    "sala": "4"
   },
-  "111-155104-4D 3D": {
-   "cine": "DOT",
-   "formato": "4D 3D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T13:30",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "5"
-  },
-  "111-155105-4D 3D": {
-   "cine": "DOT",
-   "formato": "4D 3D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T16:20",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "5"
-  },
-  "111-155106-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T14:30",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "6"
-  },
-  "111-155107-3D": {
-   "cine": "DOT",
-   "formato": "3D",
-   "idioma": "CAST",
-   "inicio": "2026-11-18T17:20",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "6"
-  },
   "111-155108-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -10193,24 +10049,6 @@
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "6"
-  },
-  "111-155110-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T13:40",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "7"
-  },
-  "111-155111-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T16:30",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "7"
   },
   "111-155112-2D": {
    "cine": "DOT",
@@ -10230,33 +10068,6 @@
    "pelicula_id": "114046",
    "sala": "7"
   },
-  "111-155114-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T13:00",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "8"
-  },
-  "111-155115-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T15:45",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "8"
-  },
-  "111-155116-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T18:30",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "8"
-  },
   "111-155117-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -10265,24 +10076,6 @@
    "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
    "pelicula_id": "111102",
    "sala": "8"
-  },
-  "111-155118-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T13:10",
-   "pelicula": "SENSATEZ Y SENTIMIENTO",
-   "pelicula_id": "113236",
-   "sala": "9"
-  },
-  "111-155119-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T16:10",
-   "pelicula": "CÓMO ROBAR UN BANCO",
-   "pelicula_id": "110804",
-   "sala": "9"
   },
   "111-155120-2D": {
    "cine": "DOT",
@@ -10301,24 +10094,6 @@
    "pelicula": "CÓMO ROBAR UN BANCO",
    "pelicula_id": "110804",
    "sala": "9"
-  },
-  "111-155122-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T13:30",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "10"
-  },
-  "111-155123-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-18T16:50",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "10"
   },
   "111-155124-2D": {
    "cine": "DOT",
@@ -11922,26 +11697,12 @@
    "titulo": "RESIDENT EVIL: NOCHE CERO",
    "url": "https://www.cinemark.com.ar/pelicula/resident-evil-noche-cero"
   },
-  "110807": {
-   "estado": "En cartelera",
-   "estreno": "2026-10-01",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013070.jpg",
-   "titulo": "DIGGER",
-   "url": "https://www.cinemark.com.ar/pelicula/digger"
-  },
   "110808": {
    "estado": "En cartelera",
    "estreno": "2026-10-01",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00012617.jpg",
+   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013091.jpg",
    "titulo": "VERITY: LA SOMBRA DE UN ENGAÑO",
    "url": "https://www.cinemark.com.ar/pelicula/verity-la-sombra-de-un-engano"
-  },
-  "110809": {
-   "estado": "En cartelera",
-   "estreno": "2026-10-15",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00012618.jpg",
-   "titulo": "LA CAÍDA DE LA BALLENA",
-   "url": "https://www.cinemark.com.ar/pelicula/la-caida-de-la-ballena"
   },
   "110812": {
    "estado": "En cartelera",
@@ -11953,7 +11714,7 @@
   "110813": {
    "estado": "En cartelera",
    "estreno": "2026-11-05",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013329.jpg",
+   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013326.jpg",
    "titulo": "EL GATO CON SOMBRERO",
    "url": "https://www.cinemark.com.ar/pelicula/el-gato-con-sombrero"
   },
@@ -11974,7 +11735,7 @@
   "111103": {
    "estado": "En cartelera",
    "estreno": "2026-11-05",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013297.jpg",
+   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00012759.jpg",
    "titulo": "GODZILLA MINUS ZERO",
    "url": "https://www.cinemark.com.ar/pelicula/godzilla-minus-zero"
   },
@@ -12005,13 +11766,6 @@
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013188.jpg",
    "titulo": "LA CASA",
    "url": "https://www.cinemark.com.ar/pelicula/la-casa"
-  },
-  "113211": {
-   "estado": "En cartelera",
-   "estreno": "2026-10-22",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013238.jpg",
-   "titulo": "¿QUERÉS SER MI HIJO?",
-   "url": "https://www.cinemark.com.ar/pelicula/queres-ser-mi-hijo"
   },
   "113236": {
    "estado": "En cartelera",
@@ -12075,13 +11829,6 @@
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013406.jpg",
    "titulo": "JU-ON: EL GRITO",
    "url": "https://www.cinemark.com.ar/pelicula/ju-on-el-grito"
-  },
-  "114050": {
-   "estado": "En cartelera",
-   "estreno": "2026-11-12",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013409.jpg",
-   "titulo": "¡PLUMAS! OPERACIÓN RESCATE",
-   "url": "https://www.cinemark.com.ar/pelicula/plumas-operacion-rescate"
   },
   "114052": {
    "estado": "Preventa",
@@ -12166,6 +11913,34 @@
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013469.jpg",
    "titulo": "SERET 2026 BELLA",
    "url": "https://www.cinemark.com.ar/pelicula/seret-2026-bella"
+  },
+  "114332": {
+   "estado": "Próximamente",
+   "estreno": "2026-12-03",
+   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013470.jpg",
+   "titulo": "SERET 2026 NANDAURI",
+   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-nandauri"
+  },
+  "114333": {
+   "estado": "Próximamente",
+   "estreno": "2026-12-03",
+   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013471.jpg",
+   "titulo": "SERET 2026 A BURNING MAN",
+   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-a-burning-man"
+  },
+  "114334": {
+   "estado": "Próximamente",
+   "estreno": "2026-12-03",
+   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013472.jpg",
+   "titulo": "SERET 2026 A LETTER TO DAVID SUB",
+   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-a-letter-to-david-sub"
+  },
+  "114335": {
+   "estado": "Próximamente",
+   "estreno": "2026-12-03",
+   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013473.jpg",
+   "titulo": "SERET 2026 PINK LADY",
+   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-pink-lady"
   }
  },
  "promos": {

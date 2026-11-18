@@ -1,9 +1,23 @@
 {
  "avengers: doomsday": {
+  "detalles": {
+   "duracion": 165,
+   "fondo": "https://image.tmdb.org/t/p/w1280/g3gpP5YDbA85DsA0bt5mgGQIe5q.jpg",
+   "t": 1795037827,
+   "trailer": "https://www.youtube.com/watch?v=X1aFkAkFASk"
+  },
   "en": "Avengers: Doomsday",
   "es": "AVENGERS: DOOMSDAY",
-  "poster": "https://image.tmdb.org/t/p/w780/1zqWkLwC1zLBBBtIWzmkmWeMWnT.jpg",
-  "t": 1794977563
+  "id": 1003596,
+  "poster": "https://image.tmdb.org/t/p/w780/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg",
+  "t": 1795037827
+ },
+ "digger": {
+  "en": "Digger",
+  "es": "DIGGER",
+  "id": 1248832,
+  "poster": "https://image.tmdb.org/t/p/w780/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
+  "t": 1795037827
  },
  "duna: parte tres": {
   "detalles": {
@@ -32,8 +46,16 @@
  "godzilla minus zero": {
   "en": "Godzilla Minus Zero",
   "es": "Godzilla Minus Zero",
+  "id": 1381071,
   "poster": "https://image.tmdb.org/t/p/w780/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
-  "t": 1794973458
+  "t": 1795037824
+ },
+ "la caída de la ballena": {
+  "en": "Whalefall",
+  "es": "LA CAÍDA DE LA BALLENA",
+  "id": 1255833,
+  "poster": "https://image.tmdb.org/t/p/w780/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg",
+  "t": 1795037827
  },
  "las nuevas desventuras de cliff booth": {
   "detalles": {
@@ -50,15 +72,30 @@
  },
  "los juegos del hambre: amanecer en la cosecha": {
   "en": "The Hunger Games: Sunrise on the Reaping",
-  "es": "Los Juegos del Hambre: amanecer en la cosecha",
-  "poster": "https://image.tmdb.org/t/p/w780/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg",
-  "t": 1794973458
+  "es": "LOS JUEGOS DEL HAMBRE: AMANECER EN LA COSECHA",
+  "id": 1300968,
+  "poster": "https://image.tmdb.org/t/p/w780/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg",
+  "t": 1795037827
  },
  "perfume": {
   "en": "Perfume",
   "es": "PERFUME",
   "poster": "https://image.tmdb.org/t/p/w780/t7flYSsrk9EbulxCX8MbduNGqXK.jpg",
   "t": 1794977563
+ },
+ "seret 2026 a burning man": {
+  "en": null,
+  "es": "SERET 2026 A BURNING MAN",
+  "id": null,
+  "poster": null,
+  "t": 1795037827
+ },
+ "seret 2026 a letter to david sub": {
+  "en": null,
+  "es": "SERET 2026 A LETTER TO DAVID SUB",
+  "id": null,
+  "poster": null,
+  "t": 1795037826
  },
  "seret 2026 bella": {
   "en": null,
@@ -67,11 +104,39 @@
   "poster": null,
   "t": 1795009418
  },
+ "seret 2026 nandauri": {
+  "en": null,
+  "es": "SERET 2026 NANDAURI",
+  "id": null,
+  "poster": null,
+  "t": 1795037826
+ },
+ "seret 2026 pink lady": {
+  "en": null,
+  "es": "SERET 2026 PINK LADY",
+  "id": null,
+  "poster": null,
+  "t": 1795037826
+ },
  "seret 2026 the ring": {
   "en": null,
   "es": "SERET 2026 THE RING",
   "id": null,
   "poster": null,
   "t": 1795009418
+ },
+ "¡plumas! operación rescate": {
+  "en": "Out of the Nest",
+  "es": "¡PLUMAS! OPERACIÓN RESCATE",
+  "id": 1280405,
+  "poster": "https://image.tmdb.org/t/p/w780/wko3GEAMPbOYpH0COlQhLDZOqbw.jpg",
+  "t": 1795037827
+ },
+ "¿querés ser mi hijo?": {
+  "en": "¿Querés ser mi hijo?",
+  "es": "¿QUERÉS SER MI HIJO?",
+  "id": 1779106,
+  "poster": "https://image.tmdb.org/t/p/w780/9LdKQmifSVEZEVmfNY5KOGrG8Oa.jpg",
+  "t": 1795037827
  }
 }
