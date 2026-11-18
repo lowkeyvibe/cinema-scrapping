@@ -405,9 +405,10 @@ def _bloques(fs: list[dict]) -> str:
     """Un bloque por función, agrupadas por cine y en orden de horario:
 
         📍 <b>Abasto</b>
-        <b>DBOX 2D · 22:45</b> 🌙
-        Sala 11: 22 🟢 / 30 🔴
-        Martes 15/12
+        🌙 <b>DBOX 2D · 22:45</b>
+             Sala 11: 22 🟢 / 30 🔴
+             Tipo: Subtitulada
+             Martes 15/12
 
     (🟢 asientos libres / 🔴 capacidad de la sala). Hasta MAX_POR_CINE funciones
     por cine; las demás se ven con el link a la película del final del aviso.
@@ -422,13 +423,25 @@ def _bloques(fs: list[dict]) -> str:
     return "\n\n".join(partes)
 
 
+SANGRIA = "\u00a0" * 5   # espacios que Telegram no recorta al principio de la línea
+TIPOS = {"SUB": "Subtitulada", "CAST": "Doblada al castellano"}
+
+
 def _bloque(f: dict) -> str:
+    """
+        🌙 <b>2D · 22:40</b>
+             Sala 10: 219 🟢 / 224 🔴
+             Tipo: Subtitulada
+             Jueves 17/12
+    """
     libres, capacidad = ASIENTOS.get(f.get("clave", ""), (None, None))
     lugar = f"Sala {_e(str(f['sala']))}" if f.get("sala") else ""
     if libres is not None and capacidad:
         lugar += (": " if lugar else "") + f"{libres} 🟢 / {capacidad} 🔴"
-    lineas = [f"<b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b> 🌙", lugar, _dia_largo(f)]
-    return "\n".join(l for l in lineas if l)
+    tipo = f"Tipo: {TIPOS.get(f.get('idioma'), f.get('idioma'))}" if f.get("idioma") else ""
+    detalle = [l for l in (lugar, tipo, _dia_largo(f)) if l]
+    return "\n".join([f"🌙 <b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b>"]
+                     + [SANGRIA + l for l in detalle])
 
 
 def _dia_largo(f: dict) -> str:
