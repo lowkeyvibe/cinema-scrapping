@@ -1,0 +1,559 @@
+{
+ "_fallas": {
+  "banners": 0,
+  "candy": 0,
+  "funciones": 0,
+  "peliculas": 0,
+  "precios": 0,
+  "promos": 0,
+  "sorteos": 0
+ },
+ "banners": {
+  "https://www.todoshowcase.com/images/sliders/0000001991.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000001991.jpg",
+   "link": null
+  },
+  "https://www.todoshowcase.com/images/sliders/0000002105.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000002105.jpg",
+   "link": "https://todoshowcase.com/cumpleanios"
+  },
+  "https://www.todoshowcase.com/images/sliders/0000002132.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000002132.jpg",
+   "link": "https://mas.todoshowcase.com"
+  },
+  "https://www.todoshowcase.com/images/sliders/0000002141.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000002141.jpg",
+   "link": null
+  },
+  "https://www.todoshowcase.com/images/sliders/0000002148.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000002148.jpg",
+   "link": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6291"
+  },
+  "https://www.todoshowcase.com/images/sliders/0000002150.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000002150.jpg",
+   "link": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6323&house_id=3250"
+  },
+  "https://www.todoshowcase.com/images/sliders/0000002151.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000002151.jpg",
+   "link": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6325"
+  },
+  "https://www.todoshowcase.com/images/sliders/0000002152.jpg": {
+   "imagen": "https://www.todoshowcase.com/images/sliders/0000002152.jpg",
+   "link": "https://www.todoshowcase.com/sorteo"
+  }
+ },
+ "candy": {
+  "https://www.todoshowcase.com/themes/default/images/img-candy.jpg": {
+   "imagen": "https://www.todoshowcase.com/themes/default/images/img-candy.jpg"
+  }
+ },
+ "funciones": {
+  "573786": {
+   "cinema": 18,
+   "fecha": "2026-11-18",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573787": {
+   "cinema": 18,
+   "fecha": "2026-11-18",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573795": {
+   "cinema": 18,
+   "fecha": "2026-11-19",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573796": {
+   "cinema": 18,
+   "fecha": "2026-11-19",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573798": {
+   "cinema": 18,
+   "fecha": "2026-11-20",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573799": {
+   "cinema": 18,
+   "fecha": "2026-11-20",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573801": {
+   "cinema": 18,
+   "fecha": "2026-11-21",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573802": {
+   "cinema": 18,
+   "fecha": "2026-11-21",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573804": {
+   "cinema": 18,
+   "fecha": "2026-11-22",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573805": {
+   "cinema": 18,
+   "fecha": "2026-11-22",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573807": {
+   "cinema": 18,
+   "fecha": "2026-11-23",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573808": {
+   "cinema": 18,
+   "fecha": "2026-11-23",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573810": {
+   "cinema": 18,
+   "fecha": "2026-11-24",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573813": {
+   "cinema": 18,
+   "fecha": "2026-11-25",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573856": {
+   "cinema": 18,
+   "fecha": "2026-11-19",
+   "formato": "IMAX-Subtitulado",
+   "hora": "15:50",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573857": {
+   "cinema": 18,
+   "fecha": "2026-11-20",
+   "formato": "IMAX-Subtitulado",
+   "hora": "15:50",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573858": {
+   "cinema": 18,
+   "fecha": "2026-11-21",
+   "formato": "IMAX-Subtitulado",
+   "hora": "15:50",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573859": {
+   "cinema": 18,
+   "fecha": "2026-11-22",
+   "formato": "IMAX-Subtitulado",
+   "hora": "15:50",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573860": {
+   "cinema": 18,
+   "fecha": "2026-11-23",
+   "formato": "IMAX-Subtitulado",
+   "hora": "15:50",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573861": {
+   "cinema": 18,
+   "fecha": "2026-11-24",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573862": {
+   "cinema": 18,
+   "fecha": "2026-11-25",
+   "formato": "IMAX-Subtitulado",
+   "hora": "13:00",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573863": {
+   "cinema": 18,
+   "fecha": "2026-11-25",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:15",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "573903": {
+   "cinema": 18,
+   "fecha": "2026-11-18",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:00",
+   "pelicula": "Godzilla Minus Zero",
+   "pelicula_id": "6234",
+   "show": "87639A",
+   "trasnoche": false
+  },
+  "574670": {
+   "cinema": 18,
+   "fecha": "2026-11-25",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574671": {
+   "cinema": 18,
+   "fecha": "2026-11-26",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574672": {
+   "cinema": 18,
+   "fecha": "2026-11-27",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574673": {
+   "cinema": 18,
+   "fecha": "2026-11-28",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574674": {
+   "cinema": 18,
+   "fecha": "2026-11-29",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574675": {
+   "cinema": 18,
+   "fecha": "2026-11-30",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574676": {
+   "cinema": 18,
+   "fecha": "2026-12-01",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574677": {
+   "cinema": 18,
+   "fecha": "2026-12-02",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574706": {
+   "cinema": 18,
+   "fecha": "2026-11-24",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
+   "pelicula_id": "6291",
+   "show": "87722A",
+   "trasnoche": false
+  },
+  "574707": {
+   "cinema": 18,
+   "fecha": "2026-11-26",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574708": {
+   "cinema": 18,
+   "fecha": "2026-11-26",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574709": {
+   "cinema": 18,
+   "fecha": "2026-11-27",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574710": {
+   "cinema": 18,
+   "fecha": "2026-11-27",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574711": {
+   "cinema": 18,
+   "fecha": "2026-11-28",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574712": {
+   "cinema": 18,
+   "fecha": "2026-11-28",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574713": {
+   "cinema": 18,
+   "fecha": "2026-11-29",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574714": {
+   "cinema": 18,
+   "fecha": "2026-11-29",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574715": {
+   "cinema": 18,
+   "fecha": "2026-11-30",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574716": {
+   "cinema": 18,
+   "fecha": "2026-11-30",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574717": {
+   "cinema": 18,
+   "fecha": "2026-12-01",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574718": {
+   "cinema": 18,
+   "fecha": "2026-12-01",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574719": {
+   "cinema": 18,
+   "fecha": "2026-12-02",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:30",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  },
+  "574720": {
+   "cinema": 18,
+   "fecha": "2026-12-02",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Las nuevas desventuras de Cliff Booth",
+   "pelicula_id": "6323",
+   "show": "87740A",
+   "trasnoche": false
+  }
+ },
+ "peliculas": {
+  "6234": {
+   "estado": "En cartelera",
+   "poster": "https://static.voyalcine.net/Uploads/i6234.jpg",
+   "titulo": "Godzilla Minus Zero",
+   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6234&house_id=3250"
+  },
+  "6291": {
+   "estado": "Preventa",
+   "poster": "https://static.voyalcine.net/Uploads/i6291.jpg",
+   "titulo": "Los Juegos del Hambre: amanecer en la cosecha",
+   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6291&house_id=3250"
+  },
+  "6323": {
+   "estado": "Preventa",
+   "poster": "https://static.voyalcine.net/Uploads/i6323.jpg",
+   "titulo": "Las nuevas desventuras de Cliff Booth",
+   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6323&house_id=3250"
+  }
+ },
+ "precios": {
+  "PROMOCIÓN 2x1 con MÁS SHOWCASE": "Válido todos los días... $12.000 por entrada.",
+  "SALAS 2D y 3D": "General... $24.000 / Niños hasta 12 años y mayores de 60... $19.000"
+ },
+ "promos": {
+  "Bonda | IMAX: 2x1 en entradas todos los días.": {
+   "cines": "Cines habilitados: Imax",
+   "imagen": "https://www.todoshowcase.com/images/promociones/0000000153.jpg",
+   "promo": "IMAX: 2x1 en entradas todos los días.",
+   "titulo": "Bonda",
+   "vigencia": "Vigencia: Desde 01-01-2026 Hasta 31-12-2026"
+  },
+  "Shell BOX | IMAX: 2x1 en entradas, todos los días": {
+   "cines": "Cines habilitados: Imax",
+   "imagen": "https://www.todoshowcase.com/images/promociones/0000000194.jpg",
+   "promo": "IMAX: 2x1 en entradas, todos los días",
+   "titulo": "Shell BOX",
+   "vigencia": "Vigencia: Desde 01-01-2026 Hasta 31-12-2026"
+  }
+ },
+ "sorteos": {
+  "Sorteo Los Juegos del Hambre": {
+   "descripcion": "No te pierdas este sorteo increíble para IMAX, podés ganar 1 de los 3 kits que contienen: 1 Remera, 1 Tote bag, 2 señaladores y 1 Frasco con gomitas comestibles.",
+   "imagen": "https://www.todoshowcase.com/images/concursos/0000000754.jpg",
+   "titulo": "Sorteo Los Juegos del Hambre"
+  }
+ }
+}
