@@ -51,6 +51,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # Títulos en inglés (themoviedb.org); sin esto los avisos salen en castellano.
+          TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}
           # Bot propio de Cinemark (si no está, usa el general de arriba).
           TELEGRAM_BOT_TOKEN_CINEMARK: ${{ secrets.TELEGRAM_BOT_TOKEN_CINEMARK }}
           TELEGRAM_CHAT_ID_CINEMARK: ${{ secrets.TELEGRAM_CHAT_ID_CINEMARK }}

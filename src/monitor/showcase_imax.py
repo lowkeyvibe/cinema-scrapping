@@ -27,6 +27,7 @@ from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 
+from src.monitor.titulos import en_ingles, guardar_cache
 from src.scrapers.showcase_imax import CINE_IMAX_ID, ENTRADAS, HOUSE_ID, SITE, ShowcaseImaxScraper
 
 TZ = ZoneInfo("America/Argentina/Buenos_Aires")
@@ -218,6 +219,7 @@ def comparar(antes: dict, ahora: dict, momento: datetime | None = None) -> list[
                 lineas.append(f"<b>{_e(k)}</b>\nAntes: {_e(a or '—')}\nAhora: {_e(b or '—')}")
         avisos.append(Aviso("💲 <b>Cambiaron los precios IMAX</b>\n\n" + "\n\n".join(lineas) + f"\n\n{SITE}/precios"))
 
+    guardar_cache()
     return avisos
 
 
@@ -235,7 +237,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     for fid in nuevas_pelis:
         p = p_ahora[fid]
         funcs = nuevas_por_peli.pop(fid, [])
-        txt = f"🎬 <b>Nueva en IMAX: {_e(p['titulo'])}</b>"
+        txt = f"🎬 <b>Nueva en IMAX: {_e(_peli(p['titulo'], momento))}</b>"
         if p["estado"] == "Preventa":
             txt += "\n🔥 ¡Arrancó la preventa!"
         if funcs:
@@ -248,7 +250,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
         p = p_ahora.get(fid) or {"titulo": funcs[0]["pelicula"], "url": ""}
         n = len(funcs)
         avisos.append(Aviso(
-            f"🎟️ <b>{n} {'función' if n == 1 else 'funciones'} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(p['titulo'])}</b>\n\n"
+            f"🎟️ <b>{n} {'función' if n == 1 else 'funciones'} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(_peli(p['titulo'], momento))}</b>\n\n"
             f"{_listar(funcs, fid, momento)}" + _pie(p["url"])))
 
     # Funciones que desaparecen antes de empezar => canceladas.
@@ -256,7 +258,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     for k in f_antes.keys() - f_ahora.keys():
         f = f_antes[k]
         if es_de_noche(f) and _inicio(f) > momento + MARGEN_CANCELADA:
-            canceladas.setdefault(f["pelicula"], []).append(f)
+            canceladas.setdefault(_peli(f["pelicula"], momento), []).append(f)
     for titulo, funcs in canceladas.items():
         avisos.append(Aviso(f"❌ <b>Funciones IMAX que ya no están: {_e(titulo)}</b>\n\n{_listar(funcs)}"))
 
@@ -265,7 +267,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     for k in f_antes.keys() & f_ahora.keys():
         a, b = f_antes[k], f_ahora[k]
         if (a["fecha"], a["hora"]) != (b["fecha"], b["hora"]) and (es_de_noche(a) or es_de_noche(b)):
-            cambios.append(f"• {_e(b['pelicula'])}: {_fecha(a)} → {_fecha(b)}")
+            cambios.append(f"• {_e(_peli(b['pelicula'], momento))}: {_fecha(a)} → {_fecha(b)}")
     if cambios:
         avisos.append(Aviso("🔄 <b>Cambios de horario en IMAX</b>\n\n" + "\n".join(cambios)))
 
@@ -273,9 +275,10 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     for fid in p_antes.keys() & p_ahora.keys():
         if p_antes[fid]["estado"] != p_ahora[fid]["estado"]:
             p = p_ahora[fid]
-            avisos.append(Aviso(f"📣 <b>{_e(p['titulo'])}</b>: {p_antes[fid]['estado']} → {p['estado']}\n{p['url']}"))
+            avisos.append(Aviso(f"📣 <b>{_e(_peli(p['titulo'], momento))}</b>: {p_antes[fid]['estado']} → {p['estado']}"
+                                + _pie(p["url"])))
     for fid in p_antes.keys() - p_ahora.keys():
-        avisos.append(Aviso(f"👋 <b>Salió de la cartelera IMAX:</b> {_e(p_antes[fid]['titulo'])}"))
+        avisos.append(Aviso(f"👋 <b>Salió de la cartelera IMAX:</b> {_e(_peli(p_antes[fid]['titulo'], momento))}"))
 
     return avisos
 
@@ -286,15 +289,22 @@ def resumen_inicial(foto: dict) -> Aviso:
     lineas = []
     for fid, p in pelis.items():
         n = sum(1 for f in funcs.values() if f["pelicula_id"] == fid and es_de_noche(f))
-        lineas.append(f"• {_e(p['titulo'])} — {p['estado']}, {n} funciones desde las {HORA_DESDE}")
-    return Aviso(
+        lineas.append(f"• {_e(_peli(p['titulo'], datetime.now(TZ)))} — {p['estado']}, {n} funciones desde las {HORA_DESDE}")
+    aviso = Aviso(
         "✅ <b>Monitor de Showcase IMAX activado</b>\n"
         "Te voy a avisar de funciones nuevas o canceladas, preventas, promos, sorteos/merch, "
         "banners nuevos y cambios de precio.\n\n"
         "<b>Cartelera IMAX hoy:</b>\n" + ("\n".join(lineas) or "(vacía)"))
+    guardar_cache()
+    return aviso
 
 
 # --------------------------------------------------------------------------- helpers
+
+def _peli(titulo: str, momento: datetime) -> str:
+    """Nombre de la película en inglés (TMDB); si no se encuentra, el de Showcase."""
+    return en_ingles(titulo, momento.year)
+
 
 def _url_funcion(fid: str, perf_id: str, f: dict) -> str | None:
     """Link directo a la función: es el mismo al que lleva el botón "Confirmar" del sitio."""
