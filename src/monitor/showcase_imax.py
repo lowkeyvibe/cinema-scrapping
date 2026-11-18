@@ -27,7 +27,7 @@ from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 
-from src.monitor.titulos import en_ingles, guardar_cache, poster
+from src.monitor.titulos import detalles, en_ingles, guardar_cache, poster
 from src.scrapers.showcase_imax import CINE_IMAX_ID, ENTRADAS, HOUSE_ID, SITE, ShowcaseImaxScraper
 
 TZ = ZoneInfo("America/Argentina/Buenos_Aires")
@@ -247,18 +247,22 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     for fid in nuevas_pelis:
         p = p_ahora[fid]
         funcs = nuevas_por_peli.pop(fid, [])
+        det = detalles(p["titulo"], momento.year)
         if funcs:
-            # Igual que Cinemark: el póster ya dice qué película es.
-            txt = "<b>🟢🟢 Tickets are on sale now!! 🟢🟢</b>\n\n" + _bloques(funcs, fid, momento)
+            # Igual que Cinemark: la imagen ya dice qué película es. Va el fondo panorámico.
+            txt = ("<b>🟢🟢 Tickets are on sale now!! 🟢🟢</b>" + info_peli(det) + "\n\n"
+                   + _bloques(funcs, fid, momento, det["duracion"]))
+            avisos.append(Aviso(txt, det["fondo"] or img(fid)))
         else:
-            txt = (f"🎬 <b>Nueva en IMAX: {_e(_peli(p['titulo'], momento))}</b>\n\n"
+            txt = (f"🎬 <b>Nueva en IMAX: {_e(_peli(p['titulo'], momento))}</b>" + info_peli(det) + "\n\n"
                    f"Todavía no hay funciones subtituladas desde las {HORA_DESDE}." + _pie(p["url"]))
-        avisos.append(Aviso(txt, img(fid)))
+            avisos.append(Aviso(txt, img(fid)))
 
     for fid, funcs in nuevas_por_peli.items():
         p = p_ahora.get(fid) or {"titulo": funcs[0]["pelicula"], "url": ""}
-        avisos.append(Aviso(f"🎟️ <b>Funciones nuevas: {_e(_peli(p['titulo'], momento))}</b>\n\n"
-                            + _bloques(funcs, fid, momento), img(fid, p["titulo"])))
+        det = detalles(p["titulo"], momento.year)
+        avisos.append(Aviso(f"🎟️ <b>Funciones nuevas: {_e(_peli(p['titulo'], momento))}</b>" + info_peli(det)
+                            + "\n\n" + _bloques(funcs, fid, momento, det["duracion"]), img(fid, p["titulo"])))
 
     # Funciones que desaparecen antes de empezar => canceladas.
     canceladas: dict[str, list[dict]] = {}
@@ -334,15 +338,35 @@ def es_relevante(f: dict) -> bool:
     return es_de_noche(f) and "castellano" not in formato and "doblad" not in formato
 
 
-def _bloques(funcs: list[dict], fid: str, momento: datetime) -> str:
+def _bloques(funcs: list[dict], fid: str, momento: datetime, duracion: int | None = None) -> str:
     """Mismo formato que Cinemark (sin asientos libres: Showcase no los publica):
 
         📍 <b>IMAX - Norcenter</b>
         <a href="…">IMAX 🍿 · 22:35 · Subtitulada</a>
-             Jue 26/11
+        Jue 26/11 · termina 01:00
     """
     futuras = [f for f in sorted(funcs, key=_inicio) if _inicio(f) > momento][:MAX_FUNCIONES]
-    return f"📍 <b>{CINE_IMAX}</b>\n" + _separados(_bloque(f, fid) for f in futuras)
+    return f"📍 <b>{CINE_IMAX}</b>\n" + _separados(_bloque(f, fid, duracion) for f in futuras)
+
+
+def info_peli(det: dict) -> str:
+    """Segunda línea del título: '⏱️ 2 h 30 min · ▶️ Trailer' (lo que haya), con salto de línea delante."""
+    partes = []
+    if det.get("duracion"):
+        h, m = divmod(int(det["duracion"]), 60)
+        partes.append("⏱️ " + (f"{h} h {m:02d} min" if h else f"{m} min"))
+    if det.get("trailer"):
+        partes.append(f'▶️ <a href="{html.escape(det["trailer"])}">Trailer</a>')
+    return ("\n" + " · ".join(partes)) if partes else ""
+
+
+def termina(hora: str, duracion: int | None) -> str:
+    """' · termina 01:15' a partir de la hora de inicio y la duración (sin contar publicidades)."""
+    if not duracion:
+        return ""
+    h, m = map(int, hora.split(":"))
+    fin = (h * 60 + m + int(duracion)) % (24 * 60)
+    return f" · termina {fin // 60:02d}:{fin % 60:02d}"
 
 
 SEPARADOR = "-" * 33
@@ -353,7 +377,7 @@ def _separados(bloques) -> str:
     return "\n".join([SEPARADOR] + [x for b in bloques for x in (b, SEPARADOR)])
 
 
-def _bloque(f: dict, fid: str) -> str:
+def _bloque(f: dict, fid: str, duracion: int | None = None) -> str:
     formato, _, idioma = (f.get("formato") or "IMAX").partition("-")
     idioma = {"subtitulado": "Subtitulada", "castellano": "Doblada al castellano"}.get(idioma.strip().lower(), idioma.strip())
     cabeza = " · ".join(x for x in ("IMAX 🍿", f["hora"], idioma) if x)
@@ -362,7 +386,7 @@ def _bloque(f: dict, fid: str) -> str:
         cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
     d = datetime.strptime(f["fecha"], "%Y-%m-%d")
     dia = f"{DIAS[d.weekday()]} {d:%d/%m}" + (" (trasnoche)" if f.get("trasnoche") else "")
-    return cabeza + "\n" + dia
+    return cabeza + "\n" + dia + termina(f["hora"], duracion)
 
 
 def es_de_noche(f: dict) -> bool:

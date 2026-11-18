@@ -5,7 +5,8 @@
 
 Busca el título en castellano (con el año, si se sabe) y devuelve el título en
 inglés. Los resultados se guardan en state/titulos.json para no repetir la
-consulta en cada corrida, junto con el póster (poster()). Ese archivo se puede
+consulta en cada corrida, junto con el póster (poster()) y los detalles de
+detalles(): fondo panorámico, duración y trailer. Ese archivo se puede
 editar a mano para corregir un título mal encontrado: poné "manual": true en la
 entrada y no se vuelve a pisar.
 
@@ -26,7 +27,11 @@ import requests
 CACHE = Path("state/titulos.json")
 API = "https://api.themoviedb.org/3/search/movie"
 IMAGENES = "https://image.tmdb.org/t/p/w780"
+FONDOS = "https://image.tmdb.org/t/p/w1280"
 REINTENTAR_DESPUES = 3 * 24 * 3600  # una película no encontrada se vuelve a buscar a los 3 días
+# Antes del estreno TMDB a veces no tiene duración o trailer: los detalles incompletos se
+# vuelven a pedir una vez por día.
+REFRESCAR_DETALLES = 24 * 3600
 
 _cache: dict | None = None
 _cambios = False
@@ -46,11 +51,30 @@ def poster(titulo: str, anio: int | str | None = None) -> str | None:
     return (_datos(titulo, anio) or {}).get("poster")
 
 
+def detalles(titulo: str, anio: int | str | None = None) -> dict:
+    """{"fondo": url, "duracion": minutos, "trailer": url de YouTube}; los que falten, None."""
+    vacio = {"fondo": None, "duracion": None, "trailer": None}
+    datos = _datos(titulo, anio) if titulo else None
+    if not datos or not datos.get("id"):
+        return vacio
+    det = datos.get("detalles")
+    incompleto = not det or not det.get("duracion") or not det.get("trailer")
+    if incompleto and time.time() - (det or {}).get("t", 0) > REFRESCAR_DETALLES:
+        token = os.environ.get("TMDB_TOKEN")
+        if token:
+            try:
+                det = {**_pedir_detalles(datos["id"], token), "t": int(time.time())}
+                _guardar(_clave(titulo), {**datos, "detalles": det})
+            except Exception as e:  # noqa: BLE001 - el aviso sale igual, sin estos datos
+                print(f"  ! TMDB detalles ({titulo}): {e}")
+    return {**vacio, **{k: v for k, v in (det or {}).items() if k in vacio}}
+
+
 def _datos(titulo: str, anio) -> dict | None:
     """Lo que hay en el caché para esta película; si falta, lo busca en TMDB."""
     clave = _clave(titulo)
     guardado = _cargar().get(clave)
-    completo = guardado and "poster" in guardado
+    completo = guardado and "poster" in guardado and ("id" in guardado or not guardado.get("en"))
     if completo and (guardado.get("en") or time.time() - guardado.get("t", 0) < REINTENTAR_DESPUES):
         return guardado
 
@@ -58,11 +82,11 @@ def _datos(titulo: str, anio) -> dict | None:
     if not token:
         return guardado
     try:
-        en, img = _buscar(titulo, anio, token)
+        en, img, tmdb_id = _buscar(titulo, anio, token)
     except Exception as e:  # noqa: BLE001 - sin TMDB el aviso sale igual, en castellano
         print(f"  ! TMDB ({titulo}): {e}")
         return guardado
-    nuevo = {"es": titulo, "en": en, "poster": img, "t": int(time.time())}
+    nuevo = {"es": titulo, "en": en, "poster": img, "id": tmdb_id, "t": int(time.time())}
     if guardado and guardado.get("manual"):
         nuevo["en"] = guardado.get("en")   # un título corregido a mano no se pisa
         nuevo["manual"] = True
@@ -81,7 +105,7 @@ def guardar_cache() -> None:
 
 # ---------------------------------------------------------------------------
 
-def _buscar(titulo: str, anio, token: str) -> tuple[str | None, str | None]:
+def _buscar(titulo: str, anio, token: str) -> tuple[str | None, str | None, int | None]:
     headers = {"Authorization": f"Bearer {token}"}
     consulta = re.sub(r"\s+", " ", titulo).strip()
     # Primero con el año (y el anterior, por estrenos de fin de año), después sin año.
@@ -96,8 +120,30 @@ def _buscar(titulo: str, anio, token: str) -> tuple[str | None, str | None]:
         if resultados:
             m = resultados[0]
             img = f"{IMAGENES}{m['poster_path']}" if m.get("poster_path") else None
-            return _prolijo(m.get("title") or m.get("original_title")), img
-    return None, None
+            return _prolijo(m.get("title") or m.get("original_title")), img, m.get("id")
+    return None, None, None
+
+
+def _pedir_detalles(tmdb_id: int, token: str) -> dict:
+    r = requests.get(f"https://api.themoviedb.org/3/movie/{tmdb_id}",
+                     headers={"Authorization": f"Bearer {token}"},
+                     params={"language": "en-US", "append_to_response": "videos"}, timeout=20)
+    r.raise_for_status()
+    m = r.json()
+    return {
+        "fondo": f"{FONDOS}{m['backdrop_path']}" if m.get("backdrop_path") else None,
+        "duracion": m.get("runtime") or None,
+        "trailer": _trailer((m.get("videos") or {}).get("results") or []),
+    }
+
+
+def _trailer(videos: list[dict]) -> str | None:
+    """El trailer de YouTube más reciente, prefiriendo el oficial."""
+    trailers = [v for v in videos if v.get("site") == "YouTube" and v.get("type") == "Trailer" and v.get("key")]
+    if not trailers:
+        return None
+    mejor = max(trailers, key=lambda v: (bool(v.get("official")), v.get("published_at") or ""))
+    return f"https://www.youtube.com/watch?v={mejor['key']}"
 
 
 def _prolijo(t: str | None) -> str | None:

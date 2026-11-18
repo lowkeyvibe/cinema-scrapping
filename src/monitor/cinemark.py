@@ -22,8 +22,8 @@ from datetime import datetime, timedelta
 
 from src.scrapers.cinemark import SITE, CinemarkScraper
 
-from .showcase_imax import DIAS, HORA_DESDE, TZ, Aviso, _e, _separados
-from .titulos import en_ingles, guardar_cache, poster
+from .showcase_imax import DIAS, HORA_DESDE, TZ, Aviso, _e, _separados, info_peli, termina
+from .titulos import detalles, en_ingles, guardar_cache, poster
 
 SECCIONES = ("peliculas", "funciones", "promos", "merch")
 MARGEN_CANCELADA = timedelta(hours=1)
@@ -244,17 +244,21 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
         if pid not in pelis_con_funciones_antes:
             # Primera vez que la película tiene funciones: se avisa aunque no haya de noche.
             # El póster ya dice qué película es: el título queda corto.
-            txt = "<b>🟢🟢 Tickets are on sale now!! 🟢🟢</b>\n\n"
+            det = _detalles(peli, momento)
+            txt = "<b>🟢🟢 Tickets are on sale now!! 🟢🟢</b>" + info_peli(det) + "\n\n"
             if noche:
-                txt += _bloques(noche, peli.get("url", ""))
+                txt += _bloques(noche, peli.get("url", ""), det["duracion"])
                 botones = []
             else:
                 txt += f"Todavía no hay funciones subtituladas desde las {HORA_DESDE}."
                 botones = _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))
-            primeras.append(Aviso(txt, _poster(peli, momento), botones))
+            # Va el fondo panorámico de la película (si TMDB lo tiene); si no, el póster.
+            primeras.append(Aviso(txt, det["fondo"] or _poster(peli, momento), botones))
         elif noche:
             # Un aviso por película, con un bloque por función.
-            resto.append(Aviso(f"🎟️ <b>Funciones nuevas: {titulo}</b>\n\n{_bloques(noche, peli.get('url', ''))}",
+            det = _detalles(peli, momento)
+            resto.append(Aviso(f"🎟️ <b>Funciones nuevas: {titulo}</b>" + info_peli(det) + "\n\n"
+                               + _bloques(noche, peli.get("url", ""), det["duracion"]),
                                _poster(peli, momento)))
     avisos += primeras + resto
 
@@ -380,6 +384,12 @@ def _peli(p: dict, momento: datetime | None = None) -> str:
     return _e(en_ingles(p["titulo"], anio))
 
 
+def _detalles(p: dict, momento: datetime | None = None) -> dict:
+    """Fondo panorámico, duración y trailer de TMDB (ver titulos.detalles)."""
+    anio = (p.get("estreno") or "")[:4] or (momento or datetime.now(TZ)).year
+    return detalles(p["titulo"], anio)
+
+
 def _poster(p: dict, momento: datetime | None = None) -> str | None:
     """Póster de TMDB (arte en inglés); si no hay, el del sitio de Cinemark."""
     anio = (p.get("estreno") or "")[:4] or (momento or datetime.now(TZ)).year
@@ -408,12 +418,12 @@ def es_de_noche(f: dict) -> bool:
     return hora >= HORA_DESDE or hora < "06:00"
 
 
-def _bloques(fs: list[dict], url: str = "") -> str:
+def _bloques(fs: list[dict], url: str = "", duracion: int | None = None) -> str:
     """Un bloque por función, agrupadas por cine y en orden de horario (mismo formato que IMAX):
 
         📍 <b>CINEMARK - Abasto</b>
         <a href="…">Cinemark 🍿 · 22:45 · Subtitulada</a>
-             Mié 16/12
+        Mié 16/12 · termina 01:15
 
     El link lleva a comprar: Cinemark no tiene
     un link por función, así que abre la película y ahí se toca el horario.
@@ -424,7 +434,7 @@ def _bloques(fs: list[dict], url: str = "") -> str:
         por_cine.setdefault(f["cine"], []).append(f)
     partes = []
     for cine, funcs in sorted(por_cine.items()):
-        bloques = [_bloque(f, url) for f in funcs[:MAX_POR_CINE]]
+        bloques = [_bloque(f, url, duracion) for f in funcs[:MAX_POR_CINE]]
         partes.append(f"📍 <b>CINEMARK - {_e(cine)}</b>\n" + _separados(bloques))
     return "\n\n".join(partes)
 
@@ -433,12 +443,12 @@ SANGRIA = "\u00a0" * 5   # espacios que Telegram no recorta al principio de la l
 TIPOS = {"SUB": "Subtitulada", "CAST": "Doblada al castellano"}
 
 
-def _bloque(f: dict, url: str = "") -> str:
+def _bloque(f: dict, url: str = "", duracion: int | None = None) -> str:
     cabeza = " · ".join(x for x in ("Cinemark 🍿", f["inicio"][11:16],
                                      TIPOS.get(f.get("idioma"), f.get("idioma") or "")) if x)
     if url:
         cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
-    return cabeza + "\n" + _dia_corto(f)
+    return cabeza + "\n" + _dia_corto(f) + termina(f["inicio"][11:16], duracion)
 
 
 def _lugares(f: dict) -> str:

@@ -1,9 +1,28 @@
 {
+ "avengers: doomsday": {
+  "en": "Avengers: Doomsday",
+  "es": "AVENGERS: DOOMSDAY",
+  "poster": "https://image.tmdb.org/t/p/w780/1zqWkLwC1zLBBBtIWzmkmWeMWnT.jpg",
+  "t": 1794977563
+ },
  "duna: parte tres": {
+  "detalles": {
+   "duracion": 150,
+   "fondo": "https://image.tmdb.org/t/p/w1280/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+   "t": 1794978954,
+   "trailer": "https://www.youtube.com/watch?v=uJqaGLmZpGo"
+  },
   "en": "Dune: Part Three",
   "es": "DUNA: PARTE TRES",
+  "id": 1170608,
   "poster": "https://image.tmdb.org/t/p/w780/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg",
-  "t": 1794974308
+  "t": 1794978954
+ },
+ "ebenezer: los fantasmas de navidad": {
+  "en": "Ebenezer",
+  "es": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+  "poster": "https://image.tmdb.org/t/p/w780/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg",
+  "t": 1794977563
  },
  "el gato con sombrero": {
   "en": "The Cat in the Hat",
@@ -17,15 +36,28 @@
   "t": 1794973458
  },
  "las nuevas desventuras de cliff booth": {
+  "detalles": {
+   "duracion": 141,
+   "fondo": "https://image.tmdb.org/t/p/w1280/qqPspJFy0XrEoVTKZdp0Em7kej6.jpg",
+   "t": 1794978951,
+   "trailer": "https://www.youtube.com/watch?v=fJH-wfSXnWg"
+  },
   "en": "The Further Mis-Adventures of Cliff Booth",
   "es": "Las nuevas desventuras de Cliff Booth",
+  "id": 1457866,
   "poster": "https://image.tmdb.org/t/p/w780/5jO6rhfethzH7xdWl6KCOxCNCzQ.jpg",
-  "t": 1794973458
+  "t": 1794978951
  },
  "los juegos del hambre: amanecer en la cosecha": {
   "en": "The Hunger Games: Sunrise on the Reaping",
   "es": "Los Juegos del Hambre: amanecer en la cosecha",
   "poster": "https://image.tmdb.org/t/p/w780/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg",
   "t": 1794973458
+ },
+ "perfume": {
+  "en": "Perfume",
+  "es": "PERFUME",
+  "poster": "https://image.tmdb.org/t/p/w780/t7flYSsrk9EbulxCX8MbduNGqXK.jpg",
+  "t": 1794977563
  }
 }
