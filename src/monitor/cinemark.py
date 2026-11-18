@@ -438,7 +438,7 @@ def _bloque(f: dict, url: str = "") -> str:
                                      TIPOS.get(f.get("idioma"), f.get("idioma") or "")) if x)
     if url:
         cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
-    return cabeza + "\n" + SANGRIA + _dia_corto(f)
+    return cabeza + "\n" + _dia_corto(f)
 
 
 def _lugares(f: dict) -> str:

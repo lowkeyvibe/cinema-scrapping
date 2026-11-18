@@ -344,7 +344,7 @@ def _bloques(funcs: list[dict], fid: str, momento: datetime) -> str:
     return f"📍 <b>{CINE_IMAX}</b>\n" + _separados(_bloque(f, fid) for f in futuras)
 
 
-SEPARADOR = "------------------------"
+SEPARADOR = "-" * 33
 
 
 def _separados(bloques) -> str:
@@ -361,7 +361,7 @@ def _bloque(f: dict, fid: str) -> str:
         cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
     d = datetime.strptime(f["fecha"], "%Y-%m-%d")
     dia = f"{DIAS[d.weekday()]} {d:%d/%m}" + (" (trasnoche)" if f.get("trasnoche") else "")
-    return cabeza + "\n" + SANGRIA + dia
+    return cabeza + "\n" + dia
 
 
 def es_de_noche(f: dict) -> bool:
