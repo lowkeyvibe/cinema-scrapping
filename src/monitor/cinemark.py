@@ -32,6 +32,13 @@ MARGEN_CANCELADA = timedelta(hours=1)
 CINES = {103: "Abasto", 733: "Palermo", 111: "DOT", 104: "Unicenter"}
 CINE_MERCH = "Abasto"  # la tienda pide elegir un cine; el catálogo es el mismo en todos
 MAX_LINEAS = 25        # para que un aviso no se vuelva interminable
+MAX_FUNCIONES = 12     # bloques de función por aviso; el resto, "y N funciones más"
+DIAS_LARGOS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+
+# Asientos libres de la última foto: {clave de función: (libres, capacidad)}.
+# Cambian en cada corrida, así que NO van a state/ (harían un commit cada 30 min):
+# solo se usan para armar el texto de los avisos.
+ASIENTOS: dict[str, tuple[int | None, int | None]] = {}
 ESTADOS = {"SHOWING_NOW": "En cartelera", "PRESALE": "Preventa", "COMING_SOON": "Próximamente"}
 
 
@@ -63,6 +70,7 @@ class Fotografo:
 
     def funciones(self) -> dict:
         items = {}
+        ASIENTOS.clear()
         for cine in self.scraper._get("theaters", limit=1000):
             if cine["id"] not in CINES:
                 continue
@@ -76,7 +84,10 @@ class Fotografo:
                     "inicio": s["sessionDateTime"][:16],
                     "formato": s.get("sessionFormat"),
                     "idioma": (s.get("language") or {}).get("shortName"),
+                    "sala": s.get("theaterRoom"),
                 }
+                occ = s.get("occupation") or {}
+                ASIENTOS[clave] = (occ.get("availableSeats"), occ.get("capacity"))
         if not items:
             raise RuntimeError("no vino ninguna función")
         return items
@@ -223,8 +234,8 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
     # Funciones nuevas: un resumen por película.
     nuevas: dict[str, list[dict]] = {}
     for k in ahora.keys() - antes.keys():
-        nuevas.setdefault(ahora[k]["pelicula_id"], []).append(ahora[k])
-    primeras, resto, pelis_resto = [], [], []
+        nuevas.setdefault(ahora[k]["pelicula_id"], []).append({**ahora[k], "clave": k})
+    primeras, resto = [], []
     for pid, fs in sorted(nuevas.items(), key=lambda x: -len(x[1])):
         peli = peliculas.get(pid) or {"titulo": fs[0]["pelicula"]}
         titulo = _peli(peli, momento)
@@ -233,18 +244,16 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
             # Primera vez que la película tiene funciones: se avisa aunque no haya de noche.
             txt = f"🔥 <b>¡Salieron las entradas de {titulo}!</b>\n"
             if noche:
-                txt += f"\n🌙 <b>Funciones desde las {HORA_DESDE}</b> ({_rango(noche)}):\n{_por_cine(noche)}"
+                txt += f"\n🌙 <b>Funciones desde las {HORA_DESDE}</b> ({_rango(noche)})\n\n{_bloques(noche)}"
             else:
                 txt += f"\nTodavía no hay funciones desde las {HORA_DESDE}."
             primeras.append(Aviso(txt, _poster(peli, momento), _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
         elif noche:
-            cines = sorted({f["cine"] for f in noche})
-            resto.append(f"• <b>{titulo}</b>: +{len(noche)} en {_e(', '.join(cines))} ({_rango(noche)})")
-            pelis_resto.append(peli)
-    avisos += primeras
-    if resto:
-        avisos.append(Aviso(f"🎟️ <b>Funciones nuevas en Cinemark</b> (desde las {HORA_DESDE})\n\n"
-                            + _recortar(resto), _poster_si_una(pelis_resto, momento)))
+            # Un aviso por película, con un bloque por función.
+            resto.append(Aviso(f"🎟️ <b>Funciones nuevas: {titulo}</b>\n\n{_bloques(noche)}",
+                               _poster(peli, momento),
+                               _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
+    avisos += primeras + resto
 
     # Funciones que desaparecen antes de empezar => canceladas.
     canceladas: dict[tuple[str, str], list[dict]] = {}
@@ -390,13 +399,47 @@ def es_de_noche(f: dict) -> bool:
     return hora >= HORA_DESDE or hora < "06:00"
 
 
-def _por_cine(fs: list[dict]) -> str:
-    """'• Palermo: 12 (primera Jue 17/12 20:45)', una línea por cine."""
+def _bloques(fs: list[dict]) -> str:
+    """Un bloque por función, agrupadas por cine y en orden de horario:
+
+        📍 <b>Abasto</b>
+
+        <b>DBOX 2D · 22:45</b>
+        Sala 11: 22 asientos libres de 30
+        Martes 15/12
+
+    Los MAX_FUNCIONES lugares se reparten entre los cines (así no se los come
+    uno solo); lo que no entra queda como "… y N funciones más en <cine>".
+    """
     por_cine: dict[str, list[dict]] = {}
-    for f in fs:
+    for f in sorted(fs, key=lambda f: (f["inicio"], f.get("formato") or "")):
         por_cine.setdefault(f["cine"], []).append(f)
-    return "\n".join(f"• {_e(cine)}: {len(v)} (primera {_cuando(min(v, key=_inicio))})"
-                     for cine, v in sorted(por_cine.items()))
+    por_cada = max(3, MAX_FUNCIONES // len(por_cine))
+    partes = []
+    for cine, funcs in sorted(por_cine.items()):
+        partes.append(f"📍 <b>{_e(cine)}</b>")
+        partes += [_bloque(f) for f in funcs[:por_cada]]
+        if len(funcs) > por_cada:
+            partes.append(f"<i>… y {len(funcs) - por_cada} funciones más en {_e(cine)}</i>")
+    return "\n\n".join(partes)
+
+
+def _bloque(f: dict) -> str:
+    libres, capacidad = ASIENTOS.get(f.get("clave", ""), (None, None))
+    lugar = f"Sala {_e(str(f['sala']))}" if f.get("sala") else ""
+    if libres is not None and capacidad:
+        lugar += (": " if lugar else "") + f"{libres} asientos libres de {capacidad}"
+    lineas = [f"<b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b>", lugar, _dia_largo(f)]
+    return "\n".join(l for l in lineas if l)
+
+
+def _dia_largo(f: dict) -> str:
+    """'Martes 15/12'; pasada la medianoche, el día anterior con '(trasnoche)'."""
+    d = _inicio(f)
+    if f["inicio"][11:16] < "06:00":
+        d -= timedelta(days=1)
+        return f"{DIAS_LARGOS[d.weekday()]} {d:%d/%m} (trasnoche)"
+    return f"{DIAS_LARGOS[d.weekday()]} {d:%d/%m}"
 
 
 def _inicio(f: dict) -> datetime:
