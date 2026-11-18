@@ -252,8 +252,7 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
             else:
                 txt += f"Todavía no hay funciones subtituladas desde las {HORA_DESDE}."
                 botones = _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))
-            # Va el fondo panorámico de la película (si TMDB lo tiene); si no, el póster.
-            primeras.append(Aviso(txt, det["fondo"] or _poster(peli, momento), botones))
+            primeras.append(Aviso(txt, _poster(peli, momento), botones))
         elif noche:
             # Un aviso por película, con un bloque por función.
             det = _detalles(peli, momento)

@@ -249,10 +249,10 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
         funcs = nuevas_por_peli.pop(fid, [])
         det = detalles(p["titulo"], momento.year)
         if funcs:
-            # Igual que Cinemark: la imagen ya dice qué película es. Va el fondo panorámico.
+            # Igual que Cinemark: el póster ya dice qué película es.
             txt = ("<b>🟢🟢 Tickets are on sale now!! 🟢🟢</b>" + info_peli(det) + "\n\n"
                    + _bloques(funcs, fid, momento, det["duracion"]))
-            avisos.append(Aviso(txt, det["fondo"] or img(fid)))
+            avisos.append(Aviso(txt, img(fid)))
         else:
             txt = (f"🎬 <b>Nueva en IMAX: {_e(_peli(p['titulo'], momento))}</b>" + info_peli(det) + "\n\n"
                    f"Todavía no hay funciones subtituladas desde las {HORA_DESDE}." + _pie(p["url"]))
