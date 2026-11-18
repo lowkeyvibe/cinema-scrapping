@@ -59,8 +59,6 @@ Cada corrida reemplaza las filas de esa cadena, así que otras cadenas pueden co
 | 🎬 Película nueva en IMAX / 🔥 arranque de preventa | cartelera IMAX de la home |
 | 🎟️ Funciones nuevas · ❌ canceladas · 🔄 cambio de horario | API `api.voyalcine.net` |
 | 🏷️ Promos IMAX nuevas, que terminan o cambian de vigencia | `/promocion` |
-| 🎁 Sorteos nuevos (kits de merch) | `/sorteo` |
-| 🖼️ Banners nuevos en la home (combos, merch, eventos) | carrusel de la home |
 | 🍿 Cambios en Candy | `/candy` |
 | 💲 Cambios de precio IMAX | `cron/data.js` |
 
@@ -72,7 +70,7 @@ Cada corrida reemplaza las filas de esa cadena, así que otras cadenas pueden co
 | 🔥 ¡Salieron las entradas! (primera vez que una película tiene funciones) | API `.../showtimes?theater=` (solo Abasto y DOT: `CINES` en `src/monitor/cinemark.py`) |
 | 🎟️ Funciones nuevas (resumen por película) · ❌ canceladas · 🔄 cambio de horario | ídem |
 | 🏷️ Promos nuevas, que terminan o cambian (solo las que aplican a esos cines) | API `.../content/promotions` |
-| 🛍️ Merch nuevo, que sale de la tienda o 💲 cambia de precio | tienda `/store` con Playwright (solo con `--merch`, cada 6 h) |
+| 🛍️ Merch nuevo, que sale de la tienda o 💲 cambia de precio | tienda `/store` con Playwright (solo a mano con `--merch`; no corre en Actions) |
 
 Si una sección no se puede leer, se conserva su foto anterior (sin falsos avisos); si falla
 6 corridas seguidas, llega un aviso ⚠️.
@@ -96,12 +94,12 @@ y Showcase con **@showcase_imax_alertas_bot**, los dos en el grupo "Cinema Alert
 ### Correrlo en GitHub Actions
 
 El workflow [`.github/workflows/monitor.yml`](.github/workflows/monitor.yml) corre todos los
-monitores cada 30 minutos (y el merch de Cinemark cada 6 h) y guarda las fotos en `state/` con un commit.
+monitores cada 5 minutos y guarda las fotos en `state/` con un commit.
 Si un monitor falla, los demás siguen igual y la corrida queda en rojo.
 
 1. En el repo: *Settings → Secrets and variables → Actions* → agregar `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`
    (o `gh secret set TELEGRAM_BOT_TOKEN` / `gh secret set TELEGRAM_CHAT_ID`).
 2. *Actions → Monitor de cines → Run workflow* para la primera corrida (manda un "monitor activado" por cada sitio).
 
-Con el repo privado: las corridas cada 30 min duran menos de 1 minuto facturado (~1.440 min/mes) y las del
-merch, ~2 min cada 6 h (~240 min/mes), así que entra en los 2.000 minutos gratis por mes de Actions.
+El repo es público, así que los minutos de Actions son ilimitados y puede correr cada 5 minutos
+(el mínimo que permite GitHub). Los tokens están en *Secrets*, nunca en el código.

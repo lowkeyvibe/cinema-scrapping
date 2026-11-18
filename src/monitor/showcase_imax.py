@@ -32,7 +32,8 @@ from src.scrapers.showcase_imax import CINE_IMAX_ID, ENTRADAS, HOUSE_ID, SITE, S
 
 TZ = ZoneInfo("America/Argentina/Buenos_Aires")
 MARGEN_CANCELADA = timedelta(hours=1)  # una función que "desaparece" a menos de 1h de empezar no es cancelación
-SECCIONES = ("peliculas", "funciones", "promos", "sorteos", "banners", "candy", "precios")
+# Sorteos y banners no interesan: no se leen ni se avisan (el código queda por si se quieren volver a sumar).
+SECCIONES = ("peliculas", "funciones", "promos", "candy", "precios")
 DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 
@@ -165,7 +166,7 @@ class Fotografo:
             foto["peliculas"], foto["funciones"] = self.peliculas_y_funciones()
         except Exception as e:  # noqa: BLE001
             log(f"  ! cartelera/funciones: {e}")
-        for seccion in ("promos", "sorteos", "banners", "candy", "precios"):
+        for seccion in ("promos", "candy", "precios"):
             try:
                 foto[seccion] = getattr(self, seccion)()
             except Exception as e:  # noqa: BLE001

@@ -5,16 +5,10 @@ name: Monitor de cines
 
 on:
   schedule:
-    # Cada 30 minutos (hora UTC). GitHub puede demorar unos minutos cada corrida.
-    - cron: "*/30 * * * *"
-    # Cada 6 horas, además, la tienda de merch de Cinemark (necesita un navegador: es más lenta).
-    - cron: "7 */6 * * *"
-  workflow_dispatch:      # botón "Run workflow" para correrlo a mano
-    inputs:
-      merch:
-        description: "Revisar también el merch de Cinemark"
-        type: boolean
-        default: true
+    # Cada 5 minutos (el mínimo de GitHub; el repo es público, así que los minutos son ilimitados).
+    # GitHub puede demorar unos minutos cada corrida.
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}   # botón "Run workflow" para correrlo a mano
 
 permissions:
   contents: write         # para guardar las fotos (state/) en el repo
@@ -22,9 +16,6 @@ permissions:
 concurrency:
   group: monitor-cines
   cancel-in-progress: false
-
-env:
-  MERCH: ${{ github.event.schedule == '7 */6 * * *' || (github.event_name == 'workflow_dispatch' && inputs.merch) }}
 
 jobs:
   monitor:
@@ -41,12 +32,6 @@ jobs:
 
       - run: pip install -r requirements-monitor.txt
 
-      - name: Instalar navegador (solo para el merch)
-        if: env.MERCH == 'true'
-        run: |
-          pip install playwright
-          python -m playwright install --with-deps --only-shell chromium
-
       - name: Revisar novedades y avisar por Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -56,7 +41,7 @@ jobs:
           # Bot propio de Cinemark (si no está, usa el general de arriba).
           TELEGRAM_BOT_TOKEN_CINEMARK: ${{ secrets.TELEGRAM_BOT_TOKEN_CINEMARK }}
           TELEGRAM_CHAT_ID_CINEMARK: ${{ secrets.TELEGRAM_CHAT_ID_CINEMARK }}
-        run: python -m src.monitor ${{ env.MERCH == 'true' && '--merch' || '' }}
+        run: python -m src.monitor
 
       - name: Guardar las fotos de los sitios
         # También si un monitor falló: el que anduvo ya mandó sus avisos y tiene que guardar su foto.
