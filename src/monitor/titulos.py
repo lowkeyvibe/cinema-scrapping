@@ -85,15 +85,23 @@ def _prolijo(t: str | None) -> str | None:
     if not t or t != t.upper() or not re.search(r"[A-Z]", t):
         return t
     chicas = {"a", "an", "and", "as", "at", "but", "by", "for", "in", "of", "on", "or", "the", "to", "vs", "with"}
-    palabras = t.lower().split(" ")
     salida = []
-    for i, p in enumerate(palabras):
+    for i, original in enumerate(t.split(" ")):
+        p = original.lower()
         anterior = salida[-1] if salida else ""
-        if i and p in chicas and not anterior.endswith(":"):
+        if len(original) > 1 and not re.search(r"[AEIOUY0-9]", original) and re.search(r"[A-Z]", original):
+            salida.append(original)          # siglas sin vocales (BTS, NCT): quedan en mayúscula
+        elif i and p in chicas and not anterior.endswith(":"):
             salida.append(p)
         else:
-            salida.append("-".join(s[:1].upper() + s[1:] for s in p.split("-")))
+            salida.append("-".join(_mayuscula_inicial(s) for s in p.split("-")))
     return " ".join(salida)
+
+
+def _mayuscula_inicial(palabra: str) -> str:
+    """Primera letra en mayúscula, salteando comillas o signos del principio ('arirang' -> 'Arirang')."""
+    m = re.search(r"[^\W\d_]", palabra)
+    return palabra[:m.start()] + palabra[m.start()].upper() + palabra[m.start() + 1:] if m else palabra
 
 
 def _clave(titulo: str) -> str:
