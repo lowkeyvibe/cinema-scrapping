@@ -248,7 +248,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
         funcs = nuevas_por_peli.pop(fid, [])
         if funcs:
             # Igual que Cinemark: el póster ya dice qué película es.
-            txt = "<b>🟢🟢🟢 Tickets are on sale now!! 🟢🟢🟢</b>\n\n" + _bloques(funcs, fid, momento)
+            txt = "<b>🟢🟢 Tickets are on sale now!! 🟢🟢</b>\n\n" + _bloques(funcs, fid, momento)
         else:
             txt = (f"🎬 <b>Nueva en IMAX: {_e(_peli(p['titulo'], momento))}</b>\n\n"
                    f"Todavía no hay funciones subtituladas desde las {HORA_DESDE}." + _pie(p["url"]))
@@ -341,7 +341,15 @@ def _bloques(funcs: list[dict], fid: str, momento: datetime) -> str:
              Jue 26/11
     """
     futuras = [f for f in sorted(funcs, key=_inicio) if _inicio(f) > momento][:MAX_FUNCIONES]
-    return f"📍 <b>{CINE_IMAX}</b>\n" + "\n\n".join(_bloque(f, fid) for f in futuras)
+    return f"📍 <b>{CINE_IMAX}</b>\n" + _separados(_bloque(f, fid) for f in futuras)
+
+
+SEPARADOR = "------------------------"
+
+
+def _separados(bloques) -> str:
+    """Bloques con una línea de guiones antes, entre y después de cada uno."""
+    return "\n".join([SEPARADOR] + [x for b in bloques for x in (b, SEPARADOR)])
 
 
 def _bloque(f: dict, fid: str) -> str:

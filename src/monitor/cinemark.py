@@ -22,7 +22,7 @@ from datetime import datetime, timedelta
 
 from src.scrapers.cinemark import SITE, CinemarkScraper
 
-from .showcase_imax import DIAS, HORA_DESDE, TZ, Aviso, _e
+from .showcase_imax import DIAS, HORA_DESDE, TZ, Aviso, _e, _separados
 from .titulos import en_ingles, guardar_cache, poster
 
 SECCIONES = ("peliculas", "funciones", "promos", "merch")
@@ -244,7 +244,7 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
         if pid not in pelis_con_funciones_antes:
             # Primera vez que la película tiene funciones: se avisa aunque no haya de noche.
             # El póster ya dice qué película es: el título queda corto.
-            txt = "<b>🟢🟢🟢 Tickets are on sale now!! 🟢🟢🟢</b>\n\n"
+            txt = "<b>🟢🟢 Tickets are on sale now!! 🟢🟢</b>\n\n"
             if noche:
                 txt += _bloques(noche, peli.get("url", ""))
                 botones = []
@@ -425,7 +425,7 @@ def _bloques(fs: list[dict], url: str = "") -> str:
     partes = []
     for cine, funcs in sorted(por_cine.items()):
         bloques = [_bloque(f, url) for f in funcs[:MAX_POR_CINE]]
-        partes.append(f"📍 <b>CINEMARK - {_e(cine)}</b>\n" + "\n\n".join(bloques))
+        partes.append(f"📍 <b>CINEMARK - {_e(cine)}</b>\n" + _separados(bloques))
     return "\n\n".join(partes)
 
 
