@@ -413,9 +413,9 @@ def _bloques(fs: list[dict], url: str = "") -> str:
 
         📍 <b>CINEMARK - Abasto</b>
         <a href="…">Cinemark 🍿 · 22:45 · Subtitulada</a>
-             Mié 16/12 · 231 🟢 / 279 🔴
+             Mié 16/12
 
-    (🟢 asientos libres / 🔴 capacidad). El link lleva a comprar: Cinemark no tiene
+    El link lleva a comprar: Cinemark no tiene
     un link por función, así que abre la película y ahí se toca el horario.
     Hasta MAX_POR_CINE funciones por cine.
     """
@@ -438,8 +438,7 @@ def _bloque(f: dict, url: str = "") -> str:
                                      TIPOS.get(f.get("idioma"), f.get("idioma") or "")) if x)
     if url:
         cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
-    lugares = _lugares(f)
-    return cabeza + "\n" + SANGRIA + (f"{_dia_corto(f)} · {lugares}" if lugares else _dia_corto(f))
+    return cabeza + "\n" + SANGRIA + _dia_corto(f)
 
 
 def _lugares(f: dict) -> str:
