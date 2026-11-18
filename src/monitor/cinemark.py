@@ -244,7 +244,7 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
         if pid not in pelis_con_funciones_antes:
             # Primera vez que la película tiene funciones: se avisa aunque no haya de noche.
             # El póster ya dice qué película es: el título queda corto.
-            txt = "<b>Tickets are on sale now!</b>\n\n"
+            txt = "<b>🟢🟢🟢 Tickets are on sale now!! 🟢🟢🟢</b>\n\n"
             if noche:
                 txt += _bloques(noche, peli.get("url", ""))
                 botones = []
