@@ -17,6 +17,7 @@ lo más lento.
 
 from __future__ import annotations
 
+import html
 from datetime import datetime, timedelta
 
 from src.scrapers.cinemark import SITE, CinemarkScraper
@@ -182,6 +183,8 @@ def comparar(antes: dict, ahora: dict, momento: datetime | None = None) -> list[
         avisos += _avisos_promos(p_antes, ahora["promos"])
     if ambas("merch"):
         avisos += _avisos_merch(antes["merch"], ahora["merch"])
+    for a in avisos:
+        _links_en_texto(a)
     return avisos
 
 
@@ -194,13 +197,13 @@ def _avisos_peliculas(antes: dict, ahora: dict, con_funciones: set[str]) -> list
             txt += f" · estreno {_dia(p['estreno'])}"
         if p["estado"] == "Preventa":
             txt += "\n🔥 ¡Ya está en preventa!"
-        avisos.append(Aviso(txt, p.get("poster"), _boton("🎟️ Ver película y entradas", p["url"])))
+        avisos.append(Aviso(txt, p.get("poster"), _boton("🎟️ Ver película y todas las funciones", p["url"])))
     for k in antes.keys() & ahora.keys():
         a, p = antes[k], ahora[k]
         if a["estado"] != p["estado"]:
             fuego = "🔥 " if p["estado"] == "Preventa" else ""
             avisos.append(Aviso(f"📣 {fuego}<b>{_e(p['titulo'])}</b>: {a['estado']} → {p['estado']}",
-                                p.get("poster"), _boton("🎟️ Comprar entradas", p["url"])))
+                                p.get("poster"), _boton("🎟️ Ver película y todas las funciones", p["url"])))
         elif a["estreno"] != p["estreno"] and a["estreno"] and p["estreno"]:
             avisos.append(Aviso(f"📅 <b>{_e(p['titulo'])}</b>: cambió el estreno "
                                 f"{_dia(a['estreno'])} → {_dia(p['estreno'])}",
@@ -231,7 +234,7 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
                 txt += f"\n🌙 <b>Funciones desde las {HORA_DESDE}</b> ({_rango(noche)}):\n{_por_cine(noche)}"
             else:
                 txt += f"\nTodavía no hay funciones desde las {HORA_DESDE}."
-            primeras.append(Aviso(txt, peli.get("poster"), _boton("🎟️ Comprar entradas", peli.get("url", ""))))
+            primeras.append(Aviso(txt, peli.get("poster"), _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
         elif noche:
             cines = sorted({f["cine"] for f in noche})
             resto.append(f"• <b>{_e(titulo)}</b>: +{len(noche)} en {_e(', '.join(cines))} ({_rango(noche)})")
@@ -332,6 +335,18 @@ def _cines(nombres: list[str]) -> str:
 
 def _boton(texto: str, url: str) -> list[list[dict]]:
     return [[{"text": texto, "url": url}]] if url else []
+
+
+def _links_en_texto(aviso: Aviso) -> None:
+    """Sin botones (el usuario no los quiere): cada uno pasa a ser un link al pie del texto.
+
+    "🎟️ Ver película" → "🎟️ <a href=...>Ver película</a>"
+    """
+    for fila in aviso.botones:
+        for b in fila:
+            emoji, _, etiqueta = b["text"].partition(" ")
+            aviso.texto += f'\n\n{emoji} <a href="{html.escape(b["url"])}">{_e(etiqueta)}</a>'
+    aviso.botones = []
 
 
 def es_de_noche(f: dict) -> bool:
