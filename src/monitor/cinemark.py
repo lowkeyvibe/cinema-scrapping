@@ -23,7 +23,7 @@ from datetime import datetime, timedelta
 from src.scrapers.cinemark import SITE, CinemarkScraper
 
 from .showcase_imax import DIAS, HORA_DESDE, TZ, Aviso, _e
-from .titulos import en_ingles, guardar_cache
+from .titulos import en_ingles, guardar_cache, poster
 
 SECCIONES = ("peliculas", "funciones", "promos", "merch")
 MARGEN_CANCELADA = timedelta(hours=1)
@@ -199,19 +199,19 @@ def _avisos_peliculas(antes: dict, ahora: dict, con_funciones: set[str]) -> list
             txt += f" · estreno {_dia(p['estreno'])}"
         if p["estado"] == "Preventa":
             txt += "\n🔥 ¡Ya está en preventa!"
-        avisos.append(Aviso(txt, p.get("poster"), _boton("🎟️ Ver película y todas las funciones", p["url"])))
+        avisos.append(Aviso(txt, _poster(p), _boton("🎟️ Ver película y todas las funciones", p["url"])))
     for k in antes.keys() & ahora.keys():
         a, p = antes[k], ahora[k]
         if a["estado"] != p["estado"]:
             fuego = "🔥 " if p["estado"] == "Preventa" else ""
             avisos.append(Aviso(f"📣 {fuego}<b>{_peli(p)}</b>: {a['estado']} → {p['estado']}",
-                                p.get("poster"), _boton("🎟️ Ver película y todas las funciones", p["url"])))
+                                _poster(p), _boton("🎟️ Ver película y todas las funciones", p["url"])))
         elif a["estreno"] != p["estreno"] and a["estreno"] and p["estreno"]:
             avisos.append(Aviso(f"📅 <b>{_peli(p)}</b>: cambió el estreno "
                                 f"{_dia(a['estreno'])} → {_dia(p['estreno'])}",
-                                botones=_boton("🎬 Ver película", p["url"])))
+                                _poster(p), _boton("🎬 Ver película", p["url"])))
     for k in antes.keys() - ahora.keys():
-        avisos.append(Aviso(f"👋 <b>Salió de Cinemark:</b> {_peli(antes[k])}"))
+        avisos.append(Aviso(f"👋 <b>Salió de Cinemark:</b> {_peli(antes[k])}", _poster(antes[k])))
     return avisos
 
 
@@ -224,10 +224,10 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
     nuevas: dict[str, list[dict]] = {}
     for k in ahora.keys() - antes.keys():
         nuevas.setdefault(ahora[k]["pelicula_id"], []).append(ahora[k])
-    primeras, resto = [], []
+    primeras, resto, pelis_resto = [], [], []
     for pid, fs in sorted(nuevas.items(), key=lambda x: -len(x[1])):
-        peli = peliculas.get(pid) or {}
-        titulo = _peli(peli or {"titulo": fs[0]["pelicula"]}, momento)
+        peli = peliculas.get(pid) or {"titulo": fs[0]["pelicula"]}
+        titulo = _peli(peli, momento)
         noche = [f for f in fs if es_de_noche(f)]
         if pid not in pelis_con_funciones_antes:
             # Primera vez que la película tiene funciones: se avisa aunque no haya de noche.
@@ -236,35 +236,42 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
                 txt += f"\n🌙 <b>Funciones desde las {HORA_DESDE}</b> ({_rango(noche)}):\n{_por_cine(noche)}"
             else:
                 txt += f"\nTodavía no hay funciones desde las {HORA_DESDE}."
-            primeras.append(Aviso(txt, peli.get("poster"), _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
+            primeras.append(Aviso(txt, _poster(peli, momento), _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
         elif noche:
             cines = sorted({f["cine"] for f in noche})
             resto.append(f"• <b>{titulo}</b>: +{len(noche)} en {_e(', '.join(cines))} ({_rango(noche)})")
+            pelis_resto.append(peli)
     avisos += primeras
     if resto:
         avisos.append(Aviso(f"🎟️ <b>Funciones nuevas en Cinemark</b> (desde las {HORA_DESDE})\n\n"
-                            + _recortar(resto)))
+                            + _recortar(resto), _poster_si_una(pelis_resto, momento)))
 
     # Funciones que desaparecen antes de empezar => canceladas.
     canceladas: dict[tuple[str, str], list[dict]] = {}
+    pelis_canceladas: dict[str, dict] = {}
     for k in antes.keys() - ahora.keys():
         f = antes[k]
         if es_de_noche(f) and _inicio(f) > momento + MARGEN_CANCELADA:
             canceladas.setdefault((_peli_de(f, peliculas, momento), f["cine"]), []).append(f)
+            pelis_canceladas[f["pelicula_id"]] = peliculas.get(f["pelicula_id"]) or {"titulo": f["pelicula"]}
     if canceladas:
         lineas = [f"• <b>{peli}</b> — {_e(cine)}: "
                   + ", ".join(_cuando(f) for f in sorted(fs, key=_inicio)[:6])
                   + (f" y {len(fs) - 6} más" if len(fs) > 6 else "")
                   for (peli, cine), fs in sorted(canceladas.items())]
-        avisos.append(Aviso("❌ <b>Funciones canceladas en Cinemark</b>\n\n" + _recortar(lineas)))
+        avisos.append(Aviso("❌ <b>Funciones canceladas en Cinemark</b>\n\n" + _recortar(lineas),
+                            _poster_si_una(list(pelis_canceladas.values()), momento)))
 
     # Misma función con otro horario (si era o pasa a ser de noche).
-    cambios = [f"• <b>{_peli_de(ahora[k], peliculas, momento)}</b> — {_e(ahora[k]['cine'])}: "
-               f"{_cuando(antes[k])} → {_cuando(ahora[k])}"
-               for k in antes.keys() & ahora.keys()
+    movidas = [k for k in antes.keys() & ahora.keys()
                if antes[k]["inicio"] != ahora[k]["inicio"] and (es_de_noche(antes[k]) or es_de_noche(ahora[k]))]
+    cambios = [f"• <b>{_peli_de(ahora[k], peliculas, momento)}</b> — {_e(ahora[k]['cine'])}: "
+               f"{_cuando(antes[k])} → {_cuando(ahora[k])}" for k in movidas]
     if cambios:
-        avisos.append(Aviso("🔄 <b>Cambios de horario en Cinemark</b>\n\n" + _recortar(sorted(cambios))))
+        pelis = {ahora[k]["pelicula_id"]: peliculas.get(ahora[k]["pelicula_id"]) or {"titulo": ahora[k]["pelicula"]}
+                 for k in movidas}
+        avisos.append(Aviso("🔄 <b>Cambios de horario en Cinemark</b>\n\n" + _recortar(sorted(cambios)),
+                            _poster_si_una(list(pelis.values()), momento)))
     return avisos
 
 
@@ -359,6 +366,17 @@ def _peli(p: dict, momento: datetime | None = None) -> str:
     """
     anio = (p.get("estreno") or "")[:4] or (momento or datetime.now(TZ)).year
     return _e(en_ingles(p["titulo"], anio))
+
+
+def _poster(p: dict, momento: datetime | None = None) -> str | None:
+    """Póster de TMDB (arte en inglés); si no hay, el del sitio de Cinemark."""
+    anio = (p.get("estreno") or "")[:4] or (momento or datetime.now(TZ)).year
+    return poster(p["titulo"], anio) or p.get("poster")
+
+
+def _poster_si_una(pelis: list[dict], momento: datetime) -> str | None:
+    """En los avisos que juntan varias películas, póster solo si es una sola."""
+    return _poster(pelis[0], momento) if len(pelis) == 1 else None
 
 
 def _peli_de(f: dict, peliculas: dict, momento: datetime) -> str:
