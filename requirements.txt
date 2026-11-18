@@ -1,0 +1,18 @@
+# HTTP
+requests
+httpx
+fake-useragent
+tenacity
+# Parseo HTML
+beautifulsoup4
+lxml
+# Sitios con JavaScript
+playwright
+# Google Sheets
+gspread
+google-auth
+gspread-dataframe
+# Datos y utilidades
+pandas
+python-dotenv
+schedule
