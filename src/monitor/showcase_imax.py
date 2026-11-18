@@ -38,8 +38,9 @@ DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 # Solo interesan las funciones de noche: desde esta hora, más las de trasnoche (después de medianoche).
 HORA_DESDE = "20:30"
-# Showcase no publica asientos libres por función; la sala es siempre la misma.
-SALA_IMAX = "📍 Sala IMAX · 320 butacas"
+CINE_IMAX = "IMAX Theatre"
+MAX_FUNCIONES = 8      # bloques por aviso, igual que en Cinemark; el resto, con el link a la película
+SANGRIA = "\u00a0" * 5
 
 
 @dataclass
@@ -239,33 +240,30 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     nuevas_por_peli: dict[str, list[dict]] = {}
     for k in f_ahora.keys() - f_antes.keys():
         f = {**f_ahora[k], "perf": k}
-        if es_de_noche(f):
+        if es_relevante(f):
             nuevas_por_peli.setdefault(f["pelicula_id"], []).append(f)
 
     for fid in nuevas_pelis:
         p = p_ahora[fid]
         funcs = nuevas_por_peli.pop(fid, [])
-        txt = f"🎬 <b>Nueva en IMAX: {_e(_peli(p['titulo'], momento))}</b>"
-        if p["estado"] == "Preventa":
-            txt += "\n🔥 ¡Arrancó la preventa!"
         if funcs:
-            txt += f"\n\n<b>Funciones desde las {HORA_DESDE}:</b>\n{SALA_IMAX}\n{_listar(funcs, fid, momento)}"
+            # Igual que Cinemark: el póster ya dice qué película es.
+            txt = "<b>Tickets are on sale now!</b>\n\n" + _bloques(funcs, fid, momento)
         else:
-            txt += f"\n\nTodavía no hay funciones desde las {HORA_DESDE}."
-        avisos.append(Aviso(txt + _pie(p["url"]), img(fid)))
+            txt = (f"🎬 <b>Nueva en IMAX: {_e(_peli(p['titulo'], momento))}</b>\n\n"
+                   f"Todavía no hay funciones subtituladas desde las {HORA_DESDE}." + _pie(p["url"]))
+        avisos.append(Aviso(txt, img(fid)))
 
     for fid, funcs in nuevas_por_peli.items():
         p = p_ahora.get(fid) or {"titulo": funcs[0]["pelicula"], "url": ""}
-        n = len(funcs)
-        avisos.append(Aviso(
-            f"🎟️ <b>{n} {'función' if n == 1 else 'funciones'} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(_peli(p['titulo'], momento))}</b>\n\n{SALA_IMAX}\n"
-            f"{_listar(funcs, fid, momento)}" + _pie(p["url"]), img(fid, p["titulo"])))
+        avisos.append(Aviso(f"🎟️ <b>Funciones nuevas: {_e(_peli(p['titulo'], momento))}</b>\n\n"
+                            + _bloques(funcs, fid, momento), img(fid, p["titulo"])))
 
     # Funciones que desaparecen antes de empezar => canceladas.
     canceladas: dict[str, list[dict]] = {}
     for k in f_antes.keys() - f_ahora.keys():
         f = f_antes[k]
-        if es_de_noche(f) and _inicio(f) > momento + MARGEN_CANCELADA:
+        if es_relevante(f) and _inicio(f) > momento + MARGEN_CANCELADA:
             canceladas.setdefault(f["pelicula_id"], []).append(f)
     for fid, funcs in canceladas.items():
         titulo = _peli(funcs[0]["pelicula"], momento)
@@ -276,7 +274,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     cambios, pelis_cambiadas = [], set()
     for k in f_antes.keys() & f_ahora.keys():
         a, b = f_antes[k], f_ahora[k]
-        if (a["fecha"], a["hora"]) != (b["fecha"], b["hora"]) and (es_de_noche(a) or es_de_noche(b)):
+        if (a["fecha"], a["hora"]) != (b["fecha"], b["hora"]) and (es_relevante(a) or es_relevante(b)):
             cambios.append(f"• {_e(_peli(b['pelicula'], momento))}: {_fecha(a)} → {_fecha(b)}")
             pelis_cambiadas.add((b["pelicula_id"], b["pelicula"]))
     if cambios:
@@ -303,7 +301,7 @@ def resumen_inicial(foto: dict) -> Aviso:
     funcs = foto.get("funciones", {})
     lineas = []
     for fid, p in pelis.items():
-        n = sum(1 for f in funcs.values() if f["pelicula_id"] == fid and es_de_noche(f))
+        n = sum(1 for f in funcs.values() if f["pelicula_id"] == fid and es_relevante(f))
         lineas.append(f"• {_e(_peli(p['titulo'], datetime.now(TZ)))} — {p['estado']}, {n} funciones desde las {HORA_DESDE}")
     aviso = Aviso(
         "✅ <b>Monitor de Showcase IMAX activado</b>\n"
@@ -327,6 +325,35 @@ def _url_funcion(fid: str, perf_id: str, f: dict) -> str | None:
         return None
     return (f"{ENTRADAS}/pelicula.aspx?filmid={fid}&perf={perf_id}"
             f"&cinema={f['cinema']}&date={f['fecha']}&show={f['show']}")
+
+
+def es_relevante(f: dict) -> bool:
+    """Las únicas funciones que interesan: de noche y subtituladas (como en Cinemark)."""
+    formato = (f.get("formato") or "").lower()
+    return es_de_noche(f) and "castellano" not in formato and "doblad" not in formato
+
+
+def _bloques(funcs: list[dict], fid: str, momento: datetime) -> str:
+    """Mismo formato que Cinemark (sin asientos libres: Showcase no los publica):
+
+        📍 <b>IMAX Theatre</b>
+        <a href="…">IMAX · 22:35 · Subtitulada</a>
+             Jue 26/11
+    """
+    futuras = [f for f in sorted(funcs, key=_inicio) if _inicio(f) > momento][:MAX_FUNCIONES]
+    return f"📍 <b>{CINE_IMAX}</b>\n" + "\n\n".join(_bloque(f, fid) for f in futuras)
+
+
+def _bloque(f: dict, fid: str) -> str:
+    formato, _, idioma = (f.get("formato") or "IMAX").partition("-")
+    idioma = {"subtitulado": "Subtitulada", "castellano": "Doblada al castellano"}.get(idioma.strip().lower(), idioma.strip())
+    cabeza = " · ".join(x for x in (formato.strip() or "IMAX", f["hora"], idioma) if x)
+    url = _url_funcion(fid, f["perf"], f) if f.get("perf") else None
+    if url:
+        cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
+    d = datetime.strptime(f["fecha"], "%Y-%m-%d")
+    dia = f"{DIAS[d.weekday()]} {d:%d/%m}" + (" (trasnoche)" if f.get("trasnoche") else "")
+    return cabeza + "\n" + SANGRIA + dia
 
 
 def es_de_noche(f: dict) -> bool:
