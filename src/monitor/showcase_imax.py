@@ -38,7 +38,7 @@ DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 # Solo interesan las funciones de noche: desde esta hora, más las de trasnoche (después de medianoche).
 HORA_DESDE = "20:30"
-CINE_IMAX = "IMAX Theatre"
+CINE_IMAX = "IMAX - Norcenter"
 MAX_FUNCIONES = 8      # bloques por aviso, igual que en Cinemark; el resto, con el link a la película
 SANGRIA = "\u00a0" * 5
 
@@ -336,8 +336,8 @@ def es_relevante(f: dict) -> bool:
 def _bloques(funcs: list[dict], fid: str, momento: datetime) -> str:
     """Mismo formato que Cinemark (sin asientos libres: Showcase no los publica):
 
-        📍 <b>IMAX Theatre</b>
-        <a href="…">IMAX · 22:35 · Subtitulada</a>
+        📍 <b>IMAX - Norcenter</b>
+        <a href="…">IMAX 🍿 · 22:35 · Subtitulada</a>
              Jue 26/11
     """
     futuras = [f for f in sorted(funcs, key=_inicio) if _inicio(f) > momento][:MAX_FUNCIONES]
@@ -347,7 +347,7 @@ def _bloques(funcs: list[dict], fid: str, momento: datetime) -> str:
 def _bloque(f: dict, fid: str) -> str:
     formato, _, idioma = (f.get("formato") or "IMAX").partition("-")
     idioma = {"subtitulado": "Subtitulada", "castellano": "Doblada al castellano"}.get(idioma.strip().lower(), idioma.strip())
-    cabeza = " · ".join(x for x in (formato.strip() or "IMAX", f["hora"], idioma) if x)
+    cabeza = " · ".join(x for x in ("IMAX 🍿", f["hora"], idioma) if x)
     url = _url_funcion(fid, f["perf"], f) if f.get("perf") else None
     if url:
         cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'

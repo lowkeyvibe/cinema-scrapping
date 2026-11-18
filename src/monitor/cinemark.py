@@ -409,13 +409,13 @@ def es_de_noche(f: dict) -> bool:
 
 
 def _bloques(fs: list[dict], url: str = "") -> str:
-    """Un bloque por función, agrupadas por cine y en orden de horario:
+    """Un bloque por función, agrupadas por cine y en orden de horario (mismo formato que IMAX):
 
-        📍 <b>Abasto</b>
-        <a href="…">2D · 22:45 · Sala 11 · Subtitulada</a>
-             Vie 18/12: 209 🟢 / 224 🔴
+        📍 <b>CINEMARK - Abasto</b>
+        <a href="…">Cinemark 🍿 · 22:45 · Subtitulada</a>
+             Mié 16/12 · 231 🟢 / 279 🔴
 
-    (🟢 asientos libres / 🔴 capacidad). La cabecera lleva a comprar: Cinemark no tiene
+    (🟢 asientos libres / 🔴 capacidad). El link lleva a comprar: Cinemark no tiene
     un link por función, así que abre la película y ahí se toca el horario.
     Hasta MAX_POR_CINE funciones por cine.
     """
@@ -425,7 +425,7 @@ def _bloques(fs: list[dict], url: str = "") -> str:
     partes = []
     for cine, funcs in sorted(por_cine.items()):
         bloques = [_bloque(f, url) for f in funcs[:MAX_POR_CINE]]
-        partes.append(f"📍 <b>{_e(cine)}</b>\n" + "\n\n".join(bloques))
+        partes.append(f"📍 <b>CINEMARK - {_e(cine)}</b>\n" + "\n\n".join(bloques))
     return "\n\n".join(partes)
 
 
@@ -434,16 +434,12 @@ TIPOS = {"SUB": "Subtitulada", "CAST": "Doblada al castellano"}
 
 
 def _bloque(f: dict, url: str = "") -> str:
-    cabeza = [_e(f.get("formato") or ""), f["inicio"][11:16]]
-    if f.get("sala"):
-        cabeza.append(f"Sala {_e(str(f['sala']))}")
-    if f.get("idioma"):
-        cabeza.append(TIPOS.get(f["idioma"], f["idioma"]))
-    cabeza = " · ".join(cabeza)
+    cabeza = " · ".join(x for x in ("Cinemark 🍿", f["inicio"][11:16],
+                                     TIPOS.get(f.get("idioma"), f.get("idioma") or "")) if x)
     if url:
         cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
     lugares = _lugares(f)
-    return cabeza + "\n" + SANGRIA + (f"{_dia_corto(f)}: {lugares}" if lugares else _dia_corto(f))
+    return cabeza + "\n" + SANGRIA + (f"{_dia_corto(f)} · {lugares}" if lugares else _dia_corto(f))
 
 
 def _lugares(f: dict) -> str:
