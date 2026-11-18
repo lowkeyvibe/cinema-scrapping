@@ -5,8 +5,9 @@
 
 Busca el título en castellano (con el año, si se sabe) y devuelve el título en
 inglés. Los resultados se guardan en state/titulos.json para no repetir la
-consulta en cada corrida. Ese archivo se puede editar a mano para corregir un
-título mal encontrado: lo que esté ahí manda.
+consulta en cada corrida, junto con el póster (poster()). Ese archivo se puede
+editar a mano para corregir un título mal encontrado: poné "manual": true en la
+entrada y no se vuelve a pisar.
 
 Si no hay TMDB_TOKEN, si TMDB no la encuentra o si falla la consulta, devuelve
 el título original, así un aviso nunca sale sin nombre.
@@ -24,6 +25,7 @@ import requests
 
 CACHE = Path("state/titulos.json")
 API = "https://api.themoviedb.org/3/search/movie"
+IMAGENES = "https://image.tmdb.org/t/p/w780"
 REINTENTAR_DESPUES = 3 * 24 * 3600  # una película no encontrada se vuelve a buscar a los 3 días
 
 _cache: dict | None = None
@@ -34,22 +36,38 @@ def en_ingles(titulo: str, anio: int | str | None = None) -> str:
     """El título en inglés, o `titulo` tal cual si no se puede averiguar."""
     if not titulo:
         return titulo
+    return (_datos(titulo, anio) or {}).get("en") or titulo
+
+
+def poster(titulo: str, anio: int | str | None = None) -> str | None:
+    """URL del póster en TMDB (arte en inglés si hay), o None."""
+    if not titulo:
+        return None
+    return (_datos(titulo, anio) or {}).get("poster")
+
+
+def _datos(titulo: str, anio) -> dict | None:
+    """Lo que hay en el caché para esta película; si falta, lo busca en TMDB."""
     clave = _clave(titulo)
-    cache = _cargar()
-    guardado = cache.get(clave)
-    if guardado and (guardado.get("en") or time.time() - guardado.get("t", 0) < REINTENTAR_DESPUES):
-        return guardado.get("en") or titulo
+    guardado = _cargar().get(clave)
+    completo = guardado and "poster" in guardado
+    if completo and (guardado.get("en") or time.time() - guardado.get("t", 0) < REINTENTAR_DESPUES):
+        return guardado
 
     token = os.environ.get("TMDB_TOKEN")
     if not token:
-        return titulo
+        return guardado
     try:
-        en = _buscar(titulo, anio, token)
+        en, img = _buscar(titulo, anio, token)
     except Exception as e:  # noqa: BLE001 - sin TMDB el aviso sale igual, en castellano
         print(f"  ! TMDB ({titulo}): {e}")
-        return titulo
-    _guardar(clave, {"es": titulo, "en": en, "t": int(time.time())})
-    return en or titulo
+        return guardado
+    nuevo = {"es": titulo, "en": en, "poster": img, "t": int(time.time())}
+    if guardado and guardado.get("manual"):
+        nuevo["en"] = guardado.get("en")   # un título corregido a mano no se pisa
+        nuevo["manual"] = True
+    _guardar(clave, nuevo)
+    return nuevo
 
 
 def guardar_cache() -> None:
@@ -63,7 +81,7 @@ def guardar_cache() -> None:
 
 # ---------------------------------------------------------------------------
 
-def _buscar(titulo: str, anio, token: str) -> str | None:
+def _buscar(titulo: str, anio, token: str) -> tuple[str | None, str | None]:
     headers = {"Authorization": f"Bearer {token}"}
     consulta = re.sub(r"\s+", " ", titulo).strip()
     # Primero con el año (y el anterior, por estrenos de fin de año), después sin año.
@@ -76,8 +94,10 @@ def _buscar(titulo: str, anio, token: str) -> str | None:
         r.raise_for_status()
         resultados = r.json().get("results") or []
         if resultados:
-            return _prolijo(resultados[0].get("title") or resultados[0].get("original_title"))
-    return None
+            m = resultados[0]
+            img = f"{IMAGENES}{m['poster_path']}" if m.get("poster_path") else None
+            return _prolijo(m.get("title") or m.get("original_title")), img
+    return None, None
 
 
 def _prolijo(t: str | None) -> str | None:

@@ -27,7 +27,7 @@ from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 
-from src.monitor.titulos import en_ingles, guardar_cache
+from src.monitor.titulos import en_ingles, guardar_cache, poster
 from src.scrapers.showcase_imax import CINE_IMAX_ID, ENTRADAS, HOUSE_ID, SITE, ShowcaseImaxScraper
 
 TZ = ZoneInfo("America/Argentina/Buenos_Aires")
@@ -225,6 +225,12 @@ def comparar(antes: dict, ahora: dict, momento: datetime | None = None) -> list[
 
 def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso]:
     avisos = []
+    pelis = {**p_antes, **p_ahora}
+
+    def img(fid: str, titulo: str | None = None) -> str | None:
+        """Póster de TMDB (más grande, arte en inglés) o, si no hay, el de Showcase."""
+        p = pelis.get(fid) or {}
+        return poster(titulo or p.get("titulo"), momento.year) or p.get("poster")
     nuevas_pelis = p_ahora.keys() - p_antes.keys()
 
     # Funciones nuevas (solo de noche), agrupadas por película.
@@ -244,41 +250,48 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
             txt += f"\n\n<b>Funciones desde las {HORA_DESDE}:</b>\n{_listar(funcs, fid, momento)}"
         else:
             txt += f"\n\nTodavía no hay funciones desde las {HORA_DESDE}."
-        avisos.append(Aviso(txt + _pie(p["url"]), p.get("poster")))
+        avisos.append(Aviso(txt + _pie(p["url"]), img(fid)))
 
     for fid, funcs in nuevas_por_peli.items():
         p = p_ahora.get(fid) or {"titulo": funcs[0]["pelicula"], "url": ""}
         n = len(funcs)
         avisos.append(Aviso(
             f"🎟️ <b>{n} {'función' if n == 1 else 'funciones'} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(_peli(p['titulo'], momento))}</b>\n\n"
-            f"{_listar(funcs, fid, momento)}" + _pie(p["url"])))
+            f"{_listar(funcs, fid, momento)}" + _pie(p["url"]), img(fid, p["titulo"])))
 
     # Funciones que desaparecen antes de empezar => canceladas.
     canceladas: dict[str, list[dict]] = {}
     for k in f_antes.keys() - f_ahora.keys():
         f = f_antes[k]
         if es_de_noche(f) and _inicio(f) > momento + MARGEN_CANCELADA:
-            canceladas.setdefault(_peli(f["pelicula"], momento), []).append(f)
-    for titulo, funcs in canceladas.items():
-        avisos.append(Aviso(f"❌ <b>Funciones IMAX que ya no están: {_e(titulo)}</b>\n\n{_listar(funcs)}"))
+            canceladas.setdefault(f["pelicula_id"], []).append(f)
+    for fid, funcs in canceladas.items():
+        titulo = _peli(funcs[0]["pelicula"], momento)
+        avisos.append(Aviso(f"❌ <b>Funciones IMAX que ya no están: {_e(titulo)}</b>\n\n{_listar(funcs)}",
+                            img(fid, funcs[0]["pelicula"])))
 
     # Misma función con otro horario/fecha.
-    cambios = []
+    cambios, pelis_cambiadas = [], set()
     for k in f_antes.keys() & f_ahora.keys():
         a, b = f_antes[k], f_ahora[k]
         if (a["fecha"], a["hora"]) != (b["fecha"], b["hora"]) and (es_de_noche(a) or es_de_noche(b)):
             cambios.append(f"• {_e(_peli(b['pelicula'], momento))}: {_fecha(a)} → {_fecha(b)}")
+            pelis_cambiadas.add((b["pelicula_id"], b["pelicula"]))
     if cambios:
-        avisos.append(Aviso("🔄 <b>Cambios de horario en IMAX</b>\n\n" + "\n".join(cambios)))
+        # Con una sola película, va su póster; si son varias, sin imagen.
+        unica = next(iter(pelis_cambiadas)) if len(pelis_cambiadas) == 1 else None
+        avisos.append(Aviso("🔄 <b>Cambios de horario en IMAX</b>\n\n" + "\n".join(cambios),
+                            img(*unica) if unica else None))
 
     # Películas que pasan de preventa a cartelera, o salen de cartelera.
     for fid in p_antes.keys() & p_ahora.keys():
         if p_antes[fid]["estado"] != p_ahora[fid]["estado"]:
             p = p_ahora[fid]
             avisos.append(Aviso(f"📣 <b>{_e(_peli(p['titulo'], momento))}</b>: {p_antes[fid]['estado']} → {p['estado']}"
-                                + _pie(p["url"])))
+                                + _pie(p["url"]), img(fid)))
     for fid in p_antes.keys() - p_ahora.keys():
-        avisos.append(Aviso(f"👋 <b>Salió de la cartelera IMAX:</b> {_e(_peli(p_antes[fid]['titulo'], momento))}"))
+        avisos.append(Aviso(f"👋 <b>Salió de la cartelera IMAX:</b> {_e(_peli(p_antes[fid]['titulo'], momento))}",
+                            img(fid)))
 
     return avisos
 

@@ -12,16 +12,19 @@
  "godzilla minus zero": {
   "en": "Godzilla Minus Zero",
   "es": "Godzilla Minus Zero",
-  "t": 1794973233
+  "poster": "https://image.tmdb.org/t/p/w780/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
+  "t": 1794973458
  },
  "las nuevas desventuras de cliff booth": {
   "en": "The Further Mis-Adventures of Cliff Booth",
   "es": "Las nuevas desventuras de Cliff Booth",
-  "t": 1794973232
+  "poster": "https://image.tmdb.org/t/p/w780/5jO6rhfethzH7xdWl6KCOxCNCzQ.jpg",
+  "t": 1794973458
  },
  "los juegos del hambre: amanecer en la cosecha": {
   "en": "The Hunger Games: Sunrise on the Reaping",
   "es": "Los Juegos del Hambre: amanecer en la cosecha",
-  "t": 1794973232
+  "poster": "https://image.tmdb.org/t/p/w780/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg",
+  "t": 1794973458
  }
 }
