@@ -5,7 +5,7 @@ App para scrapear páginas de cine y cargar los datos en Google Sheets.
 ## Setup
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv   # requiere Python 3.12+
 source .venv/bin/activate
 pip install -r requirements.txt
 python -m playwright install chromium
