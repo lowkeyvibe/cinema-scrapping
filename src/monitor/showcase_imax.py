@@ -35,6 +35,8 @@ SECCIONES = ("peliculas", "funciones", "promos", "sorteos", "banners", "candy", 
 DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 
+# Solo interesan las funciones de noche: desde esta hora, más las de trasnoche (después de medianoche).
+HORA_DESDE = "20:30"
 MAX_BOTONES = 24        # botones de funciones por aviso (Telegram admite ~100)
 BOTONES_POR_FILA = 3
 
@@ -225,11 +227,12 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     avisos = []
     nuevas_pelis = p_ahora.keys() - p_antes.keys()
 
-    # Funciones nuevas, agrupadas por película.
+    # Funciones nuevas (solo de noche), agrupadas por película.
     nuevas_por_peli: dict[str, list[dict]] = {}
     for k in f_ahora.keys() - f_antes.keys():
         f = {**f_ahora[k], "perf": k}
-        nuevas_por_peli.setdefault(f["pelicula_id"], []).append(f)
+        if es_de_noche(f):
+            nuevas_por_peli.setdefault(f["pelicula_id"], []).append(f)
 
     for fid in nuevas_pelis:
         p = p_ahora[fid]
@@ -238,21 +241,23 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
         if p["estado"] == "Preventa":
             txt += "\n🔥 ¡Arrancó la preventa!"
         if funcs:
-            txt += f"\n\n{_listar(funcs)}"
+            txt += f"\n\n<b>Funciones desde las {HORA_DESDE}:</b>\n{_listar(funcs)}"
+        else:
+            txt += f"\n\nTodavía no hay funciones desde las {HORA_DESDE}."
         avisos.append(Aviso(txt, p.get("poster"), _botones(fid, funcs, p["url"], momento)))
 
     for fid, funcs in nuevas_por_peli.items():
         p = p_ahora.get(fid) or {"titulo": funcs[0]["pelicula"], "url": ""}
         n = len(funcs)
         avisos.append(Aviso(
-            f"🎟️ <b>{n} función{'es' if n != 1 else ''} IMAX nueva{'s' if n != 1 else ''}: {_e(p['titulo'])}</b>\n\n"
+            f"🎟️ <b>{n} función{'es' if n != 1 else ''} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(p['titulo'])}</b>\n\n"
             f"{_listar(funcs)}", botones=_botones(fid, funcs, p["url"], momento)))
 
     # Funciones que desaparecen antes de empezar => canceladas.
     canceladas: dict[str, list[dict]] = {}
     for k in f_antes.keys() - f_ahora.keys():
         f = f_antes[k]
-        if _inicio(f) > momento + MARGEN_CANCELADA:
+        if es_de_noche(f) and _inicio(f) > momento + MARGEN_CANCELADA:
             canceladas.setdefault(f["pelicula"], []).append(f)
     for titulo, funcs in canceladas.items():
         avisos.append(Aviso(f"❌ <b>Funciones IMAX que ya no están: {_e(titulo)}</b>\n\n{_listar(funcs)}"))
@@ -261,7 +266,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
     cambios = []
     for k in f_antes.keys() & f_ahora.keys():
         a, b = f_antes[k], f_ahora[k]
-        if (a["fecha"], a["hora"]) != (b["fecha"], b["hora"]):
+        if (a["fecha"], a["hora"]) != (b["fecha"], b["hora"]) and (es_de_noche(a) or es_de_noche(b)):
             cambios.append(f"• {_e(b['pelicula'])}: {_fecha(a)} → {_fecha(b)}")
     if cambios:
         avisos.append(Aviso("🔄 <b>Cambios de horario en IMAX</b>\n\n" + "\n".join(cambios)))
@@ -282,8 +287,8 @@ def resumen_inicial(foto: dict) -> Aviso:
     funcs = foto.get("funciones", {})
     lineas = []
     for fid, p in pelis.items():
-        n = sum(1 for f in funcs.values() if f["pelicula_id"] == fid)
-        lineas.append(f"• {_e(p['titulo'])} — {p['estado']}, {n} funciones")
+        n = sum(1 for f in funcs.values() if f["pelicula_id"] == fid and es_de_noche(f))
+        lineas.append(f"• {_e(p['titulo'])} — {p['estado']}, {n} funciones desde las {HORA_DESDE}")
     return Aviso(
         "✅ <b>Monitor de Showcase IMAX activado</b>\n"
         "Te voy a avisar de funciones nuevas o canceladas, preventas, promos, sorteos/merch, "
@@ -308,12 +313,23 @@ def _botones(fid: str, funcs: list[dict], url_peli: str, momento: datetime) -> l
     for f in futuras[:MAX_BOTONES]:
         url = _url_funcion(fid, f["perf"], f)
         if url:
-            botones.append({"text": f"🎟️ {_fecha(f)}", "url": url})
+            botones.append({"text": _etiqueta(f), "url": url})
     filas = [botones[i:i + BOTONES_POR_FILA] for i in range(0, len(botones), BOTONES_POR_FILA)]
     extra = len(futuras) - MAX_BOTONES
     filas.append([{"text": f"Ver todas las funciones (+{extra})" if extra > 0 else "Ver película y funciones",
                    "url": url_peli}])
     return filas
+
+
+def es_de_noche(f: dict) -> bool:
+    """Desde HORA_DESDE hasta medianoche, o trasnoche (pasada la medianoche, antes de las 6)."""
+    return f.get("trasnoche") or f["hora"] >= HORA_DESDE or f["hora"] < "06:00"
+
+
+def _etiqueta(f: dict) -> str:
+    """Texto corto para el botón, para que entre en el celular: 'Jue 26 · 19:30'."""
+    d = datetime.strptime(f["fecha"], "%Y-%m-%d")
+    return f"{DIAS[d.weekday()]} {d.day} · {f['hora']}" + (" 🌙" if f.get("trasnoche") else "")
 
 
 def _inicio(f: dict) -> datetime:
