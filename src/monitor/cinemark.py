@@ -23,6 +23,7 @@ from datetime import datetime, timedelta
 from src.scrapers.cinemark import SITE, CinemarkScraper
 
 from .showcase_imax import DIAS, HORA_DESDE, TZ, Aviso, _e
+from .titulos import en_ingles, guardar_cache
 
 SECCIONES = ("peliculas", "funciones", "promos", "merch")
 MARGEN_CANCELADA = timedelta(hours=1)
@@ -185,6 +186,7 @@ def comparar(antes: dict, ahora: dict, momento: datetime | None = None) -> list[
         avisos += _avisos_merch(antes["merch"], ahora["merch"])
     for a in avisos:
         _links_en_texto(a)
+    guardar_cache()
     return avisos
 
 
@@ -192,7 +194,7 @@ def _avisos_peliculas(antes: dict, ahora: dict, con_funciones: set[str]) -> list
     avisos = []
     for k in ahora.keys() - antes.keys() - con_funciones:
         p = ahora[k]
-        txt = f"🎬 <b>Película nueva en Cinemark: {_e(p['titulo'])}</b>\n{p['estado']}"
+        txt = f"🎬 <b>Película nueva en Cinemark: {_peli(p)}</b>\n{p['estado']}"
         if p["estreno"]:
             txt += f" · estreno {_dia(p['estreno'])}"
         if p["estado"] == "Preventa":
@@ -202,14 +204,14 @@ def _avisos_peliculas(antes: dict, ahora: dict, con_funciones: set[str]) -> list
         a, p = antes[k], ahora[k]
         if a["estado"] != p["estado"]:
             fuego = "🔥 " if p["estado"] == "Preventa" else ""
-            avisos.append(Aviso(f"📣 {fuego}<b>{_e(p['titulo'])}</b>: {a['estado']} → {p['estado']}",
+            avisos.append(Aviso(f"📣 {fuego}<b>{_peli(p)}</b>: {a['estado']} → {p['estado']}",
                                 p.get("poster"), _boton("🎟️ Ver película y todas las funciones", p["url"])))
         elif a["estreno"] != p["estreno"] and a["estreno"] and p["estreno"]:
-            avisos.append(Aviso(f"📅 <b>{_e(p['titulo'])}</b>: cambió el estreno "
+            avisos.append(Aviso(f"📅 <b>{_peli(p)}</b>: cambió el estreno "
                                 f"{_dia(a['estreno'])} → {_dia(p['estreno'])}",
                                 botones=_boton("🎬 Ver película", p["url"])))
     for k in antes.keys() - ahora.keys():
-        avisos.append(Aviso(f"👋 <b>Salió de Cinemark:</b> {_e(antes[k]['titulo'])}"))
+        avisos.append(Aviso(f"👋 <b>Salió de Cinemark:</b> {_peli(antes[k])}"))
     return avisos
 
 
@@ -224,12 +226,12 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
         nuevas.setdefault(ahora[k]["pelicula_id"], []).append(ahora[k])
     primeras, resto = [], []
     for pid, fs in sorted(nuevas.items(), key=lambda x: -len(x[1])):
-        titulo = fs[0]["pelicula"]
         peli = peliculas.get(pid) or {}
+        titulo = _peli(peli or {"titulo": fs[0]["pelicula"]}, momento)
         noche = [f for f in fs if es_de_noche(f)]
         if pid not in pelis_con_funciones_antes:
             # Primera vez que la película tiene funciones: se avisa aunque no haya de noche.
-            txt = f"🔥 <b>¡Salieron las entradas de {_e(titulo)}!</b>\n"
+            txt = f"🔥 <b>¡Salieron las entradas de {titulo}!</b>\n"
             if noche:
                 txt += f"\n🌙 <b>Funciones desde las {HORA_DESDE}</b> ({_rango(noche)}):\n{_por_cine(noche)}"
             else:
@@ -237,7 +239,7 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
             primeras.append(Aviso(txt, peli.get("poster"), _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
         elif noche:
             cines = sorted({f["cine"] for f in noche})
-            resto.append(f"• <b>{_e(titulo)}</b>: +{len(noche)} en {_e(', '.join(cines))} ({_rango(noche)})")
+            resto.append(f"• <b>{titulo}</b>: +{len(noche)} en {_e(', '.join(cines))} ({_rango(noche)})")
     avisos += primeras
     if resto:
         avisos.append(Aviso(f"🎟️ <b>Funciones nuevas en Cinemark</b> (desde las {HORA_DESDE})\n\n"
@@ -248,16 +250,16 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
     for k in antes.keys() - ahora.keys():
         f = antes[k]
         if es_de_noche(f) and _inicio(f) > momento + MARGEN_CANCELADA:
-            canceladas.setdefault((f["pelicula"], f["cine"]), []).append(f)
+            canceladas.setdefault((_peli_de(f, peliculas, momento), f["cine"]), []).append(f)
     if canceladas:
-        lineas = [f"• <b>{_e(peli)}</b> — {_e(cine)}: "
+        lineas = [f"• <b>{peli}</b> — {_e(cine)}: "
                   + ", ".join(_cuando(f) for f in sorted(fs, key=_inicio)[:6])
                   + (f" y {len(fs) - 6} más" if len(fs) > 6 else "")
                   for (peli, cine), fs in sorted(canceladas.items())]
         avisos.append(Aviso("❌ <b>Funciones canceladas en Cinemark</b>\n\n" + _recortar(lineas)))
 
     # Misma función con otro horario (si era o pasa a ser de noche).
-    cambios = [f"• <b>{_e(ahora[k]['pelicula'])}</b> — {_e(ahora[k]['cine'])}: "
+    cambios = [f"• <b>{_peli_de(ahora[k], peliculas, momento)}</b> — {_e(ahora[k]['cine'])}: "
                f"{_cuando(antes[k])} → {_cuando(ahora[k])}"
                for k in antes.keys() & ahora.keys()
                if antes[k]["inicio"] != ahora[k]["inicio"] and (es_de_noche(antes[k]) or es_de_noche(ahora[k]))]
@@ -322,6 +324,7 @@ def resumen_inicial(foto: dict) -> Aviso:
         partes.append(f"🏷️ {len(foto['promos'])} promos activas")
     if "merch" in foto:
         partes.append(f"🛍️ {len(foto['merch'])} productos en la tienda")
+    guardar_cache()
     return Aviso("\n".join(partes))
 
 
@@ -347,6 +350,20 @@ def _links_en_texto(aviso: Aviso) -> None:
             emoji, _, etiqueta = b["text"].partition(" ")
             aviso.texto += f'\n\n{emoji} <a href="{html.escape(b["url"])}">{_e(etiqueta)}</a>'
     aviso.botones = []
+
+
+def _peli(p: dict, momento: datetime | None = None) -> str:
+    """Título en inglés (vía TMDB, ver titulos.py), ya escapado para HTML.
+
+    El año del estreno ayuda a TMDB a elegir bien; si no hay, se usa el actual.
+    """
+    anio = (p.get("estreno") or "")[:4] or (momento or datetime.now(TZ)).year
+    return _e(en_ingles(p["titulo"], anio))
+
+
+def _peli_de(f: dict, peliculas: dict, momento: datetime) -> str:
+    """Título en inglés de la película de una función."""
+    return _peli(peliculas.get(f["pelicula_id"]) or {"titulo": f["pelicula"]}, momento)
 
 
 def es_de_noche(f: dict) -> bool:
