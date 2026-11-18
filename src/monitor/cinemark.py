@@ -33,7 +33,6 @@ CINES = {103: "Abasto", 111: "DOT"}
 CINE_MERCH = "Abasto"  # la tienda pide elegir un cine; el catálogo es el mismo en todos
 MAX_LINEAS = 25        # para que un aviso no se vuelva interminable
 MAX_POR_CINE = 8       # bloques de función por cine en un aviso; el resto se ve con el link a la película
-DIAS_LARGOS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
 # Asientos libres de la última foto: {clave de función: (libres, capacidad)}.
 # Cambian en cada corrida, así que NO van a state/ (harían un commit cada 30 min):
@@ -402,23 +401,29 @@ def es_de_noche(f: dict) -> bool:
 
 
 def _bloques(fs: list[dict]) -> str:
-    """Un bloque por función, agrupadas por cine y en orden de horario:
+    """Un bloque por función, agrupadas por cine y en orden de horario. El 2D y el
+    D-BOX de la misma función (mismo cine, horario, sala e idioma) van juntos:
 
         📍 <b>Abasto</b>
-        🌙 <b>DBOX 2D · 22:45</b>
-             Sala 11: 22 🟢 / 30 🔴
-             Tipo: Subtitulada
-             Martes 15/12
+        🌙 <b>2D · 22:45</b> · Sala 11 · Subtitulada
+             Mié 16/12: 231 🟢 / 279 🔴 · DBOX 15 🟢 / 30 🔴
 
-    (🟢 asientos libres / 🔴 capacidad de la sala). Hasta MAX_POR_CINE funciones
-    por cine; las demás se ven con el link a la película del final del aviso.
+    (🟢 asientos libres / 🔴 capacidad). Hasta MAX_POR_CINE bloques por cine; las
+    demás funciones se ven con el link a la película del final del aviso.
     """
-    por_cine: dict[str, list[dict]] = {}
+    grupos: dict[tuple, dict] = {}
     for f in sorted(fs, key=lambda f: (f["inicio"], f.get("formato") or "")):
-        por_cine.setdefault(f["cine"], []).append(f)
+        formato = f.get("formato") or ""
+        dbox = formato.upper().startswith("DBOX ")
+        base = formato[5:] if dbox else formato
+        g = grupos.setdefault((f["cine"], f["inicio"], base, f.get("idioma")), {"base": None, "dbox": None})
+        g["dbox" if dbox else "base"] = f
+    por_cine: dict[str, list[dict]] = {}
+    for (cine, *_), g in grupos.items():
+        por_cine.setdefault(cine, []).append(g)
     partes = []
-    for cine, funcs in sorted(por_cine.items()):
-        bloques = [_bloque(f) for f in funcs[:MAX_POR_CINE]]
+    for cine, gs in sorted(por_cine.items()):
+        bloques = [_bloque(g["base"], g["dbox"]) for g in gs[:MAX_POR_CINE]]
         partes.append(f"📍 <b>{_e(cine)}</b>\n" + "\n\n".join(bloques))
     return "\n\n".join(partes)
 
@@ -427,30 +432,35 @@ SANGRIA = "\u00a0" * 5   # espacios que Telegram no recorta al principio de la l
 TIPOS = {"SUB": "Subtitulada", "CAST": "Doblada al castellano"}
 
 
-def _bloque(f: dict) -> str:
+def _bloque(base: dict | None, dbox: dict | None = None) -> str:
     """
-        🌙 <b>2D · 22:40</b>
-             Sala 10: 219 🟢 / 224 🔴
-             Tipo: Subtitulada
-             Jueves 17/12
+        🌙 <b>2D · 22:45</b> · Sala 11 · Subtitulada
+             Mié 16/12: 231 🟢 / 279 🔴 · DBOX 15 🟢 / 30 🔴
     """
+    f = base or dbox                       # si solo hay D-BOX, el bloque es de esa función
+    cabeza = [f"🌙 <b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b>"]
+    if f.get("sala"):
+        cabeza.append(f"Sala {_e(str(f['sala']))}")
+    if f.get("idioma"):
+        cabeza.append(TIPOS.get(f["idioma"], f["idioma"]))
+    detalle = f"{_dia_corto(f)}: {_lugares(f)}" if _lugares(f) else _dia_corto(f)
+    if base and dbox and _lugares(dbox):
+        detalle += f" · DBOX {_lugares(dbox)}"
+    return " · ".join(cabeza) + "\n" + SANGRIA + detalle
+
+
+def _lugares(f: dict) -> str:
     libres, capacidad = ASIENTOS.get(f.get("clave", ""), (None, None))
-    lugar = f"Sala {_e(str(f['sala']))}" if f.get("sala") else ""
-    if libres is not None and capacidad:
-        lugar += (": " if lugar else "") + f"{libres} 🟢 / {capacidad} 🔴"
-    tipo = f"Tipo: {TIPOS.get(f.get('idioma'), f.get('idioma'))}" if f.get("idioma") else ""
-    detalle = [l for l in (lugar, tipo, _dia_largo(f)) if l]
-    return "\n".join([f"🌙 <b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b>"]
-                     + [SANGRIA + l for l in detalle])
+    return f"{libres} 🟢 / {capacidad} 🔴" if libres is not None and capacidad else ""
 
 
-def _dia_largo(f: dict) -> str:
-    """'Martes 15/12'; pasada la medianoche, el día anterior con '(trasnoche)'."""
+def _dia_corto(f: dict) -> str:
+    """'Mié 16/12'; pasada la medianoche, el día anterior con '(trasnoche)'."""
     d = _inicio(f)
     if f["inicio"][11:16] < "06:00":
         d -= timedelta(days=1)
-        return f"{DIAS_LARGOS[d.weekday()]} {d:%d/%m} (trasnoche)"
-    return f"{DIAS_LARGOS[d.weekday()]} {d:%d/%m}"
+        return f"{DIAS[d.weekday()]} {d:%d/%m} (trasnoche)"
+    return f"{DIAS[d.weekday()]} {d:%d/%m}"
 
 
 def _inicio(f: dict) -> datetime:
