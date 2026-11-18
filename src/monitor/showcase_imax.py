@@ -37,8 +37,6 @@ DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 # Solo interesan las funciones de noche: desde esta hora, más las de trasnoche (después de medianoche).
 HORA_DESDE = "20:30"
-MAX_BOTONES = 24        # botones de funciones por aviso (Telegram admite ~100)
-BOTONES_POR_FILA = 3
 
 
 @dataclass
@@ -241,17 +239,17 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
         if p["estado"] == "Preventa":
             txt += "\n🔥 ¡Arrancó la preventa!"
         if funcs:
-            txt += f"\n\n<b>Funciones desde las {HORA_DESDE}:</b>\n{_listar(funcs)}"
+            txt += f"\n\n<b>Funciones desde las {HORA_DESDE}:</b>\n{_listar(funcs, fid, momento)}"
         else:
             txt += f"\n\nTodavía no hay funciones desde las {HORA_DESDE}."
-        avisos.append(Aviso(txt, p.get("poster"), _botones(fid, funcs, p["url"], momento)))
+        avisos.append(Aviso(txt + _pie(p["url"]), p.get("poster")))
 
     for fid, funcs in nuevas_por_peli.items():
         p = p_ahora.get(fid) or {"titulo": funcs[0]["pelicula"], "url": ""}
         n = len(funcs)
         avisos.append(Aviso(
-            f"🎟️ <b>{n} función{'es' if n != 1 else ''} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(p['titulo'])}</b>\n\n"
-            f"{_listar(funcs)}", botones=_botones(fid, funcs, p["url"], momento)))
+            f"🎟️ <b>{n} {'función' if n == 1 else 'funciones'} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(p['titulo'])}</b>\n\n"
+            f"{_listar(funcs, fid, momento)}" + _pie(p["url"])))
 
     # Funciones que desaparecen antes de empezar => canceladas.
     canceladas: dict[str, list[dict]] = {}
@@ -306,30 +304,9 @@ def _url_funcion(fid: str, perf_id: str, f: dict) -> str | None:
             f"&cinema={f['cinema']}&date={f['fecha']}&show={f['show']}")
 
 
-def _botones(fid: str, funcs: list[dict], url_peli: str, momento: datetime) -> list[list[dict]]:
-    """Un botón por función futura (ordenadas), y abajo uno a la página de la película."""
-    futuras = [f for f in sorted(funcs, key=_inicio) if _inicio(f) > momento]
-    botones = []
-    for f in futuras[:MAX_BOTONES]:
-        url = _url_funcion(fid, f["perf"], f)
-        if url:
-            botones.append({"text": _etiqueta(f), "url": url})
-    filas = [botones[i:i + BOTONES_POR_FILA] for i in range(0, len(botones), BOTONES_POR_FILA)]
-    extra = len(futuras) - MAX_BOTONES
-    filas.append([{"text": f"Ver todas las funciones (+{extra})" if extra > 0 else "Ver película y funciones",
-                   "url": url_peli}])
-    return filas
-
-
 def es_de_noche(f: dict) -> bool:
     """Desde HORA_DESDE hasta medianoche, o trasnoche (pasada la medianoche, antes de las 6)."""
     return f.get("trasnoche") or f["hora"] >= HORA_DESDE or f["hora"] < "06:00"
-
-
-def _etiqueta(f: dict) -> str:
-    """Texto corto para el botón, para que entre en el celular: 'Jue 26 · 19:30'."""
-    d = datetime.strptime(f["fecha"], "%Y-%m-%d")
-    return f"{DIAS[d.weekday()]} {d.day} · {f['hora']}" + (" 🌙" if f.get("trasnoche") else "")
 
 
 def _inicio(f: dict) -> datetime:
@@ -342,17 +319,30 @@ def _fecha(f: dict) -> str:
     return f"{DIAS[d.weekday()]} {d:%d/%m} {f['hora']}" + (" (trasnoche)" if f.get("trasnoche") else "")
 
 
-def _listar(funcs: list[dict]) -> str:
-    """Una línea por día: 'Mié 25/11: 13:00, 16:15, 22:35'."""
+def _listar(funcs: list[dict], fid: str | None = None, momento: datetime | None = None) -> str:
+    """Una línea por día: 'Mié 25/11: 20:30, 22:35'.
+
+    Con `fid`, cada horario futuro es un link directo a comprar esa función.
+    """
     por_dia: dict[str, list[dict]] = {}
     for f in sorted(funcs, key=_inicio):
         por_dia.setdefault(f["fecha"], []).append(f)
     lineas = []
     for fecha, fs in por_dia.items():
         d = datetime.strptime(fecha, "%Y-%m-%d")
-        horas = ", ".join(f["hora"] + (" (trasnoche)" if f.get("trasnoche") else "") for f in fs)
-        lineas.append(f"• {DIAS[d.weekday()]} {d:%d/%m}: {horas}")
+        horas = []
+        for f in fs:
+            hora = f["hora"] + (" (trasnoche)" if f.get("trasnoche") else "")
+            url = _url_funcion(fid, f["perf"], f) if fid and f.get("perf") else None
+            if url and (momento is None or _inicio(f) > momento):
+                hora = f'<a href="{html.escape(url)}">{hora}</a>'
+            horas.append(hora)
+        lineas.append(f"• {DIAS[d.weekday()]} {d:%d/%m}: {', '.join(horas)}")
     return "\n".join(lineas)
+
+
+def _pie(url_peli: str) -> str:
+    return f'\n\n🎟️ <a href="{html.escape(url_peli)}">Ver película y todas las funciones</a>' if url_peli else ""
 
 
 def _txt(el) -> str:

@@ -10,8 +10,10 @@ Para averiguar el chat id: mandale cualquier mensaje a tu bot y corré
 
 from __future__ import annotations
 
+import html as html_lib
 import json
 import os
+import re
 import sys
 
 import requests
@@ -52,7 +54,7 @@ class Telegram:
                          parse_mode="HTML", disable_web_page_preview="true", **extra)
 
     def foto(self, url: str, html: str, botones: list[list[dict]] | None = None) -> None:
-        if len(html) > LIMITE_CAPTION:
+        if _largo_visible(html) > LIMITE_CAPTION:
             # El texto no entra como epígrafe: foto sola y después el texto completo con los botones.
             try:
                 self._llamar("sendPhoto", chat_id=self.chat_id, photo=url)
@@ -66,6 +68,11 @@ class Telegram:
         except RuntimeError:
             # Si Telegram no puede bajar la imagen, mandamos solo el texto.
             self.mensaje(html, botones)
+
+
+def _largo_visible(texto_html: str) -> int:
+    """Telegram cuenta el largo del texto ya sin etiquetas (los links no suman su URL)."""
+    return len(html_lib.unescape(re.sub(r"<[^>]+>", "", texto_html)))
 
 
 def _teclado(botones: list[list[dict]] | None) -> dict:
