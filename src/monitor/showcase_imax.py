@@ -38,6 +38,8 @@ DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 # Solo interesan las funciones de noche: desde esta hora, más las de trasnoche (después de medianoche).
 HORA_DESDE = "20:30"
+# Showcase no publica asientos libres por función; la sala es siempre la misma.
+SALA_IMAX = "📍 Sala IMAX · 320 butacas"
 
 
 @dataclass
@@ -247,7 +249,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
         if p["estado"] == "Preventa":
             txt += "\n🔥 ¡Arrancó la preventa!"
         if funcs:
-            txt += f"\n\n<b>Funciones desde las {HORA_DESDE}:</b>\n{_listar(funcs, fid, momento)}"
+            txt += f"\n\n{SALA_IMAX}\n<b>Funciones desde las {HORA_DESDE}:</b>\n{_listar(funcs, fid, momento)}"
         else:
             txt += f"\n\nTodavía no hay funciones desde las {HORA_DESDE}."
         avisos.append(Aviso(txt + _pie(p["url"]), img(fid)))
@@ -256,7 +258,7 @@ def _avisos_cartelera(p_antes, p_ahora, f_antes, f_ahora, momento) -> list[Aviso
         p = p_ahora.get(fid) or {"titulo": funcs[0]["pelicula"], "url": ""}
         n = len(funcs)
         avisos.append(Aviso(
-            f"🎟️ <b>{n} {'función' if n == 1 else 'funciones'} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(_peli(p['titulo'], momento))}</b>\n\n"
+            f"🎟️ <b>{n} {'función' if n == 1 else 'funciones'} IMAX nueva{'s' if n != 1 else ''} de noche: {_e(_peli(p['titulo'], momento))}</b>\n{SALA_IMAX}\n\n"
             f"{_listar(funcs, fid, momento)}" + _pie(p["url"]), img(fid, p["titulo"])))
 
     # Funciones que desaparecen antes de empezar => canceladas.
