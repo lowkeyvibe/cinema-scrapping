@@ -228,7 +228,7 @@ def _avisos_peliculas(antes: dict, ahora: dict, con_funciones: set[str]) -> list
 
 
 def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: datetime) -> list[Aviso]:
-    """Solo avisa de funciones de noche (ver es_de_noche); la foto guarda todas."""
+    """Solo avisa de funciones que interesan (ver es_relevante); la foto guarda todas."""
     avisos = []
     pelis_con_funciones_antes = {f["pelicula_id"] for f in antes.values()}
 
@@ -240,20 +240,22 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
     for pid, fs in sorted(nuevas.items(), key=lambda x: -len(x[1])):
         peli = peliculas.get(pid) or {"titulo": fs[0]["pelicula"]}
         titulo = _peli(peli, momento)
-        noche = [f for f in fs if es_de_noche(f)]
+        noche = [f for f in fs if es_relevante(f)]
         if pid not in pelis_con_funciones_antes:
             # Primera vez que la película tiene funciones: se avisa aunque no haya de noche.
-            txt = f"🔥 <b>¡Salieron las entradas de {titulo}!</b>\n"
+            # El póster ya dice qué película es: el título queda corto.
+            txt = "<b>Tickets are on sale now!</b>\n\n"
             if noche:
-                txt += f"\n🌙 <b>Funciones desde las {HORA_DESDE}</b> ({_rango(noche)})\n\n{_bloques(noche)}"
+                txt += _bloques(noche, peli.get("url", ""))
+                botones = []
             else:
-                txt += f"\nTodavía no hay funciones desde las {HORA_DESDE}."
-            primeras.append(Aviso(txt, _poster(peli, momento), _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
+                txt += f"Todavía no hay funciones subtituladas desde las {HORA_DESDE}."
+                botones = _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))
+            primeras.append(Aviso(txt, _poster(peli, momento), botones))
         elif noche:
             # Un aviso por película, con un bloque por función.
-            resto.append(Aviso(f"🎟️ <b>Funciones nuevas: {titulo}</b>\n\n{_bloques(noche)}",
-                               _poster(peli, momento),
-                               _boton("🎟️ Ver película y todas las funciones", peli.get("url", ""))))
+            resto.append(Aviso(f"🎟️ <b>Funciones nuevas: {titulo}</b>\n\n{_bloques(noche, peli.get('url', ''))}",
+                               _poster(peli, momento)))
     avisos += primeras + resto
 
     # Funciones que desaparecen antes de empezar => canceladas.
@@ -261,7 +263,7 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
     pelis_canceladas: dict[str, dict] = {}
     for k in antes.keys() - ahora.keys():
         f = antes[k]
-        if es_de_noche(f) and _inicio(f) > momento + MARGEN_CANCELADA:
+        if es_relevante(f) and _inicio(f) > momento + MARGEN_CANCELADA:
             canceladas.setdefault((_peli_de(f, peliculas, momento), f["cine"]), []).append(f)
             pelis_canceladas[f["pelicula_id"]] = peliculas.get(f["pelicula_id"]) or {"titulo": f["pelicula"]}
     if canceladas:
@@ -274,7 +276,7 @@ def _avisos_funciones(antes: dict, ahora: dict, peliculas: dict, momento: dateti
 
     # Misma función con otro horario (si era o pasa a ser de noche).
     movidas = [k for k in antes.keys() & ahora.keys()
-               if antes[k]["inicio"] != ahora[k]["inicio"] and (es_de_noche(antes[k]) or es_de_noche(ahora[k]))]
+               if antes[k]["inicio"] != ahora[k]["inicio"] and (es_relevante(antes[k]) or es_relevante(ahora[k]))]
     cambios = [f"• <b>{_peli_de(ahora[k], peliculas, momento)}</b> — {_e(ahora[k]['cine'])}: "
                f"{_cuando(antes[k])} → {_cuando(ahora[k])}" for k in movidas]
     if cambios:
@@ -394,36 +396,35 @@ def _peli_de(f: dict, peliculas: dict, momento: datetime) -> str:
     return _peli(peliculas.get(f["pelicula_id"]) or {"titulo": f["pelicula"]}, momento)
 
 
+def es_relevante(f: dict) -> bool:
+    """Las únicas funciones que interesan: de noche, subtituladas y sin D-BOX."""
+    return (es_de_noche(f) and f.get("idioma") != "CAST"
+            and not (f.get("formato") or "").upper().startswith("DBOX"))
+
+
 def es_de_noche(f: dict) -> bool:
     """Desde HORA_DESDE hasta medianoche, o pasada la medianoche (antes de las 6), como en Showcase."""
     hora = f["inicio"][11:16]
     return hora >= HORA_DESDE or hora < "06:00"
 
 
-def _bloques(fs: list[dict]) -> str:
-    """Un bloque por función, agrupadas por cine y en orden de horario. El 2D y el
-    D-BOX de la misma función (mismo cine, horario, sala e idioma) van juntos:
+def _bloques(fs: list[dict], url: str = "") -> str:
+    """Un bloque por función, agrupadas por cine y en orden de horario:
 
         📍 <b>Abasto</b>
-        🌙 <b>2D · 22:45</b> · Sala 11 · Subtitulada
-             Mié 16/12: 231 🟢 / 279 🔴 · DBOX 15 🟢 / 30 🔴
+        <a href="…">2D · 22:45 · Sala 11 · Subtitulada</a>
+             Vie 18/12: 209 🟢 / 224 🔴
 
-    (🟢 asientos libres / 🔴 capacidad). Hasta MAX_POR_CINE bloques por cine; las
-    demás funciones se ven con el link a la película del final del aviso.
+    (🟢 asientos libres / 🔴 capacidad). La cabecera lleva a comprar: Cinemark no tiene
+    un link por función, así que abre la película y ahí se toca el horario.
+    Hasta MAX_POR_CINE funciones por cine.
     """
-    grupos: dict[tuple, dict] = {}
-    for f in sorted(fs, key=lambda f: (f["inicio"], f.get("formato") or "")):
-        formato = f.get("formato") or ""
-        dbox = formato.upper().startswith("DBOX ")
-        base = formato[5:] if dbox else formato
-        g = grupos.setdefault((f["cine"], f["inicio"], base, f.get("idioma")), {"base": None, "dbox": None})
-        g["dbox" if dbox else "base"] = f
     por_cine: dict[str, list[dict]] = {}
-    for (cine, *_), g in grupos.items():
-        por_cine.setdefault(cine, []).append(g)
+    for f in sorted(fs, key=lambda f: (f["inicio"], f.get("formato") or "")):
+        por_cine.setdefault(f["cine"], []).append(f)
     partes = []
-    for cine, gs in sorted(por_cine.items()):
-        bloques = [_bloque(g["base"], g["dbox"]) for g in gs[:MAX_POR_CINE]]
+    for cine, funcs in sorted(por_cine.items()):
+        bloques = [_bloque(f, url) for f in funcs[:MAX_POR_CINE]]
         partes.append(f"📍 <b>{_e(cine)}</b>\n" + "\n\n".join(bloques))
     return "\n\n".join(partes)
 
@@ -432,21 +433,17 @@ SANGRIA = "\u00a0" * 5   # espacios que Telegram no recorta al principio de la l
 TIPOS = {"SUB": "Subtitulada", "CAST": "Doblada al castellano"}
 
 
-def _bloque(base: dict | None, dbox: dict | None = None) -> str:
-    """
-        🌙 <b>2D · 22:45</b> · Sala 11 · Subtitulada
-             Mié 16/12: 231 🟢 / 279 🔴 · DBOX 15 🟢 / 30 🔴
-    """
-    f = base or dbox                       # si solo hay D-BOX, el bloque es de esa función
-    cabeza = [f"🌙 <b>{_e(f.get('formato') or '')} · {f['inicio'][11:16]}</b>"]
+def _bloque(f: dict, url: str = "") -> str:
+    cabeza = [_e(f.get("formato") or ""), f["inicio"][11:16]]
     if f.get("sala"):
         cabeza.append(f"Sala {_e(str(f['sala']))}")
     if f.get("idioma"):
         cabeza.append(TIPOS.get(f["idioma"], f["idioma"]))
-    detalle = f"{_dia_corto(f)}: {_lugares(f)}" if _lugares(f) else _dia_corto(f)
-    if base and dbox and _lugares(dbox):
-        detalle += f" · DBOX {_lugares(dbox)}"
-    return " · ".join(cabeza) + "\n" + SANGRIA + detalle
+    cabeza = " · ".join(cabeza)
+    if url:
+        cabeza = f'<a href="{html.escape(url)}">{cabeza}</a>'
+    lugares = _lugares(f)
+    return cabeza + "\n" + SANGRIA + (f"{_dia_corto(f)}: {lugares}" if lugares else _dia_corto(f))
 
 
 def _lugares(f: dict) -> str:
