@@ -6567,6 +6567,321 @@
    "pelicula_id": "110243",
    "sala": "6"
   },
+  "103-190266-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T13:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190267-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190268-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T18:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190269-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T20:35",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190270-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190271-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T13:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190272-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190273-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T18:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190274-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T20:35",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190275-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190276-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T13:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190277-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190278-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T18:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190279-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T20:35",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190280-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190281-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T13:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190282-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190283-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T18:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190284-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T20:35",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190285-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190286-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T13:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190287-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190288-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T18:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190289-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T20:35",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190290-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190291-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T13:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190292-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190293-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T18:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190294-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T20:35",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190295-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190296-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T13:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190297-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190298-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T18:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190299-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T20:35",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
+  "103-190300-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "8"
+  },
   "103-190301-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -11103,6 +11418,321 @@
    "pelicula_id": "114052",
    "sala": "10"
   },
+  "111-155350-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T12:40",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155351-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155352-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T20:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155353-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155354-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T17:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155355-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T12:40",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155356-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155357-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T17:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155358-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T20:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155359-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155360-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T12:40",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155361-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155362-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T17:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155363-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T20:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155364-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155365-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T12:40",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155366-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155367-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T17:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155368-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T20:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155369-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155370-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T12:40",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155371-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155372-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T17:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155373-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T20:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155374-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155375-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T12:40",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155376-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155377-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T17:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155378-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T20:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155379-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155380-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T12:40",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155381-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:10",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155382-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T17:45",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155383-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T20:20",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
+  "111-155384-2D": {
+   "cine": "DOT",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T23:00",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "10"
+  },
   "111-155385-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -11542,7 +12172,7 @@
    "url": "https://www.cinemark.com.ar/pelicula/avengers-doomsday"
   },
   "110243": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "estreno": "2026-11-19",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00012308.jpg",
    "titulo": "LA ASISTENTE DE LA MORGUE",
@@ -11563,7 +12193,7 @@
    "url": "https://www.cinemark.com.ar/pelicula/el-gato-con-sombrero"
   },
   "110814": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "estreno": "2026-11-19",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013363.jpg",
    "titulo": "LOS JUEGOS DEL HAMBRE: AMANECER EN LA COSECHA",
@@ -11647,7 +12277,7 @@
    "url": "https://www.cinemark.com.ar/pelicula/ebenezer-los-fantasmas-de-navidad"
   },
   "114052": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "estreno": "2026-11-19",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013365.jpg",
    "titulo": "YO SOY ROCKY",
@@ -11661,21 +12291,21 @@
    "url": "https://www.cinemark.com.ar/pelicula/puedes-verlo-todo"
   },
   "114119": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "estreno": "2026-11-19",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013420.jpg",
    "titulo": "RECEN POR MÍ: LA HISTORIA DE FRANCISCO",
    "url": "https://www.cinemark.com.ar/pelicula/recen-por-mi-la-historia-de-francisco"
   },
   "114122": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "estreno": "2026-11-19",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013421.jpg",
    "titulo": "MINOTAURO",
    "url": "https://www.cinemark.com.ar/pelicula/minotauro"
   },
   "114123": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "estreno": "2026-11-19",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013424.jpg",
    "titulo": "CARNE",

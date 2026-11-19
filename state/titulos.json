@@ -19,6 +19,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg",
   "t": 1795037827
  },
+ "carne": {
+  "en": "Carne",
+  "es": "CARNE",
+  "id": 1796896,
+  "poster": "https://image.tmdb.org/t/p/w780/lt3bOrIvM76SR6iX0Y4MSV57QGs.jpg",
+  "t": 1795085260
+ },
  "cómo robar un banco": {
   "en": "How to Rob a Bank",
   "es": "CÓMO ROBAR UN BANCO",
@@ -78,6 +85,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/d9AWoR6Goi1ZQH9K8EZy8VDi0zF.jpg",
   "t": 1795056443
  },
+ "la asistente de la morgue": {
+  "en": "The Mortuary Assistant",
+  "es": "LA ASISTENTE DE LA MORGUE",
+  "id": 1470130,
+  "poster": "https://image.tmdb.org/t/p/w780/72AoFPC5TY4DfJwXXS9rPwPeReD.jpg",
+  "t": 1795085260
+ },
  "la caída de la ballena": {
   "en": "Whalefall",
   "es": "LA CAÍDA DE LA BALLENA",
@@ -86,6 +100,12 @@
   "t": 1795037827
  },
  "la nueva focker": {
+  "detalles": {
+   "duracion": 105,
+   "fondo": "https://image.tmdb.org/t/p/w1280/6IfsmHoVWwgJwzxA9DLim2XZbSn.jpg",
+   "t": 1795085260,
+   "trailer": "https://www.youtube.com/watch?v=9CKu3WoMYCg"
+  },
   "en": "Focker-in-Law",
   "es": "LA NUEVA FOCKER",
   "id": 1400336,
@@ -112,12 +132,26 @@
   "poster": "https://image.tmdb.org/t/p/w780/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg",
   "t": 1795037827
  },
+ "minotauro": {
+  "en": "Minotaur",
+  "es": "MINOTAURO",
+  "id": 848700,
+  "poster": "https://image.tmdb.org/t/p/w780/bM37B5CuMWrPyGPpNsKzTGict4Q.jpg",
+  "t": 1795085260
+ },
  "perfume": {
   "en": "Perfume",
   "es": "PERFUME",
   "id": 1809658,
   "poster": "https://image.tmdb.org/t/p/w780/t7flYSsrk9EbulxCX8MbduNGqXK.jpg",
   "t": 1795056443
+ },
+ "recen por mí: la historia de francisco": {
+  "en": "Pray for me: Pope Francis' story",
+  "es": "RECEN POR MÍ: LA HISTORIA DE FRANCISCO",
+  "id": 1510295,
+  "poster": "https://image.tmdb.org/t/p/w780/gnmbwuCoGwFblQ0tvvxHHh8LhTU.jpg",
+  "t": 1795085260
  },
  "resident evil: noche cero": {
   "en": "Resident Evil",
@@ -195,6 +229,13 @@
   "id": 1283515,
   "poster": "https://image.tmdb.org/t/p/w780/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg",
   "t": 1795056442
+ },
+ "yo soy rocky": {
+  "en": "I Play Rocky",
+  "es": "YO SOY ROCKY",
+  "id": 1286656,
+  "poster": "https://image.tmdb.org/t/p/w780/xE5tY3lppZUyG7WKKThsuYHuAHr.jpg",
+  "t": 1795085260
  },
  "¡plumas! operación rescate": {
   "en": "Out of the Nest",
