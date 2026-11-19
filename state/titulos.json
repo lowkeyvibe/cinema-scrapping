@@ -1,4 +1,11 @@
 {
+ "aniquilación": {
+  "en": "Onslaught",
+  "es": "ANIQUILACIÓN",
+  "id": 1284046,
+  "poster": "https://image.tmdb.org/t/p/w780/eAs7G3yFaULpfwfVdGvPo5HmFJS.jpg",
+  "t": 1795056443
+ },
  "avengers: doomsday": {
   "detalles": {
    "duracion": 165,
@@ -11,6 +18,13 @@
   "id": 1003596,
   "poster": "https://image.tmdb.org/t/p/w780/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg",
   "t": 1795037827
+ },
+ "cómo robar un banco": {
+  "en": "How to Rob a Bank",
+  "es": "CÓMO ROBAR UN BANCO",
+  "id": 1437511,
+  "poster": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+  "t": 1795056443
  },
  "digger": {
   "en": "Digger",
@@ -43,6 +57,13 @@
   "es": "EL GATO CON SOMBRERO",
   "t": 1794973226
  },
+ "el sonido al caer": {
+  "en": "Sound of Falling",
+  "es": "EL SONIDO AL CAER",
+  "id": 1221061,
+  "poster": "https://image.tmdb.org/t/p/w780/5hLiXAqZ3xTHExOIsxYANIswBjZ.jpg",
+  "t": 1795056443
+ },
  "godzilla minus zero": {
   "en": "Godzilla Minus Zero",
   "es": "Godzilla Minus Zero",
@@ -50,12 +71,26 @@
   "poster": "https://image.tmdb.org/t/p/w780/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
   "t": 1795037824
  },
+ "ju-on: el grito": {
+  "en": "Ju-on: The Beginning of the End",
+  "es": "JU-ON: EL GRITO",
+  "id": 259233,
+  "poster": "https://image.tmdb.org/t/p/w780/d9AWoR6Goi1ZQH9K8EZy8VDi0zF.jpg",
+  "t": 1795056443
+ },
  "la caída de la ballena": {
   "en": "Whalefall",
   "es": "LA CAÍDA DE LA BALLENA",
   "id": 1255833,
   "poster": "https://image.tmdb.org/t/p/w780/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg",
   "t": 1795037827
+ },
+ "la nueva focker": {
+  "en": "Focker-in-Law",
+  "es": "LA NUEVA FOCKER",
+  "id": 1400336,
+  "poster": "https://image.tmdb.org/t/p/w780/iHJhSfqFpDMOyeMc6h6BOeHxse2.jpg",
+  "t": 1795056442
  },
  "las nuevas desventuras de cliff booth": {
   "detalles": {
@@ -80,8 +115,23 @@
  "perfume": {
   "en": "Perfume",
   "es": "PERFUME",
+  "id": 1809658,
   "poster": "https://image.tmdb.org/t/p/w780/t7flYSsrk9EbulxCX8MbduNGqXK.jpg",
-  "t": 1794977563
+  "t": 1795056443
+ },
+ "resident evil: noche cero": {
+  "en": "Resident Evil",
+  "es": "RESIDENT EVIL: NOCHE CERO",
+  "id": 1423191,
+  "poster": "https://image.tmdb.org/t/p/w780/gAgWJhUSQWCgtKR8170nMkYlBda.jpg",
+  "t": 1795056444
+ },
+ "rocky 50° aniversario": {
+  "en": null,
+  "es": "ROCKY 50° ANIVERSARIO",
+  "id": null,
+  "poster": null,
+  "t": 1795056444
  },
  "seret 2026 a burning man": {
   "en": null,
@@ -124,6 +174,27 @@
   "id": null,
   "poster": null,
   "t": 1795009418
+ },
+ "shaun, el cordero: el monstruo de mossy bottom": {
+  "en": "Shaun the Sheep: The Beast of Mossy Bottom",
+  "es": "SHAUN, EL CORDERO: EL MONSTRUO DE MOSSY BOTTOM",
+  "id": 1477104,
+  "poster": "https://image.tmdb.org/t/p/w780/gayX49siwXf8eNs16rtk1fI91Ey.jpg",
+  "t": 1795056444
+ },
+ "tierra de mi padre": {
+  "en": "Fatherland",
+  "es": "TIERRA DE MI PADRE",
+  "id": 1437696,
+  "poster": "https://image.tmdb.org/t/p/w780/oNejN1l69nBF8LdQwy5FkAQZT44.jpg",
+  "t": 1795056442
+ },
+ "verity: la sombra de un engaño": {
+  "en": "Verity",
+  "es": "VERITY: LA SOMBRA DE UN ENGAÑO",
+  "id": 1283515,
+  "poster": "https://image.tmdb.org/t/p/w780/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg",
+  "t": 1795056442
  },
  "¡plumas! operación rescate": {
   "en": "Out of the Nest",

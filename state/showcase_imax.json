@@ -48,26 +48,6 @@
   }
  },
  "funciones": {
-  "573786": {
-   "cinema": 18,
-   "fecha": "2026-11-18",
-   "formato": "IMAX-Subtitulado",
-   "hora": "19:15",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
-   "trasnoche": false
-  },
-  "573787": {
-   "cinema": 18,
-   "fecha": "2026-11-18",
-   "formato": "IMAX-Subtitulado",
-   "hora": "22:35",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
-   "trasnoche": false
-  },
   "573795": {
    "cinema": 18,
    "fecha": "2026-11-19",
@@ -501,7 +481,7 @@
  },
  "peliculas": {
   "6291": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "poster": "https://static.voyalcine.net/Uploads/i6291.jpg",
    "titulo": "Los Juegos del Hambre: amanecer en la cosecha",
    "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6291&house_id=3250"
