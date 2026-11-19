@@ -19,6 +19,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg",
   "t": 1795037827
  },
+ "caballo salvaje nueve": {
+  "en": "Wild Horse Nine",
+  "es": "CABALLO SALVAJE NUEVE",
+  "id": 891621,
+  "poster": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+  "t": 1795115500
+ },
  "carne": {
   "en": "Carne",
   "es": "CARNE",
@@ -231,6 +238,12 @@
   "t": 1795056442
  },
  "yo soy rocky": {
+  "detalles": {
+   "duracion": 128,
+   "fondo": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+   "t": 1795115500,
+   "trailer": "https://www.youtube.com/watch?v=jq5oCjhQtIc"
+  },
   "en": "I Play Rocky",
   "es": "YO SOY ROCKY",
   "id": 1286656,
