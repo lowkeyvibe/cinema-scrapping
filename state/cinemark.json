@@ -3093,24 +3093,6 @@
    "pelicula_id": "114044",
    "sala": "3"
   },
-  "103-189582-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T13:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189582-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T13:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
   "103-189583-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3165,24 +3147,6 @@
    "pelicula_id": "110814",
    "sala": "9"
   },
-  "103-189586-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T12:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
-  "103-189586-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T12:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
   "103-189587-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3236,24 +3200,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "10"
-  },
-  "103-189590-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T12:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
-  "103-189590-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T12:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
   },
   "103-189591-2D": {
    "cine": "Abasto",
@@ -4425,15 +4371,6 @@
    "pelicula_id": "114044",
    "sala": "8"
   },
-  "103-190046-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T13:30",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "12"
-  },
   "103-190047-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4704,15 +4641,6 @@
    "pelicula_id": "114117",
    "sala": "4"
   },
-  "103-190113-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T12:10",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
   "103-190114-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4739,24 +4667,6 @@
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "1"
-  },
-  "103-190117-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T23:00",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
-  "103-190118-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T13:50",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "2"
   },
   "103-190119-2D": {
    "cine": "Abasto",
@@ -4803,15 +4713,6 @@
    "pelicula_id": "110814",
    "sala": "3"
   },
-  "103-190124-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T12:10",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "4"
-  },
   "103-190125-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4847,15 +4748,6 @@
    "pelicula": "GODZILLA MINUS ZERO",
    "pelicula_id": "111103",
    "sala": "4"
-  },
-  "103-190129-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T13:40",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "5"
   },
   "103-190130-2D": {
    "cine": "Abasto",
@@ -4979,15 +4871,6 @@
    "formato": "2D",
    "idioma": "SUB",
    "inicio": "2026-11-22T20:20",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
-  "103-190144-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-22T23:00",
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "1"
@@ -5226,15 +5109,6 @@
    "pelicula_id": "114046",
    "sala": "1"
   },
-  "103-190171-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T23:00",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
   "103-190172-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -5465,15 +5339,6 @@
    "formato": "2D",
    "idioma": "SUB",
    "inicio": "2026-11-25T20:20",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
-  "103-190198-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-25T23:00",
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "1"
@@ -5882,15 +5747,6 @@
    "pelicula": "GODZILLA MINUS ZERO",
    "pelicula_id": "111103",
    "sala": "4"
-  },
-  "103-190244-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-23T23:00",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
   },
   "103-190245-2D": {
    "cine": "Abasto",
@@ -6629,6 +6485,51 @@
    "pelicula": "DUNA: PARTE TRES",
    "pelicula_id": "112486",
    "sala": "10"
+  },
+  "103-190335-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-20T23:00",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190336-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-22T23:00",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190337-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-23T23:00",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190338-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-24T23:00",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190339-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-25T23:00",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
   },
   "111-151941-PREMIER 2D": {
    "cine": "DOT",
@@ -8601,15 +8502,6 @@
    "pelicula_id": "110814",
    "sala": "3"
   },
-  "111-154754-4D 2D": {
-   "cine": "DOT",
-   "formato": "4D 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T12:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
-  },
   "111-154755-4D 2D": {
    "cine": "DOT",
    "formato": "4D 2D",
@@ -9150,15 +9042,6 @@
    "pelicula_id": "110814",
    "sala": "5"
   },
-  "111-155060-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T13:30",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "10"
-  },
   "111-155061-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -9519,15 +9402,6 @@
    "pelicula_id": "110814",
    "sala": "1"
   },
-  "111-155204-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-25T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "1"
-  },
   "111-155229-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -9581,15 +9455,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "1"
-  },
-  "111-155235-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T13:30",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "4"
   },
   "111-155236-2D": {
    "cine": "DOT",
@@ -9906,15 +9771,6 @@
    "pelicula_id": "110814",
    "sala": "6"
   },
-  "111-155277-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-20T14:00",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "7"
-  },
   "111-155278-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -10085,15 +9941,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "7"
-  },
-  "111-155297-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T14:10",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "8"
   },
   "111-155298-2D": {
    "cine": "DOT",
@@ -10301,15 +10148,6 @@
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "8"
-  },
-  "111-155321-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-20T12:50",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "9"
   },
   "111-155322-2D": {
    "cine": "DOT",
