@@ -19,6 +19,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg",
   "t": 1795037827
  },
+ "bichos de mar": {
+  "en": "Tall Tales",
+  "es": "BICHOS DE MAR",
+  "id": 458252,
+  "poster": "https://image.tmdb.org/t/p/w780/laSXfFwQ5Ce5eSCIEBOl3RaohqN.jpg",
+  "t": 1795215941
+ },
  "caballo salvaje nueve": {
   "en": "Wild Horse Nine",
   "es": "CABALLO SALVAJE NUEVE",
@@ -71,6 +78,13 @@
   "en": "The Cat in the Hat",
   "es": "EL GATO CON SOMBRERO",
   "t": 1794973226
+ },
+ "el héroe de berlín": {
+  "en": "Race",
+  "es": "EL HÉROE DE BERLÍN",
+  "id": 323677,
+  "poster": "https://image.tmdb.org/t/p/w780/ubbNizkhjEYw06XB7b0YMgsHXG1.jpg",
+  "t": 1795215942
  },
  "el sonido al caer": {
   "en": "Sound of Falling",
@@ -134,6 +148,12 @@
   "t": 1794978951
  },
  "los juegos del hambre: amanecer en la cosecha": {
+  "detalles": {
+   "duracion": 159,
+   "fondo": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+   "t": 1795215942,
+   "trailer": "https://www.youtube.com/watch?v=Dr060OLTodE"
+  },
   "en": "The Hunger Games: Sunrise on the Reaping",
   "es": "LOS JUEGOS DEL HAMBRE: AMANECER EN LA COSECHA",
   "id": 1300968,
@@ -147,12 +167,26 @@
   "poster": "https://image.tmdb.org/t/p/w780/bM37B5CuMWrPyGPpNsKzTGict4Q.jpg",
   "t": 1795085260
  },
+ "one piece: doble aventura": {
+  "en": null,
+  "es": "ONE PIECE: DOBLE AVENTURA",
+  "id": null,
+  "poster": null,
+  "t": 1795215942
+ },
  "perfume": {
   "en": "Perfume",
   "es": "PERFUME",
   "id": 1809658,
   "poster": "https://image.tmdb.org/t/p/w780/t7flYSsrk9EbulxCX8MbduNGqXK.jpg",
   "t": 1795056443
+ },
+ "ramayana: el nacimiento de una leyenda": {
+  "en": "Ramayana: Rise of a Legend",
+  "es": "RAMAYANA: EL NACIMIENTO DE UNA LEYENDA",
+  "id": 656908,
+  "poster": "https://image.tmdb.org/t/p/w780/vBQ7wks68OhJKlb3RnXSl2yXBXK.jpg",
+  "t": 1795215942
  },
  "recen por mí: la historia de francisco": {
   "en": "Pray for me: Pope Francis' story",
@@ -223,6 +257,13 @@
   "id": 1477104,
   "poster": "https://image.tmdb.org/t/p/w780/gayX49siwXf8eNs16rtk1fI91Ey.jpg",
   "t": 1795056444
+ },
+ "spider-man: un (nuevo) nuevo día": {
+  "en": "Spider-Man: Brand New Day",
+  "es": "SPIDER-MAN: UN (NUEVO) NUEVO DÍA",
+  "id": 969681,
+  "poster": "https://image.tmdb.org/t/p/w780/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+  "t": 1795215942
  },
  "tierra de mi padre": {
   "en": "Fatherland",
