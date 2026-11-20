@@ -3093,42 +3093,6 @@
    "pelicula_id": "114044",
    "sala": "3"
   },
-  "103-189577-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-19T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189577-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-19T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189579-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
-  "103-189579-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
   "103-189582-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4461,15 +4425,6 @@
    "pelicula_id": "114044",
    "sala": "8"
   },
-  "103-190045-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:40",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "12"
-  },
   "103-190046-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4748,42 +4703,6 @@
    "pelicula": "PUEDES VERLO TODO",
    "pelicula_id": "114117",
    "sala": "4"
-  },
-  "103-190081-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T23:00",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
-  "103-190098-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-19T22:45",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
-  },
-  "103-190103-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:50",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "4"
-  },
-  "103-190109-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-19T22:40",
-   "pelicula": "LA ASISTENTE DE LA MORGUE",
-   "pelicula_id": "110243",
-   "sala": "6"
   },
   "103-190113-2D": {
    "cine": "Abasto",
@@ -8628,15 +8547,6 @@
    "pelicula_id": "114044",
    "sala": "7"
   },
-  "111-154739-4D 2D": {
-   "cine": "DOT",
-   "formato": "4D 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
-  },
   "111-154747-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -9240,24 +9150,6 @@
    "pelicula_id": "110814",
    "sala": "5"
   },
-  "111-154818-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "2"
-  },
-  "111-155056-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:40",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "10"
-  },
   "111-155060-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -9500,33 +9392,6 @@
    "pelicula": "PUEDES VERLO TODO",
    "pelicula_id": "114117",
    "sala": "9"
-  },
-  "111-155170-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:50",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "4"
-  },
-  "111-155178-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "7"
-  },
-  "111-155182-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-19T22:20",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "8"
   },
   "111-155187-PREMIER 2D": {
    "cine": "DOT",
