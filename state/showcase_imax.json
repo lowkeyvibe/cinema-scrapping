@@ -48,16 +48,6 @@
   }
  },
  "funciones": {
-  "573795": {
-   "cinema": 18,
-   "fecha": "2026-11-19",
-   "formato": "IMAX-Subtitulado",
-   "hora": "19:15",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
-   "trasnoche": false
-  },
   "573796": {
    "cinema": 18,
    "fecha": "2026-11-19",
@@ -467,9 +457,305 @@
    "pelicula_id": "6323",
    "show": "87740A",
    "trasnoche": false
+  },
+  "575057": {
+   "cinema": 18,
+   "fecha": "2026-12-15",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575058": {
+   "cinema": 18,
+   "fecha": "2026-12-15",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575059": {
+   "cinema": 18,
+   "fecha": "2026-12-15",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575060": {
+   "cinema": 18,
+   "fecha": "2026-12-16",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575061": {
+   "cinema": 18,
+   "fecha": "2026-12-16",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575062": {
+   "cinema": 18,
+   "fecha": "2026-12-16",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575063": {
+   "cinema": 18,
+   "fecha": "2026-12-17",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575064": {
+   "cinema": 18,
+   "fecha": "2026-12-17",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575065": {
+   "cinema": 18,
+   "fecha": "2026-12-17",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575066": {
+   "cinema": 18,
+   "fecha": "2026-12-18",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575067": {
+   "cinema": 18,
+   "fecha": "2026-12-18",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575068": {
+   "cinema": 18,
+   "fecha": "2026-12-18",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575069": {
+   "cinema": 18,
+   "fecha": "2026-12-19",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575070": {
+   "cinema": 18,
+   "fecha": "2026-12-19",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575071": {
+   "cinema": 18,
+   "fecha": "2026-12-19",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575072": {
+   "cinema": 18,
+   "fecha": "2026-12-20",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575073": {
+   "cinema": 18,
+   "fecha": "2026-12-20",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575074": {
+   "cinema": 18,
+   "fecha": "2026-12-20",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575075": {
+   "cinema": 18,
+   "fecha": "2026-12-21",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575076": {
+   "cinema": 18,
+   "fecha": "2026-12-21",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575078": {
+   "cinema": 18,
+   "fecha": "2026-12-22",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575079": {
+   "cinema": 18,
+   "fecha": "2026-12-22",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575080": {
+   "cinema": 18,
+   "fecha": "2026-12-22",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575081": {
+   "cinema": 18,
+   "fecha": "2026-12-23",
+   "formato": "IMAX-Subtitulado",
+   "hora": "16:10",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575082": {
+   "cinema": 18,
+   "fecha": "2026-12-23",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:25",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575083": {
+   "cinema": 18,
+   "fecha": "2026-12-23",
+   "formato": "IMAX-Subtitulado",
+   "hora": "22:35",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575084": {
+   "cinema": 18,
+   "fecha": "2026-12-15",
+   "formato": "IMAX-Subtitulado",
+   "hora": "13:00",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575254": {
+   "cinema": 18,
+   "fecha": "2026-12-19",
+   "formato": "IMAX-Subtitulado",
+   "hora": "12:45",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
+  },
+  "575255": {
+   "cinema": 18,
+   "fecha": "2026-12-20",
+   "formato": "IMAX-Subtitulado",
+   "hora": "12:45",
+   "pelicula": "Duna: parte tres",
+   "pelicula_id": "6079",
+   "show": "87491A",
+   "trasnoche": false
   }
  },
  "peliculas": {
+  "6079": {
+   "estado": "Preventa",
+   "poster": "https://static.voyalcine.net/Uploads/i6079b.jpg",
+   "titulo": "Duna: parte tres",
+   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6079&house_id=3250"
+  },
   "6291": {
    "estado": "En cartelera",
    "poster": "https://static.voyalcine.net/Uploads/i6291.jpg",
