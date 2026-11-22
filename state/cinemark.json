@@ -3057,60 +3057,6 @@
    "pelicula_id": "114044",
    "sala": "3"
   },
-  "103-189597-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-21T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189597-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-21T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189601-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-21T22:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
-  "103-189601-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-21T22:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
-  "103-189605-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
-  "103-189605-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
   "103-189606-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4001,15 +3947,6 @@
    "pelicula": "BTS WORLD TOUR 'ARIRANG' IN JAKARTA",
    "pelicula_id": "114044",
    "sala": "8"
-  },
-  "103-190053-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:40",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "12"
   },
   "103-190054-2D": {
    "cine": "Abasto",
@@ -5153,51 +5090,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "8"
-  },
-  "103-190250-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-21T20:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "1"
-  },
-  "103-190252-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-21T22:40",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "2"
-  },
-  "103-190256-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T21:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "4"
-  },
-  "103-190260-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T21:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
-  },
-  "103-190265-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-21T22:40",
-   "pelicula": "LA ASISTENTE DE LA MORGUE",
-   "pelicula_id": "110243",
-   "sala": "6"
   },
   "103-190266-2D": {
    "cine": "Abasto",
@@ -7683,33 +7575,6 @@
    "pelicula_id": "114044",
    "sala": "7"
   },
-  "111-154761-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "2"
-  },
-  "111-154765-XD 2D": {
-   "cine": "DOT",
-   "formato": "XD 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "3"
-  },
-  "111-154769-4D 2D": {
-   "cine": "DOT",
-   "formato": "4D 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
-  },
   "111-154770-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -8106,15 +7971,6 @@
    "pelicula_id": "110814",
    "sala": "5"
   },
-  "111-155067-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:40",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "10"
-  },
   "111-155068-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -8285,15 +8141,6 @@
    "pelicula": "PUEDES VERLO TODO",
    "pelicula_id": "114117",
    "sala": "9"
-  },
-  "111-155192-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "1"
   },
   "111-155193-PREMIER 2D": {
    "cine": "DOT",
@@ -8528,15 +8375,6 @@
    "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
    "pelicula_id": "111102",
    "sala": "4"
-  },
-  "111-155264-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T21:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "6"
   },
   "111-155265-2D": {
    "cine": "DOT",
@@ -8789,15 +8627,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "7"
-  },
-  "111-155304-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:20",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "8"
   },
   "111-155305-2D": {
    "cine": "DOT",
@@ -9085,15 +8914,6 @@
    "inicio": "2026-11-25T22:10",
    "pelicula": "CLAYFACE",
    "pelicula_id": "110812",
-   "sala": "9"
-  },
-  "111-155344-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
    "sala": "9"
   },
   "111-155346-2D": {
@@ -9762,15 +9582,6 @@
    "pelicula_id": "112486",
    "sala": "1"
   },
-  "111-155421-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-21T22:50",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "4"
-  },
   "111-155422-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -10033,13 +9844,6 @@
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013207.jpg",
    "titulo": "SENSATEZ Y SENTIMIENTO",
    "url": "https://www.cinemark.com.ar/pelicula/sensatez-y-sentimiento"
-  },
-  "113867": {
-   "estado": "En cartelera",
-   "estreno": "2026-11-21",
-   "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013346.jpg",
-   "titulo": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG",
-   "url": "https://www.cinemark.com.ar/pelicula/bts-world-tour-arirang-in-kaohsiung"
   },
   "114044": {
    "estado": "Preventa",
