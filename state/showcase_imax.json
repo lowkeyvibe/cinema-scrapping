@@ -48,16 +48,6 @@
   }
  },
  "funciones": {
-  "573804": {
-   "cinema": 18,
-   "fecha": "2026-11-22",
-   "formato": "IMAX-Subtitulado",
-   "hora": "19:15",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
-   "trasnoche": false
-  },
   "573805": {
    "cinema": 18,
    "fecha": "2026-11-22",
@@ -103,16 +93,6 @@
    "fecha": "2026-11-25",
    "formato": "IMAX-Subtitulado",
    "hora": "22:35",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
-   "trasnoche": false
-  },
-  "573859": {
-   "cinema": 18,
-   "fecha": "2026-11-22",
-   "formato": "IMAX-Subtitulado",
-   "hora": "15:50",
    "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
    "pelicula_id": "6291",
    "show": "87722A",
