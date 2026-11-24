@@ -3057,24 +3057,6 @@
    "pelicula_id": "114044",
    "sala": "3"
   },
-  "103-189621-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-23T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189621-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-23T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
   "103-189630-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4137,24 +4119,6 @@
    "pelicula_id": "110814",
    "sala": "8"
   },
-  "103-190242-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-23T22:45",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
-  },
-  "103-190243-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-23T22:50",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "4"
-  },
   "103-190266-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -4703,15 +4667,6 @@
    "pelicula": "DUNA: PARTE TRES",
    "pelicula_id": "112486",
    "sala": "10"
-  },
-  "103-190337-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-23T23:00",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "1"
   },
   "103-190338-2D": {
    "cine": "Abasto",
@@ -6630,15 +6585,6 @@
    "pelicula_id": "114044",
    "sala": "7"
   },
-  "111-154789-XD 2D": {
-   "cine": "DOT",
-   "formato": "XD 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-23T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "3"
-  },
   "111-154795-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -6918,15 +6864,6 @@
    "pelicula_id": "114117",
    "sala": "9"
   },
-  "111-155198-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-23T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "1"
-  },
   "111-155202-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -7088,15 +7025,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "6"
-  },
-  "111-155288-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-23T23:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "7"
   },
   "111-155289-2D": {
    "cine": "DOT",
@@ -7979,15 +7907,6 @@
    "pelicula": "DUNA: PARTE TRES",
    "pelicula_id": "112486",
    "sala": "1"
-  },
-  "111-155422-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-23T22:50",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "4"
   },
   "111-155423-2D": {
    "cine": "DOT",
