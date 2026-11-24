@@ -107,6 +107,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
   "t": 1795037824
  },
+ "hechizo: bienvenidos a hexe": {
+  "en": "Hexed",
+  "es": "HECHIZO: BIENVENIDOS A HEXE",
+  "id": 1538497,
+  "poster": "https://image.tmdb.org/t/p/w780/yykeYKbDBM9eUMJUucaaDo2mi1p.jpg",
+  "t": 1795555808
+ },
  "ju-on: el grito": {
   "en": "Ju-on: The Beginning of the End",
   "es": "JU-ON: EL GRITO",
@@ -189,6 +196,12 @@
   "t": 1795056443
  },
  "ramayana: el nacimiento de una leyenda": {
+  "detalles": {
+   "duracion": 195,
+   "fondo": "https://image.tmdb.org/t/p/w1280/prbMZ3DPf8taS6JYQd6igPnm2mA.jpg",
+   "t": 1795555808,
+   "trailer": "https://www.youtube.com/watch?v=AYkPRN874m8"
+  },
   "en": "Ramayana: Rise of a Legend",
   "es": "RAMAYANA: EL NACIMIENTO DE UNA LEYENDA",
   "id": 656908,

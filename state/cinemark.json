@@ -483,6 +483,24 @@
    "pelicula_id": "109355",
    "sala": "9"
   },
+  "103-187338-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "SUB",
+   "inicio": "2026-12-17T00:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "9"
+  },
+  "103-187338-DBOX 3D": {
+   "cine": "Abasto",
+   "formato": "DBOX 3D",
+   "idioma": "SUB",
+   "inicio": "2026-12-17T00:30",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "9"
+  },
   "103-187339-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -533,6 +551,24 @@
    "formato": "DBOX 2D",
    "idioma": "CAST",
    "inicio": "2026-12-16T21:20",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "10"
+  },
+  "103-187342-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-17T00:50",
+   "pelicula": "AVENGERS: DOOMSDAY",
+   "pelicula_id": "109355",
+   "sala": "10"
+  },
+  "103-187342-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-17T00:50",
    "pelicula": "AVENGERS: DOOMSDAY",
    "pelicula_id": "109355",
    "sala": "10"
@@ -3057,42 +3093,6 @@
    "pelicula_id": "114044",
    "sala": "3"
   },
-  "103-189630-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T13:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189630-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T13:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189631-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T16:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
-  "103-189631-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T16:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "9"
-  },
   "103-189632-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3129,42 +3129,6 @@
    "pelicula_id": "110814",
    "sala": "9"
   },
-  "103-189634-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T12:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
-  "103-189634-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T12:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
-  "103-189635-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T15:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
-  "103-189635-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T15:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "10"
-  },
   "103-189636-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3200,42 +3164,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "10"
-  },
-  "103-189638-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T12:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
-  "103-189638-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T12:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
-  "103-189639-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T15:50",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
-  },
-  "103-189639-DBOX 2D": {
-   "cine": "Abasto",
-   "formato": "DBOX 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T15:50",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "11"
   },
   "103-189640-2D": {
    "cine": "Abasto",
@@ -3498,15 +3426,6 @@
    "pelicula_id": "114044",
    "sala": "2"
   },
-  "103-189655-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-29T14:00",
-   "pelicula": "NMIXX 1ST WORLD TOUR EPISODE 1",
-   "pelicula_id": "114125",
-   "sala": "5"
-  },
   "103-189712-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3515,24 +3434,6 @@
    "pelicula": "BTS WORLD TOUR 'ARIRANG' IN JAKARTA",
    "pelicula_id": "114044",
    "sala": "8"
-  },
-  "103-190062-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T13:30",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "12"
-  },
-  "103-190063-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T16:30",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "12"
   },
   "103-190064-2D": {
    "cine": "Abasto",
@@ -3651,33 +3552,6 @@
    "pelicula_id": "114117",
    "sala": "4"
   },
-  "103-190167-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T12:10",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
-  "103-190168-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T14:50",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
-  "103-190169-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T17:40",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "1"
-  },
   "103-190170-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3686,24 +3560,6 @@
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "1"
-  },
-  "103-190172-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T13:50",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "2"
-  },
-  "103-190173-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T17:10",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "2"
   },
   "103-190174-2D": {
    "cine": "Abasto",
@@ -3714,24 +3570,6 @@
    "pelicula_id": "110814",
    "sala": "2"
   },
-  "103-190175-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T14:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "3"
-  },
-  "103-190176-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T17:40",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "3"
-  },
   "103-190177-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3740,33 +3578,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "3"
-  },
-  "103-190178-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T12:10",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "4"
-  },
-  "103-190179-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T14:50",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "4"
-  },
-  "103-190180-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T17:30",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "4"
   },
   "103-190181-2D": {
    "cine": "Abasto",
@@ -3786,24 +3597,6 @@
    "pelicula_id": "111103",
    "sala": "4"
   },
-  "103-190183-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T13:40",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "5"
-  },
-  "103-190184-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T16:30",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "5"
-  },
   "103-190185-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3822,24 +3615,6 @@
    "pelicula_id": "110814",
    "sala": "5"
   },
-  "103-190187-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T14:20",
-   "pelicula": "LA ASISTENTE DE LA MORGUE",
-   "pelicula_id": "110243",
-   "sala": "6"
-  },
-  "103-190188-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T17:00",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "6"
-  },
   "103-190189-2D": {
    "cine": "Abasto",
    "formato": "2D",
@@ -3857,24 +3632,6 @@
    "pelicula": "LA ASISTENTE DE LA MORGUE",
    "pelicula_id": "110243",
    "sala": "6"
-  },
-  "103-190191-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T14:50",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "8"
-  },
-  "103-190192-2D": {
-   "cine": "Abasto",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T18:10",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "8"
   },
   "103-190193-2D": {
    "cine": "Abasto",
@@ -4685,6 +4442,2742 @@
    "pelicula": "YO SOY ROCKY",
    "pelicula_id": "114052",
    "sala": "1"
+  },
+  "103-190340-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T20:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190344-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T13:00",
+   "pelicula": "EL GATO CON SOMBRERO",
+   "pelicula_id": "110813",
+   "sala": "6"
+  },
+  "103-190353-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:40",
+   "pelicula": "RAMAYANA",
+   "pelicula_id": "114313",
+   "sala": "6"
+  },
+  "103-190356-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190356-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190357-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190357-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190358-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190358-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190360-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190360-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190361-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190361-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190362-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190362-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190371-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T23:00",
+   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+   "pelicula_id": "114046",
+   "sala": "6"
+  },
+  "103-190376-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T17:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190377-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190378-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T22:30",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "2"
+  },
+  "103-190379-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T17:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190380-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T14:25",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190382-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T19:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190383-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T23:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190384-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T19:20",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190385-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T16:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190386-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T13:45",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190388-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T19:20",
+   "pelicula": "PUEDES VERLO TODO",
+   "pelicula_id": "114117",
+   "sala": "6"
+  },
+  "103-190389-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190389-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190390-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190390-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190391-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190391-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190392-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190392-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190393-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190393-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-26T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190394-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T14:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190395-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T18:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190396-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-26T21:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190401-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190402-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T17:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190403-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T20:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190404-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T22:30",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "2"
+  },
+  "103-190405-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T14:25",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190406-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T17:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190407-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T19:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190408-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T23:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190409-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T13:45",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190410-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T16:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190411-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T19:20",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190415-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T13:00",
+   "pelicula": "LA ASISTENTE DE LA MORGUE",
+   "pelicula_id": "110243",
+   "sala": "6"
+  },
+  "103-190416-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:40",
+   "pelicula": "RAMAYANA",
+   "pelicula_id": "114313",
+   "sala": "6"
+  },
+  "103-190417-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T19:20",
+   "pelicula": "PUEDES VERLO TODO",
+   "pelicula_id": "114117",
+   "sala": "6"
+  },
+  "103-190418-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T23:00",
+   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+   "pelicula_id": "114046",
+   "sala": "6"
+  },
+  "103-190419-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190419-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190420-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190420-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190421-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190421-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190422-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190422-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190423-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190423-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190424-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190424-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190425-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190425-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190426-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190426-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190427-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190427-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190428-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190428-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190429-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190429-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190430-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T14:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190431-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T18:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190432-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-28T21:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190433-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T12:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190433-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-28T12:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190434-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T14:00",
+   "pelicula": "LA ASISTENTE DE LA MORGUE",
+   "pelicula_id": "110243",
+   "sala": "1"
+  },
+  "103-190435-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T16:20",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190436-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T19:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190437-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T22:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190438-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190439-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T17:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190440-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T20:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190441-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T22:30",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "2"
+  },
+  "103-190442-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T14:25",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190443-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T17:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190444-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T19:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190445-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T23:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190446-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T13:45",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190447-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T16:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190448-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T19:20",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190452-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T13:00",
+   "pelicula": "EL GATO CON SOMBRERO",
+   "pelicula_id": "110813",
+   "sala": "6"
+  },
+  "103-190453-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:40",
+   "pelicula": "RAMAYANA",
+   "pelicula_id": "114313",
+   "sala": "6"
+  },
+  "103-190454-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T19:20",
+   "pelicula": "PUEDES VERLO TODO",
+   "pelicula_id": "114117",
+   "sala": "6"
+  },
+  "103-190455-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T23:00",
+   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+   "pelicula_id": "114046",
+   "sala": "6"
+  },
+  "103-190456-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190456-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190457-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190457-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190458-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190458-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190459-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190459-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190460-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190460-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190461-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190461-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190462-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190462-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190463-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190463-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190464-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190464-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190465-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190465-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190466-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190466-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-27T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190467-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T14:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190468-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T18:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190469-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-27T21:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190470-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T14:00",
+   "pelicula": "LA ASISTENTE DE LA MORGUE",
+   "pelicula_id": "110243",
+   "sala": "1"
+  },
+  "103-190471-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T16:20",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190472-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T19:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190473-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T22:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190474-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190475-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T17:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190476-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T20:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190477-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T22:30",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "2"
+  },
+  "103-190478-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T14:25",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190479-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T17:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190480-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T19:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190481-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T23:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190482-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T13:45",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190483-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T16:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190484-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T19:20",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190488-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T13:00",
+   "pelicula": "EL GATO CON SOMBRERO",
+   "pelicula_id": "110813",
+   "sala": "6"
+  },
+  "103-190489-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:40",
+   "pelicula": "RAMAYANA",
+   "pelicula_id": "114313",
+   "sala": "6"
+  },
+  "103-190490-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T19:20",
+   "pelicula": "PUEDES VERLO TODO",
+   "pelicula_id": "114117",
+   "sala": "6"
+  },
+  "103-190491-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T23:00",
+   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+   "pelicula_id": "114046",
+   "sala": "6"
+  },
+  "103-190492-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190492-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190493-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190493-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190494-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190494-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190495-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190495-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190496-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190496-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190497-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190497-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190498-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190498-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190499-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190499-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190500-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190500-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190501-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190501-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190502-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190502-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-30T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190503-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T14:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190504-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T18:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190505-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-30T21:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190506-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T14:00",
+   "pelicula": "LA ASISTENTE DE LA MORGUE",
+   "pelicula_id": "110243",
+   "sala": "1"
+  },
+  "103-190507-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T16:20",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190508-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T19:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190509-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T22:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190510-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190511-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T17:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190512-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T20:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190513-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T22:30",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "2"
+  },
+  "103-190514-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T14:25",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190515-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T17:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190516-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T19:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190517-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T23:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190518-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T13:45",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190519-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T16:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190520-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T19:20",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190524-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T13:00",
+   "pelicula": "EL GATO CON SOMBRERO",
+   "pelicula_id": "110813",
+   "sala": "6"
+  },
+  "103-190525-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:40",
+   "pelicula": "RAMAYANA",
+   "pelicula_id": "114313",
+   "sala": "6"
+  },
+  "103-190526-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T19:20",
+   "pelicula": "PUEDES VERLO TODO",
+   "pelicula_id": "114117",
+   "sala": "6"
+  },
+  "103-190527-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T23:00",
+   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+   "pelicula_id": "114046",
+   "sala": "6"
+  },
+  "103-190528-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190528-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190529-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190529-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190530-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190530-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190531-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190531-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190532-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190532-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190533-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190533-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190534-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190534-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190535-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190535-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190536-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190536-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190537-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190537-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190538-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190538-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-01T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190539-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T14:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190540-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T18:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190541-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-01T21:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190542-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T14:00",
+   "pelicula": "LA ASISTENTE DE LA MORGUE",
+   "pelicula_id": "110243",
+   "sala": "1"
+  },
+  "103-190543-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T16:20",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190544-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T19:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190545-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T22:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190546-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190547-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T17:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190548-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T20:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190549-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T22:30",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "2"
+  },
+  "103-190550-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T14:25",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190551-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T17:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190552-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T19:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190553-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T23:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190554-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T13:45",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190555-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T16:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190556-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T19:20",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190560-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T13:00",
+   "pelicula": "EL GATO CON SOMBRERO",
+   "pelicula_id": "110813",
+   "sala": "6"
+  },
+  "103-190561-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:40",
+   "pelicula": "RAMAYANA",
+   "pelicula_id": "114313",
+   "sala": "6"
+  },
+  "103-190562-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T19:20",
+   "pelicula": "PUEDES VERLO TODO",
+   "pelicula_id": "114117",
+   "sala": "6"
+  },
+  "103-190563-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T23:00",
+   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+   "pelicula_id": "114046",
+   "sala": "6"
+  },
+  "103-190564-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190564-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190565-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190565-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190566-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190566-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190567-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190567-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190568-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190568-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190569-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190569-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190570-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190570-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190571-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190571-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190572-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190572-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190573-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190573-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190574-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190574-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-12-02T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190575-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T14:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190576-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T18:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190577-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-12-02T21:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190578-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T14:00",
+   "pelicula": "LA ASISTENTE DE LA MORGUE",
+   "pelicula_id": "110243",
+   "sala": "1"
+  },
+  "103-190579-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T16:20",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190580-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T19:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190581-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T22:10",
+   "pelicula": "YO SOY ROCKY",
+   "pelicula_id": "114052",
+   "sala": "1"
+  },
+  "103-190582-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190583-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T17:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190584-3D": {
+   "cine": "Abasto",
+   "formato": "3D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T20:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "2"
+  },
+  "103-190585-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T22:30",
+   "pelicula": "LA NUEVA FOCKER",
+   "pelicula_id": "114312",
+   "sala": "2"
+  },
+  "103-190586-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T14:25",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190587-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T17:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "3"
+  },
+  "103-190588-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T19:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190589-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T23:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "3"
+  },
+  "103-190590-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T13:45",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190591-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T16:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190592-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T19:20",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "4"
+  },
+  "103-190594-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T13:00",
+   "pelicula": "EL GATO CON SOMBRERO",
+   "pelicula_id": "110813",
+   "sala": "6"
+  },
+  "103-190595-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:40",
+   "pelicula": "RAMAYANA",
+   "pelicula_id": "114313",
+   "sala": "6"
+  },
+  "103-190596-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T19:20",
+   "pelicula": "PUEDES VERLO TODO",
+   "pelicula_id": "114117",
+   "sala": "6"
+  },
+  "103-190597-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T23:00",
+   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
+   "pelicula_id": "114046",
+   "sala": "6"
+  },
+  "103-190598-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T12:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190598-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T12:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190599-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190599-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:50",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190600-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190600-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T19:10",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190601-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190601-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T22:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "9"
+  },
+  "103-190602-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190602-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:20",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190603-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190603-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T18:40",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190604-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190604-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T22:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "10"
+  },
+  "103-190605-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190605-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T13:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190606-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190606-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T15:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190607-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190607-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T18:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190608-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190608-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T20:30",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190609-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190609-DBOX 2D": {
+   "cine": "Abasto",
+   "formato": "DBOX 2D",
+   "idioma": "CAST",
+   "inicio": "2026-11-29T23:00",
+   "pelicula": "HECHIZO: BIENVENIDOS A HEXE",
+   "pelicula_id": "109342",
+   "sala": "11"
+  },
+  "103-190610-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T14:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190611-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T18:00",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
+  },
+  "103-190612-2D": {
+   "cine": "Abasto",
+   "formato": "2D",
+   "idioma": "SUB",
+   "inicio": "2026-11-29T21:30",
+   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
+   "pelicula_id": "110814",
+   "sala": "12"
   },
   "111-151941-PREMIER 2D": {
    "cine": "DOT",
@@ -6585,15 +9078,6 @@
    "pelicula_id": "114044",
    "sala": "7"
   },
-  "111-154795-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T15:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "2"
-  },
   "111-154796-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -6612,24 +9096,6 @@
    "pelicula_id": "110814",
    "sala": "2"
   },
-  "111-154798-XD 2D": {
-   "cine": "DOT",
-   "formato": "XD 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T13:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "3"
-  },
-  "111-154799-XD 2D": {
-   "cine": "DOT",
-   "formato": "XD 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T16:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "3"
-  },
   "111-154801-XD 2D": {
    "cine": "DOT",
    "formato": "XD 2D",
@@ -6638,24 +9104,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "3"
-  },
-  "111-154802-4D 2D": {
-   "cine": "DOT",
-   "formato": "4D 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T12:30",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
-  },
-  "111-154803-4D 2D": {
-   "cine": "DOT",
-   "formato": "4D 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T15:50",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "5"
   },
   "111-154804-4D 2D": {
    "cine": "DOT",
@@ -6765,24 +9213,6 @@
    "pelicula_id": "110814",
    "sala": "5"
   },
-  "111-155076-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T13:30",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "10"
-  },
-  "111-155077-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T16:30",
-   "pelicula": "YO SOY ROCKY",
-   "pelicula_id": "114052",
-   "sala": "10"
-  },
   "111-155078-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -6891,15 +9321,6 @@
    "pelicula_id": "110814",
    "sala": "1"
   },
-  "111-155230-PREMIER 2D": {
-   "cine": "DOT",
-   "formato": "PREMIER 2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T16:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "1"
-  },
   "111-155231-PREMIER 2D": {
    "cine": "DOT",
    "formato": "PREMIER 2D",
@@ -6917,24 +9338,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "1"
-  },
-  "111-155251-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T13:30",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "4"
-  },
-  "111-155252-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T16:40",
-   "pelicula": "CABALLO SALVAJE NUEVE",
-   "pelicula_id": "114045",
-   "sala": "4"
   },
   "111-155253-2D": {
    "cine": "DOT",
@@ -6972,24 +9375,6 @@
    "pelicula_id": "111102",
    "sala": "4"
   },
-  "111-155271-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T14:20",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "6"
-  },
-  "111-155272-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T18:00",
-   "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
-   "pelicula_id": "110814",
-   "sala": "6"
-  },
   "111-155273-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -7025,24 +9410,6 @@
    "pelicula": "LOS JUEGOS DEL HAMBRE: AMANECER",
    "pelicula_id": "110814",
    "sala": "6"
-  },
-  "111-155289-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T14:00",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "7"
-  },
-  "111-155290-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "CAST",
-   "inicio": "2026-11-24T16:50",
-   "pelicula": "EL GATO CON SOMBRERO",
-   "pelicula_id": "110813",
-   "sala": "7"
   },
   "111-155291-2D": {
    "cine": "DOT",
@@ -7098,24 +9465,6 @@
    "pelicula_id": "110814",
    "sala": "7"
   },
-  "111-155313-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T14:10",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "8"
-  },
-  "111-155314-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T17:00",
-   "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
-   "pelicula_id": "114046",
-   "sala": "8"
-  },
   "111-155315-2D": {
    "cine": "DOT",
    "formato": "2D",
@@ -7169,24 +9518,6 @@
    "pelicula": "EBENEZER: LOS FANTASMAS DE NAVIDAD",
    "pelicula_id": "114046",
    "sala": "8"
-  },
-  "111-155333-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T12:50",
-   "pelicula": "WILDWOOD: EL BOSQUE SALVAJE",
-   "pelicula_id": "111102",
-   "sala": "9"
-  },
-  "111-155334-2D": {
-   "cine": "DOT",
-   "formato": "2D",
-   "idioma": "SUB",
-   "inicio": "2026-11-24T16:10",
-   "pelicula": "GODZILLA MINUS ZERO",
-   "pelicula_id": "111103",
-   "sala": "9"
   },
   "111-155335-2D": {
    "cine": "DOT",
@@ -8063,7 +10394,7 @@
  },
  "peliculas": {
   "109342": {
-   "estado": "Próximamente",
+   "estado": "Preventa",
    "estreno": "2026-11-26",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013448.jpg",
    "titulo": "HECHIZO: BIENVENIDOS A HEXE",
@@ -8224,7 +10555,7 @@
    "url": "https://www.cinemark.com.ar/pelicula/la-nueva-focker"
   },
   "114313": {
-   "estado": "Próximamente",
+   "estado": "Preventa",
    "estreno": "2026-11-26",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013509.jpg",
    "titulo": "RAMAYANA: EL NACIMIENTO DE UNA LEYENDA",
@@ -8248,8 +10579,8 @@
    "estado": "Próximamente",
    "estreno": "2026-12-03",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013468.jpg",
-   "titulo": "SERET 2026 THE RING",
-   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-the-ring"
+   "titulo": "SERET 2026 EL ANILLO",
+   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-el-anillo"
   },
   "114331": {
    "estado": "Próximamente",
@@ -8276,15 +10607,15 @@
    "estado": "Próximamente",
    "estreno": "2026-12-03",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013472.jpg",
-   "titulo": "SERET 2026 A LETTER TO DAVID SUB",
-   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-a-letter-to-david-sub"
+   "titulo": "SERET 2026 UNA CARTA PARA DAVID",
+   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-una-carta-para-david"
   },
   "114335": {
    "estado": "Próximamente",
    "estreno": "2026-12-03",
    "poster": "https://cdn.cinemark.com.ar/content/posters/HO00013473.jpg",
-   "titulo": "SERET 2026 PINK LADY",
-   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-pink-lady"
+   "titulo": "SERET 2026 LA DAMA DE ROSA",
+   "url": "https://www.cinemark.com.ar/pelicula/seret-2026-la-dama-de-rosa"
   },
   "114358": {
    "estado": "Próximamente",
