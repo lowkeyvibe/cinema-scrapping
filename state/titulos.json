@@ -98,7 +98,9 @@
  "el gato con sombrero": {
   "en": "The Cat in the Hat",
   "es": "EL GATO CON SOMBRERO",
-  "t": 1794973226
+  "id": 1117898,
+  "poster": "https://image.tmdb.org/t/p/w780/mWN6knIVJ2o7eGwSm7mOgSCwNUc.jpg",
+  "t": 1795618224
  },
  "el héroe de berlín": {
   "en": "Race",
@@ -221,6 +223,13 @@
   "id": 1809658,
   "poster": "https://image.tmdb.org/t/p/w780/t7flYSsrk9EbulxCX8MbduNGqXK.jpg",
   "t": 1795056443
+ },
+ "puedes verlo todo": {
+  "en": "You Can See Everything",
+  "es": "PUEDES VERLO TODO",
+  "id": 1765072,
+  "poster": "https://image.tmdb.org/t/p/w780/mVh3qkw2NUFxWWyF0G1hg2Wh0K5.jpg",
+  "t": 1795618224
  },
  "ramayana: el nacimiento de una leyenda": {
   "detalles": {
