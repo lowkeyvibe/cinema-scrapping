@@ -48,16 +48,6 @@
   }
  },
  "funciones": {
-  "573810": {
-   "cinema": 18,
-   "fecha": "2026-11-24",
-   "formato": "IMAX-Subtitulado",
-   "hora": "22:35",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
-   "trasnoche": false
-  },
   "573813": {
    "cinema": 18,
    "fecha": "2026-11-25",
@@ -166,16 +156,6 @@
    "pelicula": "Las nuevas desventuras de Cliff Booth",
    "pelicula_id": "6323",
    "show": "87740A",
-   "trasnoche": false
-  },
-  "574706": {
-   "cinema": 18,
-   "fecha": "2026-11-24",
-   "formato": "IMAX-Subtitulado",
-   "hora": "19:25",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
    "trasnoche": false
   },
   "574707": {
@@ -623,7 +603,7 @@
    "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6291&house_id=3250"
   },
   "6323": {
-   "estado": "Preventa",
+   "estado": "En cartelera",
    "poster": "https://static.voyalcine.net/Uploads/i6323.jpg",
    "titulo": "Las nuevas desventuras de Cliff Booth",
    "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6323&house_id=3250"

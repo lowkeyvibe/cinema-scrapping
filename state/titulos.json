@@ -61,6 +61,20 @@
   "poster": "https://image.tmdb.org/t/p/w780/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
   "t": 1795037827
  },
+ "duna (2021)": {
+  "en": null,
+  "es": "DUNA (2021)",
+  "id": null,
+  "poster": null,
+  "t": 1795581040
+ },
+ "duna: parte dos (2024)": {
+  "en": null,
+  "es": "DUNA: PARTE DOS (2024)",
+  "id": null,
+  "poster": null,
+  "t": 1795581040
+ },
  "duna: parte tres": {
   "detalles": {
    "duracion": 150,
@@ -181,12 +195,25 @@
   "poster": "https://image.tmdb.org/t/p/w780/bM37B5CuMWrPyGPpNsKzTGict4Q.jpg",
   "t": 1795085260
  },
+ "nmixx 1st world tour episode 1: zero frontier": {
+  "detalles": {
+   "duracion": 210,
+   "fondo": null,
+   "t": 1795581040,
+   "trailer": null
+  },
+  "en": "Nmixx 1st World Tour 〈Episode 1: Zero Frontier〉 Finale in Incheon Live Viewing",
+  "es": "NMIXX 1ST WORLD TOUR EPISODE 1: ZERO FRONTIER",
+  "id": 1824086,
+  "poster": "https://image.tmdb.org/t/p/w780/pjkFMUo2Cm4mQkveSeInd7m1Iwq.jpg",
+  "t": 1795581040
+ },
  "one piece: doble aventura": {
   "en": null,
   "es": "ONE PIECE: DOBLE AVENTURA",
   "id": null,
   "poster": null,
-  "t": 1795215942
+  "t": 1795581040
  },
  "perfume": {
   "en": "Perfume",
