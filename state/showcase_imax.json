@@ -547,6 +547,46 @@
    "pelicula_id": "6079",
    "show": "87491A",
    "trasnoche": false
+  },
+  "575701": {
+   "cinema": 18,
+   "fecha": "2026-12-10",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:10",
+   "pelicula": "Duna",
+   "pelicula_id": "6362",
+   "show": "87772A",
+   "trasnoche": false
+  },
+  "575702": {
+   "cinema": 18,
+   "fecha": "2026-12-11",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:00",
+   "pelicula": "Duna: parte dos",
+   "pelicula_id": "6363",
+   "show": "87775A",
+   "trasnoche": false
+  },
+  "575703": {
+   "cinema": 18,
+   "fecha": "2026-12-12",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:10",
+   "pelicula": "Duna",
+   "pelicula_id": "6362",
+   "show": "87772A",
+   "trasnoche": false
+  },
+  "575704": {
+   "cinema": 18,
+   "fecha": "2026-12-13",
+   "formato": "IMAX-Subtitulado",
+   "hora": "19:00",
+   "pelicula": "Duna: parte dos",
+   "pelicula_id": "6363",
+   "show": "87775A",
+   "trasnoche": false
   }
  },
  "peliculas": {
@@ -561,6 +601,18 @@
    "poster": "https://static.voyalcine.net/Uploads/i6323.jpg",
    "titulo": "Las nuevas desventuras de Cliff Booth",
    "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6323&house_id=3250"
+  },
+  "6362": {
+   "estado": "Preventa",
+   "poster": "https://static.voyalcine.net/Uploads/i6362.jpg",
+   "titulo": "Duna",
+   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6362&house_id=3250"
+  },
+  "6363": {
+   "estado": "Preventa",
+   "poster": "https://static.voyalcine.net/Uploads/i6362.jpg",
+   "titulo": "Duna: parte dos",
+   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6363&house_id=3250"
   }
  },
  "precios": {

@@ -75,12 +75,38 @@
   "poster": "https://image.tmdb.org/t/p/w780/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
   "t": 1795037827
  },
+ "duna": {
+  "detalles": {
+   "duracion": null,
+   "fondo": null,
+   "t": 1795706063,
+   "trailer": null
+  },
+  "en": "Somni d'hivern d'una nit d'estiu",
+  "es": "Duna",
+  "id": 1730365,
+  "poster": null,
+  "t": 1795706063
+ },
  "duna (2021)": {
   "en": null,
   "es": "DUNA (2021)",
   "id": null,
   "poster": null,
   "t": 1795581040
+ },
+ "duna: parte dos": {
+  "detalles": {
+   "duracion": 167,
+   "fondo": "https://image.tmdb.org/t/p/w1280/eZ239CUp1d6OryZEBPnO2n87gMG.jpg",
+   "t": 1795706063,
+   "trailer": "https://www.youtube.com/watch?v=U2Qp5pL3ovA"
+  },
+  "en": "Dune: Part Two",
+  "es": "Duna: parte dos",
+  "id": 693134,
+  "poster": "https://image.tmdb.org/t/p/w780/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg",
+  "t": 1795706063
  },
  "duna: parte dos (2024)": {
   "en": null,
