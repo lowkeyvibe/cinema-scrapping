@@ -26,6 +26,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/laSXfFwQ5Ce5eSCIEBOl3RaohqN.jpg",
   "t": 1795215941
  },
+ "bichos del mar": {
+  "en": "Bichos del mar",
+  "es": "BICHOS DEL MAR",
+  "id": 1797377,
+  "poster": "https://image.tmdb.org/t/p/w780/uYTQGXobST0zbqoBXmGBsuezb8h.jpg",
+  "t": 1795669988
+ },
  "bts world tour 'arirang' in kaohsiung": {
   "en": "BTS World Tour 'Arirang' in Kaohsiung: Live Viewing",
   "es": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG",
@@ -46,6 +53,13 @@
   "id": 1796896,
   "poster": "https://image.tmdb.org/t/p/w780/lt3bOrIvM76SR6iX0Y4MSV57QGs.jpg",
   "t": 1795085260
+ },
+ "clayface": {
+  "en": "Clayface",
+  "es": "CLAYFACE",
+  "id": 1400940,
+  "poster": "https://image.tmdb.org/t/p/w780/9l1NuFjel2j89hiuiJbsxfblqjy.jpg",
+  "t": 1795669989
  },
  "cómo robar un banco": {
   "en": "How to Rob a Bank",
@@ -94,6 +108,13 @@
   "id": 1567605,
   "poster": "https://image.tmdb.org/t/p/w780/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg",
   "t": 1795194852
+ },
+ "el corazón de la bestia": {
+  "en": "Heart of the Beast",
+  "es": "EL CORAZÓN DE LA BESTIA",
+  "id": 1263337,
+  "poster": "https://image.tmdb.org/t/p/w780/6sYemVUn79UPKz1ZsSG6kPU4RVy.jpg",
+  "t": 1795669989
  },
  "el gato con sombrero": {
   "en": "The Cat in the Hat",
@@ -144,6 +165,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/72AoFPC5TY4DfJwXXS9rPwPeReD.jpg",
   "t": 1795085260
  },
+ "la casa": {
+  "en": "The House",
+  "es": "LA CASA",
+  "id": 1736195,
+  "poster": "https://image.tmdb.org/t/p/w780/jBVM6SuWvJL128Fsfn2jAtjZOXD.jpg",
+  "t": 1795669989
+ },
  "la caída de la ballena": {
   "en": "Whalefall",
   "es": "LA CAÍDA DE LA BALLENA",
@@ -189,6 +217,13 @@
   "id": 1300968,
   "poster": "https://image.tmdb.org/t/p/w780/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg",
   "t": 1795037827
+ },
+ "madre siniestra": {
+  "en": "Other Mommy",
+  "es": "MADRE SINIESTRA",
+  "id": 1400837,
+  "poster": "https://image.tmdb.org/t/p/w780/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg",
+  "t": 1795669988
  },
  "minotauro": {
   "en": "Minotaur",
@@ -265,12 +300,19 @@
   "poster": null,
   "t": 1795056444
  },
+ "sensatez y sentimiento": {
+  "en": "Sense and Sensibility",
+  "es": "SENSATEZ Y SENTIMIENTO",
+  "id": 1503762,
+  "poster": "https://image.tmdb.org/t/p/w780/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg",
+  "t": 1795669989
+ },
  "seret 2026 a burning man": {
   "en": null,
   "es": "SERET 2026 A BURNING MAN",
   "id": null,
   "poster": null,
-  "t": 1795037827
+  "t": 1795669988
  },
  "seret 2026 a letter to david sub": {
   "en": null,
@@ -284,14 +326,28 @@
   "es": "SERET 2026 BELLA",
   "id": null,
   "poster": null,
-  "t": 1795009418
+  "t": 1795669987
+ },
+ "seret 2026 el anillo": {
+  "en": null,
+  "es": "SERET 2026 EL ANILLO",
+  "id": null,
+  "poster": null,
+  "t": 1795669988
+ },
+ "seret 2026 la dama de rosa": {
+  "en": null,
+  "es": "SERET 2026 LA DAMA DE ROSA",
+  "id": null,
+  "poster": null,
+  "t": 1795669987
  },
  "seret 2026 nandauri": {
   "en": null,
   "es": "SERET 2026 NANDAURI",
   "id": null,
   "poster": null,
-  "t": 1795037826
+  "t": 1795669988
  },
  "seret 2026 pink lady": {
   "en": null,
@@ -307,6 +363,13 @@
   "poster": null,
   "t": 1795009418
  },
+ "seret 2026 una carta para david": {
+  "en": null,
+  "es": "SERET 2026 UNA CARTA PARA DAVID",
+  "id": null,
+  "poster": null,
+  "t": 1795669987
+ },
  "shaun, el cordero: el monstruo de mossy bottom": {
   "en": "Shaun the Sheep: The Beast of Mossy Bottom",
   "es": "SHAUN, EL CORDERO: EL MONSTRUO DE MOSSY BOTTOM",
@@ -315,11 +378,30 @@
   "t": 1795056444
  },
  "spider-man: un (nuevo) nuevo día": {
+  "detalles": {
+   "duracion": 145,
+   "fondo": "https://image.tmdb.org/t/p/w1280/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
+   "t": 1795669989,
+   "trailer": "https://www.youtube.com/watch?v=P3uI5sLosKU"
+  },
   "en": "Spider-Man: Brand New Day",
   "es": "SPIDER-MAN: UN (NUEVO) NUEVO DÍA",
   "id": 969681,
   "poster": "https://image.tmdb.org/t/p/w780/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
   "t": 1795215942
+ },
+ "spider-man: un nuevo día": {
+  "detalles": {
+   "duracion": 145,
+   "fondo": "https://image.tmdb.org/t/p/w1280/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
+   "t": 1795669989,
+   "trailer": "https://www.youtube.com/watch?v=P3uI5sLosKU"
+  },
+  "en": "Spider-Man: Brand New Day",
+  "es": "SPIDER-MAN: UN NUEVO DÍA",
+  "id": 969681,
+  "poster": "https://image.tmdb.org/t/p/w780/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+  "t": 1795669989
  },
  "tierra de mi padre": {
   "en": "Fatherland",

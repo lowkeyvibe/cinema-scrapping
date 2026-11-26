@@ -48,16 +48,6 @@
   }
  },
  "funciones": {
-  "573813": {
-   "cinema": 18,
-   "fecha": "2026-11-25",
-   "formato": "IMAX-Subtitulado",
-   "hora": "22:35",
-   "pelicula": "Los Juegos del Hambre: amanecer en la cosecha",
-   "pelicula_id": "6291",
-   "show": "87722A",
-   "trasnoche": false
-  },
   "574671": {
    "cinema": 18,
    "fecha": "2026-11-26",
@@ -566,12 +556,6 @@
    "titulo": "Duna: parte tres",
    "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6079&house_id=3250"
   },
-  "6291": {
-   "estado": "En cartelera",
-   "poster": "https://static.voyalcine.net/Uploads/i6291.jpg",
-   "titulo": "Los Juegos del Hambre: amanecer en la cosecha",
-   "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6291&house_id=3250"
-  },
   "6323": {
    "estado": "En cartelera",
    "poster": "https://static.voyalcine.net/Uploads/i6323.jpg",
@@ -580,8 +564,8 @@
   }
  },
  "precios": {
-  "PROMOCIÓN 2x1 con MÁS SHOWCASE": "Válido todos los días... $12.000 por entrada.",
-  "SALAS 2D y 3D": "General... $24.000 / Niños hasta 12 años y mayores de 60... $19.000"
+  "PROMOCIÓN 2x1 con MÁS SHOWCASE": "Válido todos los días... $13.000 por entrada.",
+  "SALAS 2D y 3D": "General... $26.000 / Niños hasta 12 años y mayores de 60... $19.000"
  },
  "promos": {
   "Bonda | IMAX: 2x1 en entradas todos los días.": {
