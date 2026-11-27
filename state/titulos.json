@@ -177,6 +177,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/yykeYKbDBM9eUMJUucaaDo2mi1p.jpg",
   "t": 1795555808
  },
+ "hermanados": {
+  "en": "Twinned",
+  "es": "HERMANADOS",
+  "id": 1367749,
+  "poster": "https://image.tmdb.org/t/p/w780/rb6vAms21OYGIAoE7eEz0s6WXfU.jpg",
+  "t": 1795822640
+ },
  "ju-on: el grito": {
   "en": "Ju-on: The Beginning of the End",
   "es": "JU-ON: EL GRITO",
@@ -205,6 +212,13 @@
   "poster": "https://image.tmdb.org/t/p/w780/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg",
   "t": 1795037827
  },
+ "la navidad de la familia garcía": {
+  "en": null,
+  "es": "LA NAVIDAD DE LA FAMILIA GARCÍA",
+  "id": null,
+  "poster": null,
+  "t": 1795822640
+ },
  "la nueva focker": {
   "detalles": {
    "duracion": 105,
@@ -217,6 +231,20 @@
   "id": 1400336,
   "poster": "https://image.tmdb.org/t/p/w780/iHJhSfqFpDMOyeMc6h6BOeHxse2.jpg",
   "t": 1795056442
+ },
+ "la pequeña hermana": {
+  "en": "Mirai",
+  "es": "LA PEQUEÑA HERMANA",
+  "id": 475215,
+  "poster": "https://image.tmdb.org/t/p/w780/b9XvI4Nehzi0nXyNVD6DtT39P6l.jpg",
+  "t": 1795822639
+ },
+ "la psicópata": {
+  "en": "Victorian Psycho",
+  "es": "LA PSICÓPATA",
+  "id": 1379486,
+  "poster": "https://image.tmdb.org/t/p/w780/9LHVZevgdsdbjJdkFr6bk9EwX7q.jpg",
+  "t": 1795822640
  },
  "las nuevas desventuras de cliff booth": {
   "detalles": {
@@ -250,6 +278,13 @@
   "id": 1400837,
   "poster": "https://image.tmdb.org/t/p/w780/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg",
   "t": 1795669988
+ },
+ "maltratada": {
+  "en": "Maltratada",
+  "es": "MALTRATADA",
+  "id": 1787995,
+  "poster": "https://image.tmdb.org/t/p/w780/23S8uEmw4Eeqy5fyTTwh8vdG8L.jpg",
+  "t": 1795822640
  },
  "minotauro": {
   "en": "Minotaur",
@@ -455,6 +490,13 @@
   "id": 1286656,
   "poster": "https://image.tmdb.org/t/p/w780/xE5tY3lppZUyG7WKKThsuYHuAHr.jpg",
   "t": 1795085260
+ },
+ "¡behemoth!": {
+  "en": "Behemoth!",
+  "es": "¡BEHEMOTH!",
+  "id": 1452168,
+  "poster": "https://image.tmdb.org/t/p/w780/tlP9FKIJV4goEKH5160Hz8Gc32i.jpg",
+  "t": 1795822641
  },
  "¡plumas! operación rescate": {
   "en": "Out of the Nest",
