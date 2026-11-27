@@ -523,7 +523,7 @@
    "fecha": "2026-12-10",
    "formato": "IMAX-Subtitulado",
    "hora": "19:10",
-   "pelicula": "Duna",
+   "pelicula": "Duna (2021)",
    "pelicula_id": "6362",
    "show": "87772A",
    "trasnoche": false
@@ -533,7 +533,7 @@
    "fecha": "2026-12-11",
    "formato": "IMAX-Subtitulado",
    "hora": "19:00",
-   "pelicula": "Duna: parte dos",
+   "pelicula": "Duna: parte dos (2024)",
    "pelicula_id": "6363",
    "show": "87775A",
    "trasnoche": false
@@ -543,7 +543,7 @@
    "fecha": "2026-12-12",
    "formato": "IMAX-Subtitulado",
    "hora": "19:10",
-   "pelicula": "Duna",
+   "pelicula": "Duna (2021)",
    "pelicula_id": "6362",
    "show": "87772A",
    "trasnoche": false
@@ -553,7 +553,7 @@
    "fecha": "2026-12-13",
    "formato": "IMAX-Subtitulado",
    "hora": "19:00",
-   "pelicula": "Duna: parte dos",
+   "pelicula": "Duna: parte dos (2024)",
    "pelicula_id": "6363",
    "show": "87775A",
    "trasnoche": false
@@ -575,13 +575,13 @@
   "6362": {
    "estado": "Preventa",
    "poster": "https://static.voyalcine.net/Uploads/i6362.jpg",
-   "titulo": "Duna",
+   "titulo": "Duna (2021)",
    "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6362&house_id=3250"
   },
   "6363": {
    "estado": "Preventa",
    "poster": "https://static.voyalcine.net/Uploads/i6362.jpg",
-   "titulo": "Duna: parte dos",
+   "titulo": "Duna: parte dos (2024)",
    "url": "https://entradas.todoshowcase.com/showcase/pelicula?filmid=6363&house_id=3250"
   }
  },
